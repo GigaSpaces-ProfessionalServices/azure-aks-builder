@@ -1,0 +1,10 @@
+manager:
+  antiAffinity:
+    enabled: true
+    ha: true
+  license: "Product=InsightEdge;Version=16.3;Type=ENTERPRISE;Customer=Gigaspaces_Demo_PROD;Expiration=2023-Dec-31;Hash=VQdZNeFX6EO6RaABKNR6"
+operator:
+  license: "Product=InsightEdge;Version=16.3;Type=ENTERPRISE;Customer=Gigaspaces_Demo_PROD;Expiration=2023-Dec-31;Hash=VQdZNeFX6EO6RaABKNR6"
+spacedeck:
+  ingress:
+    host: " "

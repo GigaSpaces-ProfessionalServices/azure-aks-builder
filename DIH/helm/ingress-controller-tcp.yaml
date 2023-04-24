@@ -1,0 +1,16 @@
+tcp:
+  8090: "default/xap-manager-service:8090"
+  3030: "default/grafana:3000"
+  3000: "default/spacedeck:3000"
+  8080: "default/redpanda:8080"
+  6080: "default/di-manager:6080"
+  6081: "default/di-mdm:6081"
+  6081: "default/di-subscription-manager:6082"
+  8181: "default/flink-jobmanager:8081"
+  5432: "default/xap-dgw-service:5432"
+  11701: "default/iidr-kafka:11701"
+
+
+
+
+        
