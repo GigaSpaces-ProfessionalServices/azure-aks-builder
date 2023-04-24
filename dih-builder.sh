@@ -205,7 +205,7 @@ installDIH () {
   # Install dih 16.3 umbrella
   ingressIP=$(kubectl get svc ingress-nginx-controller -o json | jq -r .status.loadBalancer.ingress[].ip)
   echo $IIDR
-  helm install dih dih/dih --version 16.3.0-rc3 --set global.iidrKafkaHost=$ingressIP,tags.iidr=$IIDR -f DIH/helm/dih_umbrella.yaml
+  helm install dih dih/dih --version 16.3.0-rc3 --set global.iidrKafkaHost=$ingressIP,tags.iidr=$IIDR -f DIH/helm/dih-umbrella.yaml
 }
 
 ##### Main #####
