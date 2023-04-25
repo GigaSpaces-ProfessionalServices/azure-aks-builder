@@ -119,6 +119,7 @@ createJumper () {
   --ssh-key-value $JUMPER_PUBLIC_KEY \
   --public-ip-sku Standard \
   --nic-delete-option delete \
+  --os-disk-delete-option delete \
   --admin-username centos \
   --tags Owner=$owner Project=$project $default_tags \
   --size $JUMPER_SIZE
