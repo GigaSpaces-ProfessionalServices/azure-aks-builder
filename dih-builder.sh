@@ -159,9 +159,9 @@ chooseExistingAKS () {
   echo "Fetching clusters ..."
   az aks list --resource-group $REASOURCE_GROUP
   echo 
-  echo  "Enter the cluster name to set as the current context: (to the previuos menu type B/b)"
+  echo  "Enter the cluster name to set as the current context: (to the previous menu type B/b)"
   read -p ">> " CLUSTER_NAME
-  if [[ $CLUSTER_NAME == "B" ]] || [[ $CLUSTER_NAME == "b" ]]
+  if [[ $CLUSTER_NAME = "B" ]] || [[ $CLUSTER_NAME = "b" ]]
   then 
     return 0 
   fi
@@ -197,7 +197,10 @@ loginAzureAccount () {
 
 destroyAKScluster () {
   chooseExistingAKS
-  updateKubeConfig
+  if [[ $CLUSTER_NAME == "B" ]] || [[ $CLUSTER_NAME == "b" ]]
+  then 
+    return 0 
+  fi
   az aks delete --name $CLUSTER_NAME --resource-group $REASOURCE_GROUP --no-wait
 }
 
