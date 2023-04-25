@@ -79,6 +79,7 @@ DIH management
 --------------
 
 1. Install DIH umbrella
+2. Uninstall DIH umbrella
 B. Back to Main menu.
 E. Exit
 

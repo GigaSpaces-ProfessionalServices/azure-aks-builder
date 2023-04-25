@@ -78,6 +78,7 @@ dihMenu () {
   echo "--------------"
   echo
   echo "1. Install DIH umbrella"
+  echo "2. Uninstall DIH umbrella"
   echo "B. Back to Main menu."
   echo "E. Exit"
   echo 
@@ -85,6 +86,10 @@ dihMenu () {
 
   case "$choice" in
       1) installDIH  
+         dihMenu  
+          ;;
+
+      2) uninstallDIH  
          dihMenu  
           ;;
       
@@ -217,10 +222,26 @@ installDIH () {
   installIngressController
   
   # Install DIH
-  
-  helm install dih dih/dih --version 16.3.0-rc3 --set global.iidrKafkaHost=$ingressIP,tags.iidr=$IIDR -f DIH/helm/dih-umbrella.yaml
+    helm install dih dih/dih --version 16.3.0-rc3 --set global.iidrKafkaHost=$ingressIP,tags.iidr=$IIDR -f DIH/helm/dih-umbrella.yaml
 }
 
+uninstallDIH () {
+  chooseExistingAKS
+  read -p "Are you sure you want to uninstall DIH from $CLUSTER_NAME? [y/n]: " REMOVE_DIH
+  if [[ $REMOVE_DIH =~ [yY](es)* ]]
+  then
+    read -p "Remove ingress-controller from $CLUSTER_NAME? [y/n]: " REMOVE_INGRESS
+    if [[ $REMOVE_INGRESS =~ [yY](es)* ]]
+    then
+      echo "Removing the ingress-nginx ..."
+      helm uninstall ingress-nginx
+    fi
+    echo "Removing the dih ..."
+    helm uninstall dih
+  fi 
+  dihMenu
+  
+}
 installIngressController () {
   # helm repo add DIH and ingress-controller
   helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
