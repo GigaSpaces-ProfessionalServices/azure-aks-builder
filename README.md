@@ -193,6 +193,31 @@ zookeeper-1                                1/1     Running    0               4m
 zookeeper-2                                1/1     Running    0               4m24s
 ```
 
+### DIH Uninstall Menu
+```
+DIH management
+--------------
+
+1. Install DIH umbrella
+2. Uninstall DIH umbrella
+B. Back to Main menu.
+E. Exit
+
+>> 2
+Fetching clusters ...
+Name      Location    ResourceGroup    KubernetesVersion    CurrentKubernetesVersion    ProvisioningState    Fqdn
+--------  ----------  ---------------  -------------------  --------------------------  -------------------  -----------------------------------------------------
+gng-dev1  eastus      gng-lab          1.25.6               1.25.6                      Succeeded            gng-dev1-gng-lab-b5cedc-5r2el0x4.hcp.eastus.azmk8s.io
+
+Enter the cluster name to set as the current context: (to the previuos menu type B/b)
+>> gng-dev1
+Updating kube config file for [ gng-dev1 ] cluster ...
+Merged "gng-dev1" as current context in /home/centos/.kube/config
+Current context: gng-dev1
+Are you sure you want to uninstall DIH from gng-dev1? [y/n]: y
+Remove ingress-controller from gng-dev1? [y/n]: n
+```
+
 ## access service by ingress-ip:ingress-port
 
 | Ingress Port | Service Name | Service Port |
