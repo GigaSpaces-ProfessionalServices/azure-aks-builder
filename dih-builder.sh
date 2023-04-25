@@ -34,15 +34,13 @@ mainMenu () {
 }
 
 aksMenu () {
-  clear
   echo "AKS management"
   echo "--------------"
   echo
   echo "1. Set a current AKS cluster (update kubeconfig)"
   echo "2. Create a new AKS cluster"
-  echo "---------------------------------------------------------"
-  echo "3. Destroy an AKS Cluster"
-  echo "---------------------------------------------------------"
+  echo "3. Delete an AKS Cluster"
+  echo "4. Create an Jumper VM"
   echo "B. Back to Main menu."
   echo "E. Exit"
   echo 
@@ -50,8 +48,6 @@ aksMenu () {
 
   case "$choice" in
       1) chooseExistingAKS  
-         updateKubeConfig
-         sleep 2
          aksMenu  
           ;;
       
@@ -60,6 +56,9 @@ aksMenu () {
           ;;
 
       3) destroyAKScluster
+         aksMenu
+          ;;
+      4) createJumper
          aksMenu
           ;;
 
@@ -75,7 +74,6 @@ aksMenu () {
 }
 
 dihMenu () {
-  clear
   echo "DIH management"
   echo "--------------"
   echo
@@ -87,7 +85,6 @@ dihMenu () {
 
   case "$choice" in
       1) installDIH  
-         sleep 2
          dihMenu  
           ;;
       
@@ -109,6 +106,10 @@ createResourceGroup () {
 
 createJumper () {
   # Create a Jumper VM
+  if [[ -z $CLUSTER_NAME ]]
+  then
+    read -p "Please enter a Jumper description ( 'jumper-<description> ): " CLUSTER_NAME
+  fi  
   echo "Create a Jumper VM on azure [ jumper-$CLUSTER_NAME ]..."
   az vm create \
   -n jumper-$CLUSTER_NAME \
@@ -152,9 +153,19 @@ chooseExistingAKS () {
   echo "Fetching clusters ..."
   az aks list --resource-group $REASOURCE_GROUP
   echo 
-  echo  "Enter the cluster name to set as the current context: (type 'exit' to abort)"
+  echo  "Enter the cluster name to set as the current context: (to the previuos menu type B/b)"
   read -p ">> " CLUSTER_NAME
-  [[ $CLUSTER_NAME == "exit" ]] && exit
+  if [[ $CLUSTER_NAME == "B" ]] || [[ $CLUSTER_NAME == "b" ]]
+  then 
+    return 0 
+  fi
+  if [[ $(az aks list -g gng-lab -o json --query "[?name=='$CLUSTER_NAME'] | length(@)") = 1 ]]
+    then 
+      updateKubeConfig
+    else
+      echo "$CLUSTER_NAME cluster does not exist"
+      chooseExistingAKS
+  fi
 }
 
 updateKubeConfig () {
@@ -186,6 +197,10 @@ destroyAKScluster () {
 
 installDIH () {
   chooseExistingAKS
+  if [[ $CLUSTER_NAME == "B" ]] || [[ $CLUSTER_NAME == "b" ]]
+  then 
+    return 0 
+  fi
   read -p "Would you like to install the DIH umbrella with IIDR [y/n] " INSTALL_IIDR
   [[ $INSTALL_IIDR =~ [yY](es)* ]] && IIDR=true || IIDR=false
   echo "Deploying DIH umbrella ..."
@@ -193,21 +208,27 @@ installDIH () {
   kubectl create secret docker-registry myregistrysecret --docker-server=https://index.docker.io/v1/ --docker-username=dihcustomers --docker-password=dckr_pat_NYcQySRyhRFZ6eUQAwLsYm314QA --docker-email=dih-customers@gigaspaces.com
   kubectl create secret generic datastore-credentials --from-literal=username='system' --from-literal=password='admin11'
 
-  # helm repo add DIH and ingress-controller
+  # helm repo add DIH
   helm repo add dih https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
-  helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
-  helm repo update dih ingress-nginx
-
+  helm repo update dih
 
   # Install ingress-controller
-  helm install ingress-nginx ingress-nginx/ingress-nginx -f DIH/helm/ingress-controller-tcp.yaml
-
-  # Install dih 16.3 umbrella
-  ingressIP=$(kubectl get svc ingress-nginx-controller -o json | jq -r .status.loadBalancer.ingress[].ip)
-  echo $IIDR
+  installIngressController
+  
+  # Install DIH
+  
   helm install dih dih/dih --version 16.3.0-rc3 --set global.iidrKafkaHost=$ingressIP,tags.iidr=$IIDR -f DIH/helm/dih-umbrella.yaml
 }
 
+installIngressController () {
+  # helm repo add DIH and ingress-controller
+  helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
+  help repo update ingress-nginx
+
+  # Install ingress-controller
+  helm install ingress-nginx ingress-nginx/ingress-nginx -f DIH/helm/ingress-controller-tcp.yaml
+  ingressIP=$(kubectl get svc ingress-nginx-controller -o json | jq -r .status.loadBalancer.ingress[].ip)
+}
 ##### Main #####
 clear
 loginAzureAccount
