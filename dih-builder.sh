@@ -224,7 +224,7 @@ installDIH () {
 installIngressController () {
   # helm repo add DIH and ingress-controller
   helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
-  help repo update ingress-nginx
+  helm repo update ingress-nginx
 
   # Install ingress-controller
   helm install ingress-nginx ingress-nginx/ingress-nginx -f DIH/helm/ingress-controller-tcp.yaml
