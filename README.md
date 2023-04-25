@@ -218,7 +218,7 @@ Are you sure you want to uninstall DIH from gng-dev1? [y/n]: y
 Remove ingress-controller from gng-dev1? [y/n]: n
 ```
 
-## access service by ingress-ip:ingress-port
+## Access service by ingress-ip:ingress-port
 
 | Ingress Port | Service Name | Service Port |
 ---------------|--------------|--------------|
