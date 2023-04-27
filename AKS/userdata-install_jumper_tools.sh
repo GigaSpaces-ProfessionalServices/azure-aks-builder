@@ -1,7 +1,7 @@
 #!/bin/bash
 curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
 sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
-sudo yum install -y yum-utils
+sudo yum install -y yum-utils epel-release
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 echo -e "[azure-cli]
 name=Azure CLI
@@ -21,6 +21,7 @@ curl -sS https://webinstall.dev/k9s | bash
 curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
 sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 yum install bash-completion -y
+sudo yum install jq -y
 kubectl completion bash | sudo tee /etc/bash_completion.d/kubectl > /dev/null
 echo 'alias k=kubectl' >> /home/centos/.bashrc
 echo 'complete -o default -F __start_kubectl k' >> /home/centos/.bashrc

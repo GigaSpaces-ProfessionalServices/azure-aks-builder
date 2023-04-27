@@ -157,7 +157,7 @@ createAKScluster () {
 
 chooseExistingAKS () {
   echo "Fetching clusters ..."
-  az aks list --resource-group $REASOURCE_GROUP
+  az aks list --resource-group $REASOURCE_GROUP -o table
   echo 
   echo  "Enter the cluster name to set as the current context: (to the previous menu type B/b)"
   read -p ">> " CLUSTER_NAME
@@ -165,7 +165,7 @@ chooseExistingAKS () {
   then 
     return 0 
   fi
-  if [[ $(az aks list -g gng-lab -o json --query "[?name=='$CLUSTER_NAME'] | length(@)") = 1 ]]
+  if [[ $(az aks list -g $REASOURCE_GROUP -o json --query "[?name=='$CLUSTER_NAME'] | length(@)") = 1 ]]
     then 
       updateKubeConfig
     else
