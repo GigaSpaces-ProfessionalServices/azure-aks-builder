@@ -9,7 +9,7 @@ JUMPER_IMAGE="OpenLogic:CentOS:7_9:latest"
 JUMPER_USERDATA="AKS/userdata-install_jumper_tools.sh"
 JUMPER_ADMIN_USER="centos"
 JUMPER_PUBLIC_KEY="AKS/gng.pub"
-JUMPER_SIZE="Standard_B2ms"
+JUMPER_SIZE="Standard_B4ms"
 
 # ARM_CLIENT_ID=
 # ARM_CLIENT_SECRET=
