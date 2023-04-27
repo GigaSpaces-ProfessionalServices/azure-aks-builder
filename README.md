@@ -13,6 +13,25 @@ In this file you should set the following:
 - Resource Group
 - Location
 - azure credentials (ARM_ variables, also can be set at ~/.bashrc)
+```
+#!/bin/bash
+REASOURCE_GROUP=gng-lab
+TAG_GSPOLICY=noprod
+LOCATION=eastus
+AKS_NODE_COUNT=3
+AKS_VM_SIZE="Standard_B2ms"
+
+JUMPER_IMAGE="OpenLogic:CentOS:7_9:latest"
+JUMPER_USERDATA="AKS/userdata-install_jumper_tools.sh"
+JUMPER_ADMIN_USER="centos"
+JUMPER_PUBLIC_KEY="AKS/gng.pub"
+JUMPER_SIZE="Standard_B2ms"
+
+# ARM_CLIENT_ID=
+# ARM_CLIENT_SECRET=
+# ARM_SUBSCRIPTION_ID=
+# ARM_TENANT_ID=
+```
 
 ## Run the dih-builder tool
 ```
