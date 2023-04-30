@@ -8,7 +8,7 @@ mainMenu () {
   echo
   echo Subscription: $SUBSCRIPTION_NAME
   echo Client ID: $LOGGEDIN_USER
-  echo Reasource Group: $REASOURCE_GROUP
+  echo Resource Group: $REASOURCE_GROUP
   echo
   echo "1. AKS Management"
   echo "2. DIH Management"
@@ -40,7 +40,7 @@ aksMenu () {
   echo "1. Set a current AKS cluster (update kubeconfig)"
   echo "2. Create a new AKS cluster"
   echo "3. Delete an AKS Cluster"
-  echo "4. Create an Jumper VM"
+  echo "4. Create a Jumper VM"
   echo "B. Back to Main menu."
   echo "E. Exit"
   echo 
@@ -227,7 +227,7 @@ installDIH () {
   installIngressController
   
   # Install DIH
-    helm install dih dih/dih --version 16.3.0-rc3 --set global.iidrKafkaHost=$ingressIP,tags.iidr=$IIDR -f DIH/helm/dih-umbrella.yaml
+    helm install dih dih/dih --version 16.3 --set global.iidrKafkaHost=$ingressIP,tags.iidr=$IIDR -f DIH/helm/dih-umbrella.yaml
 }
 
 uninstallDIH () {
