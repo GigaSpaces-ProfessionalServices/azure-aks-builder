@@ -54,4 +54,5 @@ To update .kube/config run:
 
 ' >> /home/centos/.bashrc
 
-
+cd /home/centos
+sudo -u centos git clone https://github.com/GigaSpaces-ProfessionalServices/azure-aks-builder.git
