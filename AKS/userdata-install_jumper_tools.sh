@@ -27,13 +27,14 @@ echo 'alias k=kubectl' >> /home/centos/.bashrc
 echo 'complete -o default -F __start_kubectl k' >> /home/centos/.bashrc
 
 echo '
-export ARM_CLIENT_ID=165869b6-cbff-46b2-9bd7-34d93a36799c
-export ARM_CLIENT_SECRET=A3l8Q~EWIRz8trU7aQuzvmjtM_ZMIYQBg02hPdiQ
-export ARM_SUBSCRIPTION_ID=b5cedc24-5bf7-4266-a3c8-c8ab9149b4fe
-export ARM_TENANT_ID=821c5058-be28-4347-8bc5-8687aa5cb191
+export ARM_CLIENT_ID=""
+export ARM_CLIENT_SECRET=""
+export ARM_SUBSCRIPTION_ID=""
+export ARM_TENANT_ID=""
 clear' >> /home/centos/.bashrc 
 
 echo '
+echo "
 Welcome to the azure DIH Jumper
 --------------------------------------
 Installed tools:
@@ -48,6 +49,9 @@ Installed tools:
 # maven
 # jdk 11
 --------------------------------------
+
+To update .kube/config run:
+
 ' >> /home/centos/.bashrc
 
 

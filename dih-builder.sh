@@ -58,7 +58,8 @@ aksMenu () {
       3) destroyAKScluster
          aksMenu
           ;;
-      4) createJumper
+      4) unset CLUSTER_NAME
+         createJumper
          aksMenu
           ;;
 
@@ -150,7 +151,7 @@ createAKScluster () {
   # Create a jumper if requested
   if [[ $CREATE_JUMPER =~ [yY](es)* ]]
   then
-    echo createJumper
+    createJumper
   fi
   
 }
