@@ -151,6 +151,7 @@ createAKScluster () {
   --node-count $AKS_NODE_COUNT \
   --tags "Project=$TAG_PROJECT Owner=$TAG_OWNER gspolicy=$TAG_GSPOLICY" \
   --node-vm-size $AKS_VM_SIZE \
+  --no-ssh-key \
   --zones 1 2 3
   
   # Create a jumper if requested
