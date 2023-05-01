@@ -131,7 +131,8 @@ createJumper () {
   --os-disk-delete-option delete \
   --admin-username centos \
   --tags Owner=$owner Project=$project $default_tags \
-  --size $JUMPER_SIZE
+  --size $JUMPER_SIZE \
+  --output table
   
     
 }
@@ -152,9 +153,10 @@ createAKScluster () {
   --tags "Project=$TAG_PROJECT Owner=$TAG_OWNER gspolicy=$TAG_GSPOLICY" \
   --node-vm-size $AKS_VM_SIZE \
   --no-ssh-key \
-  --zones 1 2 3
+  --zones 1 2 3 \
+  --output table 
   updateKubeConfig
-  
+
   # Create a jumper if requested
   if [[ $CREATE_JUMPER =~ [yY](es)* ]]
   then
