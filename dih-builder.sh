@@ -187,7 +187,7 @@ chooseExistingAKS () {
 updateKubeConfig () {
   echo "Updating kube config file for [ $CLUSTER_NAME ] cluster ..."
   az account set --subscription $ARM_SUBSCRIPTION_ID
-  az aks get-credentials --resource-group $REASOURCE_GROUP --name $CLUSTER_NAME
+  az aks get-credentials --resource-group $REASOURCE_GROUP --name $CLUSTER_NAME --overwrite-existing
   echo "Current context: $(kubectl config current-context)"
 }
 
