@@ -131,7 +131,8 @@ createJumper () {
   --os-disk-delete-option delete \
   --admin-username centos \
   --tags Owner=$owner Project=$project $default_tags \
-  --size $JUMPER_SIZE
+  --size $JUMPER_SIZE \
+  --zones 1 2 3
     
 }
 

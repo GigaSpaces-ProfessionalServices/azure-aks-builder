@@ -16,11 +16,13 @@ sudo yum install -y wget vim unzip git azure-cli maven
 wget https://s3.eu-west-1.amazonaws.com/shmulik.kaufman/bbw/jdk-11.0.17_linux-x64_bin.rpm
 sudo rpm -ivh jdk-11.0.17_linux-x64_bin.rpm
 rm -rf ./get_helm.sh jdk-11.0.17_linux-x64_bin.rpm kubectl
-sudo -u centos curl -sS https://webinstall.dev/k9s | bash
+sudo -u centos curl -sS https://webinstall.dev/k9s > /tmp/install_k9s.sh
+chmod +x /tmp/install_k9s.sh
+sudo -u centos /tmp/install_k9s.sh
 
 curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
 sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
-yum install bash-completion -y
+sudo yum install bash-completion -y
 sudo yum install jq -y
 kubectl completion bash | sudo tee /etc/bash_completion.d/kubectl > /dev/null
 echo 'alias k=kubectl' >> /home/centos/.bashrc
