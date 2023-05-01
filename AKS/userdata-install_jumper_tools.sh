@@ -16,7 +16,7 @@ sudo yum install -y wget vim unzip git azure-cli maven
 wget https://s3.eu-west-1.amazonaws.com/shmulik.kaufman/bbw/jdk-11.0.17_linux-x64_bin.rpm
 sudo rpm -ivh jdk-11.0.17_linux-x64_bin.rpm
 rm -rf ./get_helm.sh jdk-11.0.17_linux-x64_bin.rpm kubectl
-curl -sS https://webinstall.dev/k9s | bash
+sudo -u centos curl -sS https://webinstall.dev/k9s | bash
 
 curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
 sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
@@ -49,9 +49,7 @@ Installed tools:
 # maven
 # jdk 11
 --------------------------------------
-
-To update .kube/config run:
-
+"
 ' >> /home/centos/.bashrc
 
 cd /home/centos
