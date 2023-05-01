@@ -153,6 +153,7 @@ createAKScluster () {
   --node-vm-size $AKS_VM_SIZE \
   --no-ssh-key \
   --zones 1 2 3
+  updateKubeConfig
   
   # Create a jumper if requested
   if [[ $CREATE_JUMPER =~ [yY](es)* ]]
