@@ -211,7 +211,7 @@ destroyAKScluster () {
   then 
     return 0 
   fi
-  az aks delete --name $CLUSTER_NAME --resource-group $REASOURCE_GROUP --no-wait
+  az aks delete --name $CLUSTER_NAME --resource-group $REASOURCE_GROUP --no-wait --output table
   echo "Deleting an AKS cluster takes a while."
   echo "Run `az aks list -g $REASOURCE_GROUP` to get the cluster state."
 }
