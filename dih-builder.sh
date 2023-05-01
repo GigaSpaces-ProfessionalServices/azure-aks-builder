@@ -5,11 +5,14 @@ mainMenu () {
   clear
   echo "Welcome to DIH Builder on Azure!"
   echo "--------------------------------"
-  echo
-  echo Subscription: $SUBSCRIPTION_NAME
+    echo Subscription: $SUBSCRIPTION_NAME
   echo Client ID: $LOGGEDIN_USER
   echo Resource Group: $REASOURCE_GROUP
   echo
+  echo "## To change the above details, edit setEnv.sh and restart the dih-builder.sh ##"
+  echo 
+  echo Main
+  echo ----
   echo "1. AKS Management"
   echo "2. DIH Management"
   echo "E. Exit"
@@ -221,14 +224,14 @@ installDIH () {
   kubectl create secret generic datastore-credentials --from-literal=username='system' --from-literal=password='admin11'
 
   # helm repo add DIH
-  helm repo add dih https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+  helm repo add dih $DIH_HELM_REPO
   helm repo update dih
 
   # Install ingress-controller
   installIngressController
   
   # Install DIH
-    helm install dih dih/dih --version 16.3 --set global.iidrKafkaHost=$ingressIP,tags.iidr=$IIDR -f DIH/helm/dih-umbrella.yaml
+    helm install dih dih/dih --version $DIH_HELM_CHART --set global.iidrKafkaHost=$ingressIP,tags.iidr=$IIDR -f DIH/helm/dih-umbrella.yaml
 }
 
 uninstallDIH () {
