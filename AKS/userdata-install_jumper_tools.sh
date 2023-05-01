@@ -39,7 +39,7 @@ Welcome to the azure DIH Jumper
 --------------------------------------
 Installed tools:
 
-# kubecl
+# kubectl
 # helm
 # azure cli
 # git
