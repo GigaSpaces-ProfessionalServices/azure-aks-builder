@@ -1,5 +1,5 @@
 #!/bin/bash
-REASOURCE_GROUP=gng-lab
+REASOURCE_GROUP=csm-bbw
 TAG_GSPOLICY=noprod
 LOCATION=eastus
 AKS_NODE_COUNT=3

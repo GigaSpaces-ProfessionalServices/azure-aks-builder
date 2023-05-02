@@ -1,11 +1,14 @@
 #!/bin/bash
+SCRIPT=$(realpath "$0")
+SCRIPTPATH=$(dirname "$SCRIPT")
+cd $SCRIPTPATH
 source ./setEnv.sh
 
 mainMenu () {
   clear
   echo "Welcome to DIH Builder on Azure!"
   echo "--------------------------------"
-    echo Subscription: $SUBSCRIPTION_NAME
+  echo Subscription: $SUBSCRIPTION_NAME
   echo Client ID: $LOGGEDIN_USER
   echo Resource Group: $REASOURCE_GROUP
   echo
