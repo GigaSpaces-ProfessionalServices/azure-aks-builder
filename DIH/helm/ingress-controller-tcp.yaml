@@ -16,10 +16,10 @@ tcp:
 ###################################################################################################
 ### Azure ###
 
-# controller:
-#  service:
-#    annotations:
-#        service.beta.kubernetes.io/azure-load-balancer-internal: true
+controller:
+ service:
+   annotations:
+       service.beta.kubernetes.io/azure-load-balancer-internal: true
 
 ### AWS ###
 

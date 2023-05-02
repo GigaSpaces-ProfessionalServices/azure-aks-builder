@@ -266,7 +266,7 @@ installIngressController () {
   helm repo update ingress-nginx
 
   # Install ingress-controller
-  helm install ingress-nginx ingress-nginx/ingress-nginx -f DIH/helm/ingress-controller-tcp.yaml
+  helm upgrade --install ingress-nginx ingress-nginx/ingress-nginx -f DIH/helm/ingress-controller-tcp.yaml
   ingressIP=$(kubectl get svc ingress-nginx-controller -o json | jq -r .status.loadBalancer.ingress[].ip)
 }
 ##### Main #####
