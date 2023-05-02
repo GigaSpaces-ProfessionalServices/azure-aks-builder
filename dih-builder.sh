@@ -237,7 +237,7 @@ installDIH () {
   installIngressController
   
   # Install DIH
-    helm install dih dih/dih --version $DIH_HELM_CHART --set global.iidrKafkaHost=$ingressIP,tags.iidr=$IIDR -f DIH/helm/dih-umbrella.yaml
+    helm install dih dih/dih --version $DIH_HELM_CHART --set global.iidrKafkaHost=$ingressIP,tags.iidr=$IIDR -f $DIH_HELM_CONF_FILE
 }
 
 uninstallDIH () {
