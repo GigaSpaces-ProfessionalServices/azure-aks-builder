@@ -9,17 +9,18 @@ tcp:
   8181: "default/flink-jobmanager:8081"
   5432: "default/xap-dgw-service:5432"
   11701: "default/iidr-kafka:11701"
-  8081: "default/bbw-kafka-producer-svc:8081"
-  6085: "default/bbw-dih-pc-pluggable-connector:6085"
+  10101: "default/iidr-as:11701"
+ # 8081: "default/bbw-kafka-producer-svc:8081"
+ # 6085: "default/bbw-dih-pc-pluggable-connector:6085"
 ###################################################################################################
 # To configure ingress-controller as Internal LB, uncomment the following depends on your vendor: #
 ###################################################################################################
 ### Azure ###
 
-controller:
- service:
-   annotations:
-       service.beta.kubernetes.io/azure-load-balancer-internal: true
+#controller:
+# service:
+#   annotations:
+#       service.beta.kubernetes.io/azure-load-balancer-internal: true
 
 ### AWS ###
 
