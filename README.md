@@ -256,5 +256,5 @@ Note: You can access spacedeck by http://ingress-ip/ without specifying :3000 po
 
 To find your ingress-IP run:
 ```
-kubectl get svc ingress-nginx-controller -o json | jq -r .status.loadBalancer.ingress[].ip
+kubectl get services  ingress-nginx-controller --output jsonpath='{.status.loadBalancer.ingress[0].ip}'
 ```
