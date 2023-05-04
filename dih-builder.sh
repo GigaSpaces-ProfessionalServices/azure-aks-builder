@@ -257,6 +257,7 @@ uninstallDIH () {
     fi
     echo "Removing the dih ..."
     helm uninstall dih
+    kubectl delete secret myregistrysecret datastore-credentials
   fi 
   dihMenu
   
