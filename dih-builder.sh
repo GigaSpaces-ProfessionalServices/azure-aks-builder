@@ -286,10 +286,10 @@ printIngressTCP () {
   read -p "Enter any key to back to the menu >> " key
 }
 ##### Main #####
-#clear
-#loginAzureAccount
-#mainMenu
-printIngressTCP
+clear
+loginAzureAccount
+mainMenu
+
 
 
 
