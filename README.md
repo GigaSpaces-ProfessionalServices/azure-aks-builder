@@ -15,7 +15,7 @@ In this file you should set the following:
 - azure credentials (ARM_ variables, also can be set at ~/.bashrc)
 ```
 #!/bin/bash
-REASOURCE_GROUP=gng-lab
+RESOURCE_GROUP=gng-lab
 TAG_GSPOLICY=noprod
 LOCATION=eastus
 AKS_NODE_COUNT=3
@@ -46,7 +46,7 @@ Welcome to DIH Builder on Azure!
 
 Subscription: support.gigaspaces.com
 Client ID: 49664c5d-130b-4463-b538-506f85f3ba0d
-Reasource Group: gng-lab
+Resource Group: gng-lab
 
 1. AKS Management
 2. DIH Management
@@ -109,7 +109,7 @@ Name       Location    ResourceGroup    KubernetesVersion    CurrentKubernetesVe
 gng-dev1   eastus      gng-lab          1.25.6               1.25.6                      Succeeded            gng-dev1-gng-lab-b5cedc-5r2el0x4.hcp.eastus.azmk8s.io
 gng-test1  eastus      gng-lab          1.25.6               1.25.6                      Succeeded            gng-test1-gng-lab-b5cedc-be1v1154.hcp.eastus.azmk8s.io
 
-Enter the cluster name to set as the current context: (to the previuos menu type B/b)
+Enter the cluster name to set as the current context: (to the pervious menu type B/b)
 >> gng-test1
 Updating kube config file for [ gng-test1 ] cluster ...
 Merged "gng-test1" as current context in /home/centos/.kube/config
@@ -228,7 +228,7 @@ Name      Location    ResourceGroup    KubernetesVersion    CurrentKubernetesVer
 --------  ----------  ---------------  -------------------  --------------------------  -------------------  -----------------------------------------------------
 gng-dev1  eastus      gng-lab          1.25.6               1.25.6                      Succeeded            gng-dev1-gng-lab-b5cedc-5r2el0x4.hcp.eastus.azmk8s.io
 
-Enter the cluster name to set as the current context: (to the previuos menu type B/b)
+Enter the cluster name to set as the current context: (to the previous menu type B/b)
 >> gng-dev1
 Updating kube config file for [ gng-dev1 ] cluster ...
 Merged "gng-dev1" as current context in /home/centos/.kube/config

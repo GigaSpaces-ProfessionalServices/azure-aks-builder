@@ -10,7 +10,7 @@ mainMenu () {
   echo "--------------------------------"
   echo Subscription: $SUBSCRIPTION_NAME
   echo Client ID: $LOGGEDIN_USER
-  echo Resource Group: $REASOURCE_GROUP
+  echo Resource Group: $RESOURCE_GROUP
   echo
   echo "## To change the above details, edit setEnv.sh and restart the dih-builder.sh ##"
   echo 
@@ -113,7 +113,7 @@ dihMenu () {
 }
 createResourceGroup () {
   # Create a reasource group
-  az group create --name $REASOURCE_GROUP --location $LOCATION
+  az group create --name $RESOURCE_GROUP --location $LOCATION
 }
 
 createJumper () {
@@ -125,7 +125,7 @@ createJumper () {
   echo "Create a Jumper VM on azure [ jumper-$CLUSTER_NAME ]..."
   az vm create \
   -n jumper-$CLUSTER_NAME \
-  -g $REASOURCE_GROUP \
+  -g $RESOURCE_GROUP \
   --image $JUMPER_IMAGE \
   --custom-data $JUMPER_USERDATA \
   --ssh-key-value $JUMPER_PUBLIC_KEY \
@@ -150,7 +150,7 @@ createAKScluster () {
   # Create an AKS cluster
   echo "Creating an AKS cluster [ $CLUSTER_NAME ]"
   az aks create \
-  -g $REASOURCE_GROUP \
+  -g $RESOURCE_GROUP \
   -n $CLUSTER_NAME \
   --node-count $AKS_NODE_COUNT \
   --tags "Project=$TAG_PROJECT Owner=$TAG_OWNER gspolicy=$TAG_GSPOLICY" \
@@ -170,7 +170,7 @@ createAKScluster () {
 
 chooseExistingAKS () {
   echo "Fetching clusters ..."
-  az aks list --resource-group $REASOURCE_GROUP -o table
+  az aks list --resource-group $RESOURCE_GROUP -o table
   echo 
   echo  "Enter the cluster name to set as the current context: (to the previous menu type B/b)"
   read -p ">> " CLUSTER_NAME
@@ -178,7 +178,7 @@ chooseExistingAKS () {
   then 
     return 0 
   fi
-  if [[ $(az aks list -g $REASOURCE_GROUP -o json --query "[?name=='$CLUSTER_NAME'] | length(@)") = 1 ]]
+  if [[ $(az aks list -g $RESOURCE_GROUP -o json --query "[?name=='$CLUSTER_NAME'] | length(@)") = 1 ]]
     then 
       updateKubeConfig
     else
@@ -190,7 +190,7 @@ chooseExistingAKS () {
 updateKubeConfig () {
   echo "Updating kube config file for [ $CLUSTER_NAME ] cluster ..."
   az account set --subscription $ARM_SUBSCRIPTION_ID
-  az aks get-credentials --resource-group $REASOURCE_GROUP --name $CLUSTER_NAME --overwrite-existing
+  az aks get-credentials --resource-group $RESOURCE_GROUP --name $CLUSTER_NAME --overwrite-existing
   echo "Current context: $(kubectl config current-context)"
 }
 
@@ -214,9 +214,9 @@ destroyAKScluster () {
   then 
     return 0 
   fi
-  az aks delete --name $CLUSTER_NAME --resource-group $REASOURCE_GROUP --no-wait --output table
+  az aks delete --name $CLUSTER_NAME --resource-group $RESOURCE_GROUP --no-wait --output table
   echo "Deleting an AKS cluster takes a while."
-  echo "Run `az aks list -g $REASOURCE_GROUP` to get the cluster state."
+  echo "Run `az aks list -g $RESOURCE_GROUP` to get the cluster state."
 }
 
 installDIH () {
@@ -241,6 +241,7 @@ installDIH () {
   
   # Install DIH
     helm install dih dih/dih --version $DIH_HELM_CHART --set global.iidrKafkaHost=$ingressIP,tags.iidr=$IIDR -f $DIH_HELM_CONF_FILE
+    printIngressTCP
 }
 
 uninstallDIH () {
@@ -267,12 +268,29 @@ installIngressController () {
 
   # Install ingress-controller
   helm upgrade --install ingress-nginx ingress-nginx/ingress-nginx -f DIH/helm/ingress-controller-tcp.yaml
-  ingressIP=$(kubectl get svc ingress-nginx-controller -o json | jq -r .status.loadBalancer.ingress[].ip)
+  
+  until [ -n "$(kubectl get svc ingress-nginx-controller -o jsonpath='{.status.loadBalancer.ingress[0].ip}')" ]; do
+    echo "Waiting for the ingress controller end-point ..."
+    sleep 3
+  done
+  
+}
+
+printIngressTCP () {
+  ingressIP=$(kubectl get services  ingress-nginx-controller --output jsonpath='{.status.loadBalancer.ingress[0].ip}')
+  echo "Ingress exposed TCP ports:"
+  echo ----------------------------------------------------------------------
+  cat ~/azure-aks-builder/DIH/helm/ingress-controller-tcp.yaml |grep -v "#" |grep default |tr -d '"' |tr -d ' '|sed 's/:default\// --> /' |cut -d':' -f1 |sed -e "s/^/$ingressIP:/"
+  echo ----------------------------------------------------------------------
+  echo
+  read -p "Enter any key to back to the menu >> " key
 }
 ##### Main #####
-clear
-loginAzureAccount
-mainMenu
+#clear
+#loginAzureAccount
+#mainMenu
+printIngressTCP
+
 
 
 

@@ -1,9 +1,9 @@
 #!/bin/bash
-REASOURCE_GROUP=csm-bbw
+RESOURCE_GROUP=csm-bbw
 TAG_GSPOLICY=noprod
 LOCATION=eastus
 AKS_NODE_COUNT=3
-AKS_VM_SIZE="Standard_B2ms"
+AKS_VM_SIZE="Standard_B4ms"
 
 DIH_HELM_REPO="https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih"
 DIH_HELM_CHART="16.3.0"
