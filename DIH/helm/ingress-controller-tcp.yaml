@@ -9,7 +9,12 @@ tcp:
   8181: "default/flink-jobmanager:8081"
   5432: "default/xap-dgw-service:5432"
   11701: "default/iidr-kafka:11701"
-  10101: "default/iidr-as:11701"
+  9092: "default/kafka:9092"
+  9093: "default/kafka-headless:9093"
+  4443: "default/kubernetes-dashboard:443"
+  8077: "microservices/mock-catenax-svc:8077"
+  8787: "microservices/sap-kafka-bridge:8787"
+  
  # 8081: "default/bbw-kafka-producer-svc:8081"
  # 6085: "default/bbw-dih-pc-pluggable-connector:6085"
 ###################################################################################################
