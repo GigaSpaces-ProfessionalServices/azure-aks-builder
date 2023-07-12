@@ -1,0 +1,55 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: di-operator
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: di-operator
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose -f docker-compose.v3.yaml convert -c
+        kompose.version: 1.28.0 (HEAD)
+      labels:
+        io.kompose.network/docker-di: "true"
+        io.kompose.service: di-operator
+        {{- if and .Values.global.affinity.enabled .Values.diOperator.affinity.enabled }}
+        deployment.affinity: {{ .Values.diMdm.affinity.value }}
+        {{- end }}
+    spec:
+      containers:
+        - name: di-operator
+          env:
+            - name: DI_ORACLEDB_SERVER
+              value: di-oracledb
+          image: {{ .Values.diOperator.image.repository }}:{{ .Values.diOperator.image.tag }}
+          imagePullPolicy: {{ .Values.diOperator.image.pullPolicy }}
+          resources: {{ toYaml .Values.diMdm.resources | nindent 12 }}
+          stdin: true
+          tty: true
+          volumeMounts:
+            - mountPath: /{{ .Values.diOperator.mountVolume }}
+              name: {{ .Values.diOperator.mountVolume }}
+      hostname: di-operator
+      restartPolicy: Always
+      {{- include "di.imagePullSecrets" . | nindent 6 }}
+      volumes:
+        - name: {{ .Values.diOperator.mountVolume }}
+          persistentVolumeClaim:
+            claimName: {{ .Values.diOperator.mountVolume }}
+      {{- if and .Values.global.affinity.enabled .Values.diOperator.affinity.enabled }}
+      affinity:
+        podAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            - labelSelector:
+                matchExpressions:
+                  - key: deployment.affinity
+                    operator: In
+                    values:
+                      - {{ .Values.diOperator.affinity.value }}
+              topologyKey: "kubernetes.io/hostname"
+      {{- end }}

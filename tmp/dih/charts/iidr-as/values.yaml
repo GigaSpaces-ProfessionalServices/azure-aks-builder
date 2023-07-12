@@ -1,0 +1,22 @@
+global:
+  imagePullSecrets:
+    - myregistrysecret
+
+image:
+  repository: gigaspaces/di-iidr-as
+  tag: 2.2.0
+  imagePullPolicy: IfNotPresent
+volumes:
+  iidr:
+    resources:
+      requests:
+        storage: 100Mi
+  iidrAs:
+    resources:
+      requests:
+        storage: 1000Mi
+affinity:
+  enabled: false
+  value: iidr
+resources: {}
+iidrAsUnlockTimeoutInSeconds: 300

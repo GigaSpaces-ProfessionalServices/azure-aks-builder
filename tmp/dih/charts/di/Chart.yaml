@@ -1,0 +1,4 @@
+apiVersion: v2
+description: DI Chart (mdm, manager & operator)
+name: di
+version: 2.0.16

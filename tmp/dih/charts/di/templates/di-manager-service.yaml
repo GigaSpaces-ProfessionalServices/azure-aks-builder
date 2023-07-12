@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    kompose.cmd: kompose -f docker-compose.v3.yaml convert -c
+    kompose.version: 1.28.0 (HEAD)
+  labels:
+    io.kompose.service: di-manager
+  name: di-manager
+spec:
+  ports:
+    - name: "6080"
+      port: 6080
+      targetPort: 6080
+  selector:
+    io.kompose.service: di-manager
+status:
+  loadBalancer: {}

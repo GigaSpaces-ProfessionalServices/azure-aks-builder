@@ -1,0 +1,115 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: xap-operator
+  namespace:  {{ .Release.Namespace }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: xap-operator
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        name: xap-operator
+        release: {{ .Release.Name }}
+    spec:
+      initContainers:
+        - name: wait-for-master-before-starup
+          image: busybox:1.36.0
+          # wait for the manager to be available. wait additional time for HA to get zookeeper quorum
+          command: [ "sh", "-c", "until nc -z xap-manager-service 8090 > /dev/null; do echo Waiting for master.; sleep 5; done; sleep 100;" ]
+      containers:
+        - command:
+            - "tools/kubernetes/kubernetes-operator.sh"
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          {{- if .Values.keystore.enabled }}
+          volumeMounts:
+            - name: tls
+              mountPath: /opt/gigaspaces/config/keystore/
+              readOnly: true
+          {{- end }}
+          imagePullPolicy: "{{ .Values.image.pullPolicy }}"
+          name: xap-operator
+          env:
+            - name: GS_LICENSE
+              value: "{{ .Values.license}}"
+            - name: PRE_UNDEPLOY_TIMEOUT
+              value: "15000"
+            - name: PRE_DEPLOYMENT_TIMEOUT
+              value: "60000"
+            - name: DEPLOYMENT_STARTED_TIMEOUT
+              value: "240000"
+            - name: PU_READINESS_CHECK_DELAY
+              value: "10"
+            - name: MANAGER_BASE_URL
+              value: "http://{{ .Values.manager.name }}-service:{{ .Values.manager.port }}"
+            - name: NAMESPACE
+              value: {{ .Release.Namespace }}
+            - name: RELEASE_NAME
+              value: {{ .Release.Name }}
+            - name: MANAGER_NAME
+              value: {{ .Values.manager.name }}
+            - name: ANTIAFFINITY_TOPOLOGY
+              value: {{ .Values.antiAffinity.topology | default "topology.kubernetes.io/zone" }}
+            {{- if .Values.keystore.enabled }}
+            - name: KEY_STORE_TYPE
+              value: {{ .Values.keystore.keystoreType}}
+            - name: KEY_STORE_FILE
+              value: {{ .Values.keystore.fileName}}
+            - name: KEY_STORE_PSWD
+              value: {{ .Values.keystore.password}}
+            {{- end }}
+          ports:
+            - containerPort: 8443
+              name: webhook-api
+      volumes:
+        - name: tls
+          secret:
+            secretName: {{ .Values.keystore.secretName}}
+---
+kind: ClusterRoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: default-{{ .Release.Namespace }}
+  namespace:  {{ .Release.Namespace }}
+subjects:
+  - kind: ServiceAccount
+    name: default
+    namespace:  {{ .Release.Namespace }}
+roleRef:
+  kind: ClusterRole
+  name: cluster-admin
+  apiGroup: rbac.authorization.k8s.io
+{{- if .Values.autoCleanup.enabled }}
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: xap-purge-pu-job
+  namespace:  {{ .Release.Namespace }}
+  annotations:
+    "helm.sh/hook": "pre-delete"
+    "helm.sh/hook-weight": "1"
+    "helm.sh/hook-delete-policy": "hook-succeeded,before-hook-creation"
+spec:
+  template:
+    spec:
+      containers:
+        - name: xap-purge-resources
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: "{{ .Values.image.pullPolicy }}"
+          command:
+            - "tools/kubernetes/purge-operator.sh"
+          env:
+            - name: PURGE_TIMEOUT
+              value: "{{ .Values.autoCleanup.timeoutSeconds }}"
+            - name: NAMESPACE
+              value: {{ .Release.Namespace }}
+          resources: {{ toYaml .Values.resources | nindent 12 }}
+      restartPolicy: OnFailure
+      terminationGracePeriodSeconds: 0
+  backoffLimit: 3
+{{- end }}

@@ -1,0 +1,17 @@
+{{- $namespace :=   .Values.namespace | default .Release.Namespace }}
+{{- $defaultHost := printf "%s.gigaspaces.net" $namespace }}
+{{- $host := .Values.operatorConfig.host | default $defaultHost  }}
+{{- $image := .Values.operatorConfig.image | default "gigaspaces/mcs-query-service:latest"  }}
+
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: operator-config
+  namespace: {{$namespace}}
+data:
+  application.yml: |-
+    memoryLimit: {{ .Values.operatorConfig.memoryLimit | default "400Mi" }}
+    cpuLimit: {{ .Values.operatorConfig.cpuLimit | default (default 1) }}
+    controllerClass: {{ .Values.operatorConfig.controllerClass | default "nginx" }}
+    host: {{ $host }}
+    image: {{ $image }}

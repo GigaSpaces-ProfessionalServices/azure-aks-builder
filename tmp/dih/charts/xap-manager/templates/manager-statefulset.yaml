@@ -1,0 +1,122 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: {{ template "xap-manager.fullname" . }}
+  labels:
+    app: {{ template "xap-manager.name" . }}
+    chart: {{ template "xap-manager.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  replicas: {{ template "manager.replicas" . }}
+  serviceName: {{ template "xap-manager.fullname" . }}-hs
+  selector:
+    matchLabels:
+      selectorId: {{ template "xap-manager.fullname" . }}
+  template:
+    metadata:
+      labels:
+        app: {{ template "xap-manager.name" . }}
+        release: {{ .Release.Name }}
+        component: manager
+        selectorId: {{ template "xap-manager.fullname" . }}
+    spec:
+      securityContext:
+        fsGroup: 2000
+        runAsUser: 0
+        runAsGroup: 1000
+      terminationGracePeriodSeconds: {{ .Values.terminationGracePeriodSeconds }}
+      initContainers:
+        - name: check-external-service-ready
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          command: ["tools/kubernetes/entrypoint.sh"]
+          args:
+            - "component=init-manager-external-service"
+            - "verbose=true"
+            - "release.namespace={{ .Release.Namespace }}"
+            - "metrics.enabled={{ .Values.metrics.enabled }}"
+            - "name={{ template "xap-manager.fullname" . }}"
+      {{- if .Values.metrics.enabled }}
+      volumes:
+        - name: metrics-config
+          configMap:
+            name: gs-metrics-config
+      {{- end }}
+      containers:
+        - name: gigaspaces-container
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+
+          env:
+            - name: POST_CLASSPATH
+              value: "/opt/gigaspaces/lib/platform/kubernetes/*"
+            - name: GS_OPTIONS_EXT
+              {{- if (.Values.securityService.enabled)}}
+              value: "{{ template "manager.baseopts" . }} -Dcom.gs.security.enabled=true -Dcom.gs.manager.rest.ssl.enabled=false -Dcom.gs.security.properties-file=config/security/openid-security.properties"
+              {{- else }}
+              value: "{{ template "manager.baseopts" . }}"
+              {{- end}}
+            - name: GS_LICENSE
+              value: "{{ .Values.license}}"
+          command: ["tools/kubernetes/entrypoint.sh"]
+          args:
+            - "component=manager"
+            - "verbose=true"
+            - "java.heap={{ .Values.java.heap}}"
+            - "managerReplicas={{ template "manager.replicas" . }}"
+            - "release.namespace={{ .Release.Namespace }}"
+            {{if (.Values.service.lrmi.enabled)}}
+            - "external.lrmi.enabled=true"
+            - "lrmi.port={{ .Values.service.lrmi.port }}"
+            {{end}}
+            - "name={{ .Values.nameOverride }}"
+            - "full.name={{ template "xap-manager.fullname" . }}"
+            - "securityService.enabled={{.Values.securityService.enabled}}"
+          {{- if or .Values.persistence.enabled .Values.metrics.enabled }}
+          volumeMounts:
+            {{- if .Values.metrics.enabled }}
+            - name: metrics-config
+              mountPath: /opt/gigaspaces/config/metrics/metrics.xml
+              subPath: metrics.xml
+            {{- end}}
+            {{- if .Values.persistence.enabled }}
+            - name: work
+              mountPath: /opt/gigaspaces/work
+            {{ end }}
+          {{ end }}
+          livenessProbe:
+            httpGet:
+              path: /v2/info
+              port: {{ .Values.service.api.port}}
+            initialDelaySeconds: 90
+            periodSeconds: 10
+            failureThreshold: 3
+          resources:
+{{ toYaml .Values.resources | indent 12 }}
+      {{- if .Values.nodeSelector.enabled }}
+      nodeSelector:
+      {{- .Values.nodeSelector.selector | nindent 8 }}
+      {{- end }}
+      {{- if .Values.antiAffinity.enabled }}
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            - labelSelector:
+                matchExpressions:
+                  - key: selectorId
+                    operator: In
+                    values:
+                      - {{ template "xap-manager.fullname" . }}
+              topologyKey: "kubernetes.io/hostname"
+{{ end }}
+  {{- if .Values.persistence.enabled }}
+  volumeClaimTemplates:
+    - metadata:
+        name: work
+      spec:
+        accessModes: [ "ReadWriteOnce" ]
+        storageClassName: {{ .Values.persistence.storageClassName | default "standard" }}
+        resources:
+          requests:
+            storage: {{ .Values.persistence.storage | default "10Gi" }}
+  {{end}}

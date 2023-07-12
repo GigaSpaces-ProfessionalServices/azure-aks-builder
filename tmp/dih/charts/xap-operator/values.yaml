@@ -1,0 +1,59 @@
+# Default values for xap-operator.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+nameOverride: xap-operator
+image:
+  repository: gigaspaces/operator
+  tag: 16.3.0
+  pullPolicy: IfNotPresent #Always
+terminationGracePeriodSeconds: 30
+
+podAnnotations: {}
+
+podSecurityContext: {}
+  # fsGroup: 2000
+
+securityContext: {}
+  # capabilities:
+  #   drop:
+  #   - ALL
+  # readOnlyRootFilesystem: true
+  # runAsNonRoot: true
+  # runAsUser: 1000
+
+license: tryme
+
+manager:
+  name: xap-manager
+  port: 8090
+
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 2
+  targetCPUUtilizationPercentage: 80
+  # targetMemoryUtilizationPercentage: 80
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
+
+antiAffinity:
+#  default "topology.kubernetes.io/zone"
+  topology:
+
+keystore:
+  enabled: false
+  secretName: nameOfSecret
+  password: nameOfLiteralItemInSecretRepresentsPassword
+  fileName: nameOfFileItemInSecretRepresentsKeystore
+  keystoreType: PKCS12
+
+autoCleanup:
+  enabled: true
+#  default timeout: 30s
+  timeoutSeconds: 30
+resources: {}

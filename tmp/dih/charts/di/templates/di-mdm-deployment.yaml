@@ -1,0 +1,83 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    io.kompose.service: di-mdm
+  name: di-mdm
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: di-mdm
+  strategy: {}
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose -f docker-compose.v3.yaml convert -c
+        kompose.version: 1.28.0 (HEAD)
+      labels:
+        io.kompose.network/docker-di: "true"
+        io.kompose.service: di-mdm
+        {{- if and .Values.global.affinity.enabled .Values.diMdm.affinity.enabled }}
+        deployment.affinity: {{ .Values.diMdm.affinity.value }}
+        {{- end }}
+    spec:
+      containers:
+        - env:
+            - name: SPRING_PROFILES_ACTIVE
+              value: {{ .Values.diMdm.repositoryProfile }}
+            - name: ZOOKEEPER_CONNECTURL
+              value: {{ .Values.global.zookeeperHost }}:{{ .Values.global.zookeeperPort }}
+            - name: MDM_URL
+              value: http://localhost:6081
+            - name: FLINK_URL
+              value: {{ .Values.global.flinkUrl }}
+            - name: DI_PROCESSOR_JAR
+              value: {{ .Values.diManager.diProcessorJar }}
+            - name: SPACE_LOOKUP_GROUPS
+              value: {{ .Values.global.xap.lookupGroups }}
+            - name: SPACE_LOOKUP_LOCATORS
+              value: {{ .Values.global.xap.lookupLocators }}
+            - name: KAFKA_BOOTSTRAP_SERVERS
+              value: {{ .Values.global.kafkaHost }}:{{ .Values.global.kafkaPort }}
+          image: {{ .Values.diMdm.image.repository }}:{{ .Values.diMdm.image.tag }}
+          imagePullPolicy: {{ .Values.diMdm.image.pullPolicy }}
+          {{- if .Values.diMdm.doGlobalConfig }}
+          lifecycle:
+            postStart:
+              exec:
+                command: [ "/bin/sh", "-c", "(sudo mkdir -p /di/logs && sudo chmod 777 /di/logs/) && /home/gsods/global_config.sh >> /di/logs/global_config.out" ]
+          {{- end }}
+{{/*          livenessProbe:*/}}
+{{/*            exec:*/}}
+{{/*              command:*/}}
+{{/*                - curl --fail http://localhost:6081/api/v1/about*/}}
+{{/*            failureThreshold: 5*/}}
+{{/*            periodSeconds: 10*/}}
+{{/*            timeoutSeconds: 1*/}}
+          name: di-mdm
+          ports:
+            - containerPort: 6081
+          resources: {{ toYaml .Values.diMdm.resources | nindent 12 }}
+          volumeMounts:
+            - mountPath: /di
+              name: di
+      restartPolicy: Always
+      {{- include "di.imagePullSecrets" . | nindent 6 }}
+      volumes:
+        - name: di
+          persistentVolumeClaim:
+            claimName: di
+      {{- if and .Values.global.affinity.enabled .Values.diMdm.affinity.enabled }}
+      affinity:
+        podAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            - labelSelector:
+                matchExpressions:
+                  - key: deployment.affinity
+                    operator: In
+                    values:
+                      - {{ .Values.diMdm.affinity.value }}
+              topologyKey: "kubernetes.io/hostname"
+      {{- end }}
+

@@ -1,0 +1,36 @@
+image:
+  repository: apache/flink
+  tag: 1.15.3
+  pullPolicy: IfNotPresent
+checkpoints:
+  dir: /flink/checkpoints
+savepoints:
+  dir: /flink/savepoints
+jobmanager:
+  memoryRequestSize: 2Gi
+  memoryProcessSize: 1600m
+  jvmMetaspaceSize: 600m
+  replicas: 1
+  webUploadDir: /flink/webUploadDir
+taskmanager:
+  numberOfTaskSlots: 10
+  memoryRequestSize: 2Gi
+  memoryProcessSize: 1728m
+  jvmMetaspaceSize: 600m
+  replicas: 2
+pvc:
+  storage: 1000Mi
+highAvailability:
+  dir: /flink/highAvailabilityStorage
+  clusterId: k8-cluster-id
+  type: zookeeper
+  zookeeperQuorum: zookeeper:2181
+rootLoggerLevel: INFO
+metrics:
+  enabled: true
+  db: mydb
+  host: influxdb
+  port: 8086
+affinity:
+  enabled: true
+  value: flink

@@ -1,0 +1,13 @@
+*It may take a few minutes for the environment to be available*
+{{ if eq (.Values.license) ("tryme") }}
+License Notice:
+The GigaSpaces license key is no longer required for individual deployments.
+It is applied through the xap-manager/xap-operator. Please make sure it is set otherwise a trial license will be used.
+A trial license will allow you to explore all the Enterprise functionality, for 24 hours.
+More on product license: https://docs.gigaspaces.com/latest/started/license-setup.html
+{{ end }}
+
+{{- if and (.Values.instances) (.Values.partitions) }}
+ERROR - both instances and partitions are set:
+* For scaling the number of instances only set the instances count, while partitions should be zero or empty.
+{{ end }}

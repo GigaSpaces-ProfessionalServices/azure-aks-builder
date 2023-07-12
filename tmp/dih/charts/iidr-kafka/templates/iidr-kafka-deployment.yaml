@@ -1,0 +1,70 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    io.kompose.network/docker-di: "true"
+    io.kompose.service: iidr-kafka
+  name: iidr-kafka
+  namespace: {{ .Release.Namespace }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: iidr-kafka
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        io.kompose.network/docker-di: "true"
+        io.kompose.service: iidr-kafka
+        {{- if .Values.affinity.enabled }}
+        deployment.affinity: {{ .Values.affinity.value }}
+        {{- end }}
+      name: iidr-kafka
+      namespace: {{ .Release.Namespace }}
+    spec:
+      containers:
+        - env:
+            - name: BOOTSTRAP_SERVERS
+              value: {{ .Values.envs.bootstrapServers }}:{{ .Values.envs.bootstrapServersPort }}
+          image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
+          imagePullPolicy: {{ .Values.image.imagePullPolicy }}
+          name: iidr-kafka
+          ports:
+            - containerPort: 11701
+          resources: {{ toYaml .Values.resources | nindent 12 }}
+          stdin: true
+          tty: true
+          {{- if .Values.volumeMounts.enabled }}
+          volumeMounts:
+            - name: iidr-shared
+              mountPath: /di
+            - name: iidr-kafka
+              mountPath: /iidr-kafka
+          {{- end }}
+      hostname: iidr-kafka
+      restartPolicy: Always
+      {{- include "di.imagePullSecrets" . | nindent 6 }}
+      {{- if .Values.volumeMounts.enabled }}
+      volumes:
+        - name: iidr-shared
+          persistentVolumeClaim:
+            claimName: iidr
+        - name: iidr-kafka
+          persistentVolumeClaim:
+            claimName: iidr-kafka
+      {{- end }}
+      {{- if .Values.affinity.enabled }}
+      affinity:
+        podAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            - labelSelector:
+                matchExpressions:
+                  - key: deployment.affinity
+                    operator: In
+                    values:
+                      - {{ .Values.affinity.value }}
+              topologyKey: "kubernetes.io/hostname"
+      {{- end }}
+status: { }

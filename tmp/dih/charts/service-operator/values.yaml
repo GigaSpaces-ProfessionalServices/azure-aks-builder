@@ -1,0 +1,25 @@
+# Default values for service-operator.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+fullnameOverride: service-operator
+autoscaling:
+  enabled: true
+replicaCount: 1
+
+image:
+  repository: gigaspaces/mcs-service-operator
+  pullPolicy: IfNotPresent
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: 1.0.4
+
+imagePullSecrets:
+  - name: "docker-secret"
+
+service:
+  type: ClusterIP
+  port: 8080
+
+operatorConfig:
+  memoryLimit: 400Mi
+  image: gigaspaces/mcs-query-service:1.0.5
+resources: {}

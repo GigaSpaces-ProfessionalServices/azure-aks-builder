@@ -1,0 +1,65 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    io.kompose.network/docker-di: "true"
+    io.kompose.service: iidr-as
+  name: iidr-as
+  namespace: {{ .Release.Namespace }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      io.kompose.service: iidr-as
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        io.kompose.network/docker-di: "true"
+        io.kompose.service: iidr-as
+        {{- if .Values.affinity.enabled }}
+        deployment.affinity: {{ .Values.affinity.value }}
+        {{- end }}
+      name: iidr-as
+      namespace: {{ .Release.Namespace }}
+    spec:
+      containers:
+        - env:
+            - name: IIDR_AS_USER_UNLOCK_TIMEOUT_IN_SECONDS
+              value: "{{ .Values.iidrAsUnlockTimeoutInSeconds }}"
+            - name: IIDR_KAFKA_USER_EXIT_PROPERTIES_FILE
+              value: /di/iidr-kafka/conf/DEMO.properties
+          image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
+          imagePullPolicy: {{ .Values.image.imagePullPolicy }}
+          name: iidr-as
+          ports:
+            - containerPort: 10101
+          resources: {{ toYaml .Values.resources | nindent 12 }}
+          volumeMounts:
+            - mountPath: /di
+              name: iidr-shared
+            - mountPath: /iidr-as
+              name: iidr-as
+      restartPolicy: Always
+      {{- include "di.imagePullSecrets" . | nindent 6 }}
+      volumes:
+        - name: iidr-shared
+          persistentVolumeClaim:
+            claimName: iidr
+        - name: iidr-as
+          persistentVolumeClaim:
+            claimName: iidr-as
+      {{- if .Values.affinity.enabled }}
+      affinity:
+        podAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            - labelSelector:
+                matchExpressions:
+                  - key: deployment.affinity
+                    operator: In
+                    values:
+                      - {{ .Values.affinity.value }}
+              topologyKey: "kubernetes.io/hostname"
+      {{- end }}
+status: {}

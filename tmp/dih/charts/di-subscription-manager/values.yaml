@@ -1,0 +1,17 @@
+global:
+  imagePullSecrets:
+    - myregistrysecret
+  mdmServerUrl: http://di-mdm:6081
+  iidrAsHost: iidr-as
+  iidrAsPort: "10101"
+  kafkaHost: kafka
+  kafkaPort: "9092"
+  iidrKafkaHost: iidr-kafka
+  iidrKafkaPort: "11701"
+image:
+  repository: gigaspaces/di-subscription-manager
+  tag: 1.2.1
+affinity:
+  enabled: true
+  value: iidr
+resources: {}

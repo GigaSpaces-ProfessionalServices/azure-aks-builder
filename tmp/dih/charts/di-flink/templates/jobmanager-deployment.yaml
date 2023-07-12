@@ -1,0 +1,85 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flink-jobmanager
+spec:
+  replicas: {{ .Values.jobmanager.replicas }}
+  selector:
+    matchLabels:
+      app: flink
+      component: jobmanager
+  template:
+    metadata:
+      labels:
+        app: flink
+        component: jobmanager
+        {{- if .Values.affinity.enabled }}
+        deployment.affinity: {{ .Values.affinity.value }}
+        {{- end }}
+    spec:
+      {{- include "di.imagePullSecrets" . | nindent 6 }}
+      containers:
+        - name: jobmanager
+          image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          env:
+            - name: POD_IP
+              valueFrom:
+                fieldRef:
+                  apiVersion: v1
+                  fieldPath: status.podIP
+          # The following args overwrite the value of jobmanager.rpc.address configured in the configuration config map to POD_IP.
+          args: ["jobmanager","-D","jobmanager.rpc.address=$(POD_IP)"]
+          ports:
+            - containerPort: 6123
+              name: rpc
+            - containerPort: 6124
+              name: blob-server
+            - containerPort: 8081
+              name: webui
+          livenessProbe:
+            tcpSocket:
+              port: 8081
+            initialDelaySeconds: 60
+            periodSeconds: 60
+          resources:
+            requests:
+              memory: {{ .Values.jobmanager.memoryRequestSize }}
+          volumeMounts:
+            - name: flink-config-volume
+              mountPath: /opt/flink/conf
+            - name: flink
+              mountPath: /flink
+          securityContext:
+            runAsUser: 9999  # refers to user _flink_ from official flink image, change if necessary
+      initContainers:
+        - name: di-init-flink
+          image: busybox
+          volumeMounts:
+            - name: flink
+              mountPath: /flink
+          command: [ "/bin/sh", "-c", "(mkdir -p {{.Values.jobmanager.webUploadDir }} {{.Values.checkpoints.dir }} {{.Values.savepoints.dir}} {{.Values.highAvailability.dir}} {{.Values.highAvailability.dir}}/job-result-store/{{.Values.highAvailability.clusterId}} && chmod 777 {{.Values.jobmanager.webUploadDir }} {{.Values.checkpoints.dir }} {{.Values.savepoints.dir}} {{.Values.highAvailability.dir}} {{.Values.highAvailability.dir}}/job-result-store/{{.Values.highAvailability.clusterId}})" ]
+      volumes:
+        - name: flink
+          persistentVolumeClaim:
+            claimName: flink
+        - name: flink-config-volume
+          configMap:
+            name: flink-config
+            items:
+              - key: flink-conf.yaml
+                path: flink-conf.yaml
+              - key: log4j-console.properties
+                path: log4j-console.properties
+      {{- if .Values.affinity.enabled }}
+      affinity:
+        podAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            - labelSelector:
+                matchExpressions:
+                  - key: deployment.affinity
+                    operator: In
+                    values:
+                      - {{ .Values.affinity.value }}
+              topologyKey: "kubernetes.io/hostname"
+      {{- end }}

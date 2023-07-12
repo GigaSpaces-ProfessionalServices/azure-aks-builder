@@ -1,0 +1,51 @@
+global:
+  affinity:
+    enabled: true
+  imagePullSecrets:
+    - myregistrysecret
+  mdmServerUrl: http://di-mdm:6081
+  kafkaHost: kafka
+  kafkaPort: "9092"
+  zookeeperHost: zookeeper
+  zookeeperPort: "2181"
+  flinkUrl: http://flink-jobmanager:8081
+  xap:
+    lookupGroups: 16.3.0
+    lookupLocators: xap
+
+tags:
+  oracle: false
+  iidr: false
+
+diMdm:
+  image:
+    repository: gigaspaces/di-mdm
+    tag: 2.1.25
+    pullPolicy: IfNotPresent
+  affinity:
+    enabled: true
+    value: di
+  doGlobalConfig: false
+  repositoryProfile: sqlite
+  # when available zookeeper should be used
+  # repositoryProfile: zookeeper
+  resources: {}
+
+diManager:
+  image:
+    repository: gigaspaces/di-manager
+    tag: 2.1.36
+    pullPolicy: IfNotPresent
+  diProcessorJar: /job.jar
+  resources: {}
+
+diOperator:
+  image:
+    repository: gigaspaces/di-centos8
+    tag: "1.1"
+    pullPolicy: IfNotPresent
+  mountVolume: di
+  affinity:
+    enabled: true
+    value: di
+  resources: {}

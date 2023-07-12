@@ -1,0 +1,37 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: "webhook-server"
+  namespace:  {{ .Release.Namespace }}
+spec:
+  selector:
+    name: xap-operator
+  ports:
+    - port: 443
+      targetPort: webhook-api
+
+---
+apiVersion: admissionregistration.k8s.io/v1
+kind: MutatingWebhookConfiguration
+metadata:
+  name: "{{ .Release.Name }}-{{ .Release.Namespace }}-webhook"
+  namespace:  {{ .Release.Namespace }}
+webhooks:
+  - name: "webhook-server.default.svc"
+    objectSelector:
+      matchLabels:
+        manager: "{{ .Values.manager.name }}"
+        gsAntiAffinity: "true"
+    rules:
+      - operations: [ "CREATE" ]
+        apiGroups: [""]
+        apiVersions: ["v1"]
+        resources: ["pods"]
+    sideEffects: None
+    admissionReviewVersions: ["v1", "v1beta1"]
+    clientConfig:
+      caBundle: "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUMyakNDQWNJQ0NRRFRHVFZ6eG5uWThEQU5CZ2txaGtpRzl3MEJBUXNGQURBdk1TMHdLd1lEVlFRRERDUkIKWkcxcGMzTnBiMjRnUTI5dWRISnZiR3hsY2lCWFpXSm9iMjlySUVSbGJXOGdRMEV3SGhjTk1qSXdPREF6TVRVeQpPVEV5V2hjTk16WXdOREV4TVRVeU9URXlXakF2TVMwd0t3WURWUVFERENSQlpHMXBjM05wYjI0Z1EyOXVkSEp2CmJHeGxjaUJYWldKb2IyOXJJRVJsYlc4Z1EwRXdnZ0VpTUEwR0NTcUdTSWIzRFFFQkFRVUFBNElCRHdBd2dnRUsKQW9JQkFRQzgwdXUzOW1kRFhiTXNpcEVjY2JpVGdZSGFZaG1VQVJyZ1RsYldaVzdaYlU4SXM2Y0EzVFF4M0FiWgpZZWIzMittWlZzTjRUa0d3ZnVtNHJvRW5LYytRa3ZBSlJ1S2orMnVFMDBuUm9nOG1lMnNpa2pmZU5yTGVqZENxClpOYnltRzN4dEFXSkF4Y1ErTXJ3UTdvOFVXVXg0a0dxdWRFU05lYW5LZjZUU2czMDNhWlFjemkrdGdGUUFQOTcKY2FSdTBSdTlVc084TktFMHdEaXhmVXVENzB5OG1jZUZLMEIvZ2xwakpCS0VZWWJEREdWbzBkcGQ2QkJPcUdkZApWY3FFNkhjR1krWXNQM0xJcnFtVmxjTzl0akYyTHE4RFd6VHljSlV6NEo2UTBoN0pzcWRHUUthc3QxZEpmSWhwCjdESk9NWThReGRwMlROalpjcUVteitSWFdoRWxBZ01CQUFFd0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFFK1UKVFh4T1puUHorM3VpY1VOdC95ZVNZRUZJQ1NIc0orZ2RrSHJ4cWtUN3pRTmRuVnZOSVMxUlNldG9vdWk2QjhFMgpra2wzcUlpR2lsVVVlZEVpci9Fdnd0ZUlsV2FidXhDNkdKaFVMc09malZ6NDlwZmVjRmF3b2FBZHZLUzZHeHBsCnU2YTl1NzlGUzh4dmZ4d29IdlZGaDJ2MDI0a1N4UlIvUk9RM0tVeTJYcFVYdEV3RTZqSy91NHJ1aXAzcnZwZC8KdDNIU29TdjM0d0Q0ZXROdDdkZzA1ZCtJS3pGbm9iUVk2cGpuU2FvblUvemR4RDl4S2ZpWEh6dTJPdGpBdmRRLwp0VTNhb0xYMDlDM0tDdFF1UjFPdmdXbDIvYXIxL3VDaXY1aGJTNDh0M282azNPdFBjalNQSElVRG5iOE5LcU1FCkUybkJDTTMyTzhjZ0RaMWtjMzA9Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K"
+      service:
+        namespace: "{{ .Release.Namespace }}"
+        name: "webhook-server"
+        path: /webhook

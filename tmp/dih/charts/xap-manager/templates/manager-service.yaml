@@ -1,0 +1,40 @@
+{{ if or .Values.service.api.enabled (or .Values.service.lus.enabled .Values.service.lrmi.enabled) }}
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ template "xap-manager.fullname" . }}-service
+  labels:
+    app: {{ template "xap-manager.name" . }}
+    chart: {{ template "xap-manager.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    {{ if .Values.service.api.enabled }}
+    - name: api
+      protocol: TCP
+      port: {{ .Values.service.api.port }}
+      {{ if .Values.service.api.nodePort }}
+      nodePort: {{ .Values.service.api.nodePort }}
+      {{ end }}
+    {{ end }}
+    {{ if .Values.service.lus.enabled }}
+    - name: lus
+      protocol: TCP
+      port: {{ .Values.service.lus.port }}
+      {{ if .Values.service.lus.nodePort }}
+      nodePort: {{ .Values.service.lus.nodePort }}
+      {{ end }}
+    {{ end }}
+    {{ if .Values.service.lrmi.enabled }}
+    - name: lrmi
+      protocol: TCP
+      port: {{ .Values.service.lrmi.port }}
+      {{ if .Values.service.lrmi.nodePort }}
+      nodePort: {{ .Values.service.lrmi.nodePort }}
+      {{ end }}
+    {{ end }}
+  selector:
+    selectorId: {{ template "xap-manager.fullname" . }}
+{{ end }}

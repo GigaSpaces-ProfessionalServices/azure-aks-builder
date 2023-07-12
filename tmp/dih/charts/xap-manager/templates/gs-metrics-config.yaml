@@ -1,0 +1,18 @@
+{{- if .Values.metrics.enabled }}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: gs-metrics-config
+data:
+    {{- $file := .Files }}
+    {{- $var := .Release.Name }}
+    {{- range $path, $byte := .Files.Glob "config/metrics.xml" }}
+    {{- $list := $path | splitList "/"}}
+    {{- $length := len $list }}
+    {{- $last := add $length -1 }}
+    {{ index $list $last }}: |-
+      {{- range $line := $file.Lines $path }}
+      {{ $line | replace "[ReleaseName]" $var }}
+      {{- end }}
+  {{- end }}
+{{- end }}

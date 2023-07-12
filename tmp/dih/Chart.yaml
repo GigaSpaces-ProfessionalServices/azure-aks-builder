@@ -1,0 +1,76 @@
+apiVersion: v2
+appVersion: 16.3.0
+dependencies:
+- alias: di
+  name: di
+  repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+  version: 2.0.16
+- alias: flink
+  condition: flink.enabled
+  name: di-flink
+  repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+  version: 1.0.7
+- alias: grafana
+  name: grafana
+  repository: https://grafana.github.io/helm-charts
+  version: 6.44.7
+- alias: influxdb
+  condition: metrics.enabled
+  name: influxdb
+  repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+  version: 4.9.14
+- condition: kafka.enabled
+  name: kafka
+  repository: https://charts.bitnami.com/bitnami
+  version: 20.0.6
+- alias: redpanda
+  condition: redpanda.enabled
+  name: kafka-ui
+  repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+  version: 0.1.0
+- alias: service-creator
+  name: service-creator
+  repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+  version: 1.0.4
+- alias: service-operator
+  name: service-operator
+  repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+  version: 1.0.9
+- alias: spacedeck
+  name: spacedeck
+  repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+  version: 1.1.13
+- alias: manager
+  name: xap-manager
+  repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+  version: 16.3.0
+- alias: operator
+  name: xap-operator
+  repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+  version: 16.3.0
+- alias: dgw
+  condition: dgw.enabled
+  name: xap-dgw
+  repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+  version: 16.3.0
+- alias: iidrAS
+  name: iidr-as
+  repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+  tags:
+  - iidr
+  version: 2.2.0
+- alias: iidrKafka
+  name: iidr-kafka
+  repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+  tags:
+  - iidr
+  version: 2.0.0
+- alias: diSubscriptionManager
+  name: di-subscription-manager
+  repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+  tags:
+  - iidr
+  version: 1.2.1
+description: A Helm chart for DIH
+name: dih
+version: 16.3.0

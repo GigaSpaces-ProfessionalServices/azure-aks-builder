@@ -1,0 +1,57 @@
+# Default values for xap-dgw
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+fullnameOverride: xap-dgw
+image:
+  repository: gigaspaces/smart-cache-enterprise
+  tag: 16.3.0
+  pullPolicy: IfNotPresent #Always
+terminationGracePeriodSeconds: 30
+
+# license: Define the GigaSpaces XAP licence key.
+license: tryme
+
+# properties: Used to override the pu.xml properties that are defined as placeholders, receives string such as: memoryThreshold=7g (see documentation)
+properties:
+
+nodeSelector:
+  enabled: false
+  selector:
+
+# instances: Define the number of instances (not applicable for `partitioned` schema)
+instances: 1
+
+# java: Define the Java options for each processing unit instance.
+java:
+  # heap: Define the size of the on-heap memory for each processing unit instance as either a percentage or an absolute value.
+  heap: limit-150Mi
+  # options: Configure additional Java options for each processing unit instance.
+  options:
+# resources: Configure the processing unit instance resources.
+resources:
+  # Best practice is do not specify default resources, so the user can configure independently.
+  # This can be especially risky when the chart is run on an environment with limited
+  # resources, such as a minikube. If you still want to configure specific resources, adjust the values as necessary.
+  limits:
+    memory: 400Mi
+
+env:
+# manager: Used when you install the Platform Manager separately; insert the Platform Manager release name here.
+manager:
+  name: xap-manager
+  ports:
+    api: 8090
+  # discoveryTimeoutSeconds: Define the length of the timeout for checking if the Platform Manager is available.
+  # If the timeout expires and the Platform Manager is still unavailable, the init pod will restart.
+  discoveryTimeoutSeconds: 60
+
+
+# When enabled, mount metrics configMap for metrics reported by Gigaspaces components.
+metrics:
+  enabled: false
+
+# When enabled, will attach a volume for the tierd-storage.
+persistence:
+  enabled: false
+

@@ -1,0 +1,7 @@
+apiVersion: v1
+appVersion: 1.15.3
+description: di flink HA influx
+keywords:
+- docker-compose.v3
+name: di-flink
+version: 1.0.7

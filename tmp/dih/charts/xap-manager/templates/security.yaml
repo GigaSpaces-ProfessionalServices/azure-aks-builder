@@ -1,0 +1,103 @@
+{{- if .Values.securityService.enabled }}
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: xap-security
+  namespace:  {{ .Release.Namespace }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      selectorId: xap-security
+  template:
+    metadata:
+      labels:
+        release: {{ .Release.Name }}
+        selectorId: xap-security
+    spec:
+      containers:
+        - name: security-container
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          command: ["java", "-jar", "{{ .Values.securityService.execJar | default "tools/security-server/xap-security-server.jar" }}", "--spring.application.json={\"zk_connection\":\"{{ template "xap-manager.fullname" . }}-hs:{{ .Values.hs.zkClient }}\"}" ]
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          env:
+            - name: ZK_CON_STR
+              value: "{{ template "xap-manager.fullname" . }}-hs:{{ .Values.hs.zkClient }}"
+            - name: server.internalIp
+              value: "xap-security-service.{{ .Release.Namespace }}.svc.cluster.local"
+            - name: root.username
+              valueFrom:
+                secretKeyRef:
+                  name: "{{ .Values.securityService.secretKeyRef.name }}"
+                  key: user
+            - name: root.password
+              valueFrom:
+                secretKeyRef:
+                  name: "{{ .Values.securityService.secretKeyRef.name }}"
+                  key: password
+          envFrom:
+            - configMapRef:
+                name: "{{ .Values.securityService.rolesConfigMap }}"
+          readinessProbe:
+            httpGet:
+              path: /actuator/health/readiness
+              port: {{ .Values.securityService.port }}
+            initialDelaySeconds: {{ .Values.securityService.readinessProbe.initialDelaySeconds | default 60 }}
+            periodSeconds: 15
+            successThreshold: 1
+            failureThreshold: 5
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: xap-security-service
+  namespace:  {{ .Release.Namespace }}
+spec:
+  type: {{ .Values.securityService.type }}
+  ports:
+    - port: {{ .Values.securityService.port }}
+      protocol: TCP
+      {{ if .Values.securityService.nodePort }}
+      nodePort: {{ .Values.securityService.nodePort }}
+      {{ end }}
+  selector:
+    selectorId: xap-security
+---
+#root user credentials (root/password)
+apiVersion: v1
+kind: Secret
+metadata:
+  name: root-credentials
+type: Opaque
+data:
+  user: "{{ .Values.securityService.secretKeyRef.user }}"
+  password: "{{ .Values.securityService.secretKeyRef.password }}"
+---
+#default roles vs permissions
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: roles-map
+data:
+  roles.ROLE_ADMIN: |
+    SystemPrivilege MANAGE_IDENTITY_PROVIDERS
+    , MonitorPrivilege MONITOR_PU
+    , MonitorPrivilege MONITOR_JVM
+    , GridPrivilege MANAGE_GRID
+    , GridPrivilege MANAGE_PU
+    , GridPrivilege PROVISION_PU
+    , SpacePrivilege EXECUTE
+    , SpacePrivilege ALTER
+    , SpacePrivilege WRITE
+    , SpacePrivilege READ
+    , SpacePrivilege NOT_SET
+    , SpacePrivilege TAKE
+    , SpacePrivilege CREATE
+    , SystemPrivilege MANAGE_ROLES
+    , SystemPrivilege MANAGE_USERS
+  roles.ROLE_MNGR: |
+    MonitorPrivilege MONITOR_JVM
+    , MonitorPrivilege MONITOR_PU
+    , GridPrivilege PROVISION_PU
+{{- end }}

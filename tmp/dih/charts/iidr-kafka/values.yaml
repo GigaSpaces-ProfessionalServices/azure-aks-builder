@@ -1,0 +1,22 @@
+global:
+  imagePullSecrets:
+    - myregistrysecret
+
+image:
+  repository: gigaspaces/di-iidr-kafka
+  tag: 2.0.0
+  imagePullPolicy: IfNotPresent
+envs:
+  bootstrapServers: kafka
+  bootstrapServersPort: 9092
+volumes:
+  iidrKafka:
+    resources:
+      requests:
+        storage: 1000Mi
+volumeMounts:
+  enabled: true
+affinity:
+  enabled: false
+  value: iidr
+resources: {}

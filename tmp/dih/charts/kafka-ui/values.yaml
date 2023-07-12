@@ -1,0 +1,19 @@
+# Default values for kafka-ui.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+fullnameOverride: kafka-ui
+autoscaling:
+  enabled: true
+replicaCount: 1
+
+image:
+  repository: docker.redpanda.com/vectorized/console
+  pullPolicy: IfNotPresent
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: latest
+
+service:
+  type: ClusterIP
+resources: {}
+
+

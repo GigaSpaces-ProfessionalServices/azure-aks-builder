@@ -1,0 +1,75 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    io.kompose.network/docker-di: "true"
+    io.kompose.service: di-subscription-manager
+  name: di-subscription-manager
+  namespace: {{ .Release.Namespace }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      io.kompose.service: di-subscription-manager
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        io.kompose.network/docker-di: "true"
+        io.kompose.service: di-subscription-manager
+        {{- if .Values.affinity.enabled }}
+        deployment.affinity: {{ .Values.affinity.value }}
+        {{- end }}
+      name: di-subscription-manager
+      namespace: {{ .Release.Namespace }}
+    spec:
+      containers:
+        - env:
+            - name: IIDR_AS_HOSTNAME
+              value: "{{ .Values.global.iidrAsHost }}"
+            - name: IIDR_AS_PORT
+              value: "{{ .Values.global.iidrAsPort }}"
+            - name: KAFKA_HOST
+              value: "{{ .Values.global.kafkaHost }}"
+            - name: KAFKA_PORT
+              value: "{{ .Values.global.kafkaPort }}"
+            - name: IIDR_KAFKA_HOST
+              value: "{{ .Values.global.iidrKafkaHost }}"
+            - name: IIDR_KAFKA_PORT
+              value: "{{ .Values.global.iidrKafkaPort }}"
+            - name: MDM_SERVER_FALLBACK-URL
+              value: "{{ .Values.global.mdmServerUrl }}"
+            - name: MDM_SERVER_URL
+              value: "{{ .Values.global.mdmServerUrl }}"
+          image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
+          name: di-subscription-manager
+          lifecycle:
+            postStart:
+              exec:
+                command: [ "/bin/sh", "-c", "(sudo mkdir -p /di/iidr-kafka && sudo chown gsods:gsods /di/iidr-kafka)" ]
+          ports:
+            - containerPort: 6082
+          resources: {{ toYaml .Values.resources | nindent 12 }}
+          volumeMounts:
+            - mountPath: /di
+              name: iidr
+      restartPolicy: Always
+      {{- include "di.imagePullSecrets" . | nindent 6 }}
+      volumes:
+        - name: iidr
+          persistentVolumeClaim:
+            claimName: iidr
+      {{- if .Values.affinity.enabled }}
+      affinity:
+        podAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            - labelSelector:
+                matchExpressions:
+                  - key: deployment.affinity
+                    operator: In
+                    values:
+                      - {{ .Values.affinity.value }}
+              topologyKey: "kubernetes.io/hostname"
+      {{- end }}
+status: {}

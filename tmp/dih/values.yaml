@@ -1,0 +1,182 @@
+#  When enabled, Installs Grafana and Influxdb services for gathering metrics reported by Gigaspaces components.
+#  The ConfigMap is loaded from the configuration file: charts/xap-manager/config/metrics.xml
+
+# Configuring here:
+# fullnameOverrides
+# image tags
+# feature flags
+# hostnames that the pod connects to
+# other overrides
+
+global:
+  affinity:
+    enabled: true
+  imagePullSecrets:
+    - myregistrysecret
+  mdmServerUrl: http://di-mdm:6081
+  kafkaHost: kafka
+  kafkaPort: "9092"
+  zookeeperHost: zookeeper
+  zookeeperPort: "2181"
+  flinkUrl: http://flink-jobmanager:8081
+  iidrAsHost: iidr-as
+  iidrAsPort: "10101"
+  iidrKafkaHost: iidr-kafka
+  iidrKafkaPort: "11701"
+  xap:
+    lookupGroups: 16.3.0
+    lookupLocators: xap-manager-service
+
+
+metrics:
+  enabled: true
+
+manager:
+  metrics:
+    enabled: true
+  service:
+    type: ClusterIP
+  ha: true
+  securityService:
+    enabled: false
+
+spacedeck:
+  auth:
+    enabled: false
+
+grafana:
+  fullnameOverride: "grafana"
+  service:
+    port: 3000
+    targetPort: 3000
+  #  adminUser: admin
+  rbac:
+    create: true
+    pspEnabled: false
+    namespaced: true
+  nodeSelector: {}
+  adminUser: admin
+  adminPassword: admin
+  sidecar:
+    dashboards:
+      enabled: true
+
+
+influxdb:
+  image:
+    tag: 1.8.10
+  service:
+    port: 8086
+    targetPort: 8086
+  env:
+    - name: INFLUXDB_DB
+      value: mydb
+  persistence:
+    enabled: true
+    size: 8Gi
+  nodeSelector: {}
+
+tags:
+  iidr: false
+
+di:
+  diMdm:
+    image:
+      repository: gigaspaces/di-mdm
+      pullPolicy: IfNotPresent
+    affinity:
+      enabled: true
+      value: di
+    doGlobalConfig: true
+    repositoryProfile: zookeeper
+  diManager:
+    image:
+      repository: gigaspaces/di-manager
+      pullPolicy: IfNotPresent
+    diProcessorJar: /job.jar
+  diOperator:
+    image:
+      repository: gigaspaces/di-centos8
+      tag: "1.1"
+      pullPolicy: IfNotPresent
+    mountVolume: di
+    affinity:
+      enabled: true
+      value: di
+
+flink:
+  enabled: true
+  rootLoggerLevel: INFO
+  jobmanager:
+    address: flink-jobmanager
+    memoryRequestSize: 1.5Gi
+    memoryProcessSize: 1200m #jobmanager.memory.process.size : Total Process Memory size for the JobManager
+    jvmMetaspaceSize: 400m
+  taskmanager:
+    numberOfTaskSlots: 2 #taskmanager.numberOfTaskSlots : min 1 max 10 . The number of jobs per taskmanager
+    memoryRequestSize: 1.5Gi
+    memoryProcessSize: 1200m #taskmanager.memory.process.size : Total Process Memory size for the TaskExecutors
+    jvmMetaspaceSize: 400m
+  affinity:
+    enabled: true
+    value: flink
+  metrics:
+    enabled: true
+    db: mydb
+    host: influxdb
+    port: 8086
+
+kafka:
+  enabled: true
+  fullnameOverride: kafka
+  replicaCount: 3
+  containerPorts:
+    client: 9092
+  service:
+    type: ClusterIP
+    ports:
+      client: 9092
+  persistence:
+    enabled: true
+    size: 8Gi
+  zookeeper:
+    enabled: true
+    fullnameOverride: zookeeper
+    replicaCount: 3
+    containerPorts:
+      client: 2181
+    service:
+      type: ClusterIP
+      ports:
+        client: 2181
+    persistence:
+      enabled: true
+      size: 8Gi
+
+
+iidrKafka:
+  envs:
+    bootstrapServers: kafka
+    bootstrapServersPort: 9092
+  volumeMounts:
+    enabled: true
+  affinity:
+    enabled: true
+    value: iidr
+
+iidrAS:
+  affinity:
+    enabled: true
+    value: iidr
+
+redpanda:
+  enabled: true
+  fullnameOverride: redpanda
+
+diSubscriptionManager:
+  affinity:
+    enabled: true
+    value: iidr
+
+dgw:
+  enabled: true

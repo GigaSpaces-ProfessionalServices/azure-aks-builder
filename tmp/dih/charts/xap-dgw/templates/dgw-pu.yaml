@@ -1,0 +1,43 @@
+apiVersion: gigaspaces.com/v1
+kind: ProcessingUnit
+metadata:
+  name: {{ template "xap-dgw.fullname" . }}
+  namespace: {{ .Release.Namespace }}
+  labels:
+    release: {{ .Release.Name }}
+spec:
+  productType: xap
+  antiAffinity: false
+  ha: false
+  image:
+    pullPolicy: "{{  .Values.image.pullPolicy }}"
+    repository: "{{  .Values.image.repository }}"
+    tag: "{{  .Values.image.tag }}"
+  instances: {{  .Values.instances }}
+  javaHeap: {{  .Values.java.heap }}
+  {{- if .Values.java.options }}
+  javaOptions: {{ .Values.java.options }}
+  {{- end }}
+  license: {{  .Values.license }}
+  livenessProbe: {{ toYaml  .Values.livenessProbe | nindent 4 }}
+  manager: {{ toYaml .Values.manager | nindent 4 }}
+  multiCast: false
+  {{- if  .Values.nodeSelector.enabled }}
+  nodeSelector:
+    enabled: {{  .Values.nodeSelector.enabled }}
+    selector: {{ .values.nodeSelector.selector }}
+  {{- end }}
+  partitions: null
+  properties: {{  .Values.properties }}
+  {{ toYaml  .Values.env | indent 4 }}
+  readinessProbe: {{ toYaml  .Values.readinessProbe | nindent 4 }}
+  resourceUrl: ../tools/data-gateway/xap-data-gateway.jar
+  resources:
+    limits:
+      {{- if  .Values.resources.limits.cpu }}
+      cpu: {{  .Values.resources.limits.cpu }}
+      {{- end }}
+      memory: {{  .Values.resources.limits.memory}}
+    requests: null
+  persistence:
+    enabled: {{  .Values.persistence.enabled }}

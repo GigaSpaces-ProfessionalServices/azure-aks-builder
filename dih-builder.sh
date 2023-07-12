@@ -281,7 +281,7 @@ printIngressTCP () {
   ingressIP=$(kubectl get services  ingress-nginx-controller --output jsonpath='{.status.loadBalancer.ingress[0].ip}')
   echo "Ingress exposed TCP ports:"
   echo ----------------------------------------------------------------------
-  cat ~/azure-aks-builder/DIH/helm/ingress-controller-tcp.yaml |grep -v "#" |grep default |tr -d '"' |tr -d ' '|sed 's/:default\// --> /' |cut -d':' -f1 |sed -e "s/^/$ingressIP:/"
+  cat DIH/helm/ingress-controller-tcp.yaml |grep -v "#" |grep default |tr -d '"' |tr -d ' '|sed 's/:default\// --> /' |cut -d':' -f1 |sed -e "s/^/$ingressIP:/"
   echo ----------------------------------------------------------------------
   echo
   read -p "Enter any key to back to the menu >> " key

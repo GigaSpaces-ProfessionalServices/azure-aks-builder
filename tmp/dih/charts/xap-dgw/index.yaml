@@ -1,0 +1,3902 @@
+apiVersion: v1
+entries:
+  di:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2023-03-15T18:14:56.177356+02:00"
+    description: A Helm chart for Kubernetes
+    digest: e508bddd4f2445b4d27437bca42a2c7f0f07c5f3e8b3ab5fd4720204908dd88c
+    name: di
+    type: application
+    urls:
+    - di-2.1.29.tgz
+    version: 2.1.29
+  - apiVersion: v2
+    created: "2023-04-24T20:19:17.443332+03:00"
+    description: DI Chart (mdm, manager & operator)
+    digest: de9aec67d78573450749347a87910d8aa339dbeced5ce3cc552f8f88fb1cb7ab
+    name: di
+    urls:
+    - di-2.0.15.tgz
+    version: 2.0.15
+  - apiVersion: v2
+    created: "2023-04-24T18:39:22.80201+03:00"
+    description: DI Chart (mdm, manager & operator)
+    digest: 254cd27d8064ce0dadb1ce9f8fb3f3159b65bb9dab9366cb45c99c292c3dcb6e
+    name: di
+    urls:
+    - di-2.0.14.tgz
+    version: 2.0.14
+  - apiVersion: v2
+    created: "2023-04-20T12:11:13.808657+03:00"
+    description: DI Chart (mdm, manager & operator)
+    digest: ae0f57af0f3708b44b99e0b7f895943aa8eeea1165d573b354f3a82cc27af63a
+    name: di
+    urls:
+    - di-2.0.13.tgz
+    version: 2.0.13
+  - apiVersion: v2
+    created: "2023-04-19T11:57:32.056973+03:00"
+    description: DI Chart (mdm, manager & operator)
+    digest: 377a859b5f06be25424bd96f25e6792b2ccf8a0dc46dc3d192c3782257db6a80
+    name: di
+    urls:
+    - di-2.0.12.tgz
+    version: 2.0.12
+  - apiVersion: v2
+    created: "2023-04-09T17:56:14.185232+03:00"
+    description: DI Chart (mdm, manager & operator)
+    digest: 6c272f11182dc9f22cf285cc32bd3fd4d40dbc73998b89972bb322b7b25494e1
+    name: di
+    urls:
+    - di-2.0.11.tgz
+    version: 2.0.11
+  - apiVersion: v2
+    created: "2023-03-27T17:08:08.196252+03:00"
+    description: Full DI Chart
+    digest: a4d955201a0173e85ef00946e370de2d0a4da910300354dbb76cd476de7852b7
+    name: di
+    urls:
+    - di-2.0.7.tgz
+    version: 2.0.7
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-11-21T18:10:47.691179+02:00"
+    description: A Helm chart for Kubernetes
+    digest: 9ff5be81130b266739ddba8af3e64d61809c743db5cceb50a9bc0f5ce3ade0e3
+    name: di
+    type: application
+    urls:
+    - di-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2023-03-07T12:59:39.18932+02:00"
+    description: A Helm chart for Kubernetes
+    digest: 982f06b2b08ccf89ae605e169e037db616c2458a89e5c5c8d0082fb89ca089e6
+    name: di
+    type: application
+    urls:
+    - di-0.1.0.tgz
+    version: 0.1.0
+  di-config:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2023-01-17T18:08:43.15915+02:00"
+    description: A Helm chart for Kubernetes
+    digest: bb771edffd7f77b043acb61a43608b25784c332998df6ab4169be41e0ab04386
+    name: di-config
+    type: application
+    urls:
+    - di-config-0.1.0.tgz
+    version: 0.1.0
+  di-flink:
+  - apiVersion: v1
+    appVersion: 1.15.3
+    created: "2023-04-24T20:18:52.948967+03:00"
+    description: di flink HA influx
+    digest: 7d3613b399335104a76c9fea4d09b340339004df747a0a594198dc14b0a3b2a7
+    keywords:
+    - docker-compose.v3
+    name: di-flink
+    urls:
+    - di-flink-1.0.7.tgz
+    version: 1.0.7
+  - apiVersion: v1
+    appVersion: 1.15.3
+    created: "2023-04-17T19:35:18.448164+03:00"
+    description: di flink HA influx
+    digest: 4470027dae5e97958225fc2d2dc45fe2d7fe604e1de415bf7311880905a90ede
+    keywords:
+    - docker-compose.v3
+    name: di-flink
+    urls:
+    - di-flink-1.0.6.tgz
+    version: 1.0.6
+  - apiVersion: v1
+    appVersion: 1.15.3
+    created: "2023-04-09T14:43:34.034479+03:00"
+    description: di flink HA influx
+    digest: 513d694f113de1b12ebadc77dd3692bb7b8846f647b1e3b5bc45ef7495d0fd7a
+    keywords:
+    - docker-compose.v3
+    name: di-flink
+    urls:
+    - di-flink-1.0.5.tgz
+    version: 1.0.5
+  - apiVersion: v1
+    appVersion: 1.15.3
+    created: "2023-03-28T15:00:06.175556+03:00"
+    description: di flink HA influx
+    digest: b1d5261bc97d4c22231c8b5620c2e34ae1941c4dea2fb7185bd0cabdb8f231a2
+    keywords:
+    - docker-compose.v3
+    name: di-flink
+    urls:
+    - di-flink-1.0.4.tgz
+    version: 1.0.4
+  - apiVersion: v1
+    appVersion: 1.15.3
+    created: "2023-03-26T18:11:14.526903+03:00"
+    description: di flink HA
+    digest: 6f0fc20dc0dbcd3051dadd767cb82355f97c4ed3a685fcf42f05dee20ef8bf92
+    keywords:
+    - docker-compose.v3
+    name: di-flink
+    urls:
+    - s3://resources.gigaspaces.com/helm-charts-dih/di-flink-1.0.3.tgz
+    version: 1.0.3
+  - apiVersion: v1
+    appVersion: 1.15.3
+    created: "2023-03-27T17:08:18.808762+03:00"
+    description: di flink HA
+    digest: 6c2d813fb7a99712da4d878bb0890f0bee4cb359fbf59dfb92fd3fb1c368bff0
+    keywords:
+    - docker-compose.v3
+    name: di-flink
+    urls:
+    - di-flink-1.0.2.tgz
+    version: 1.0.2
+  - apiVersion: v1
+    appVersion: 1.15.3
+    created: "2023-03-16T14:52:21.281066+02:00"
+    description: di flink without HA
+    digest: 12ec7379ddff449c45c8f7438b2b6cdbc24f0af186d58c166f51a23e6d9fb803
+    keywords:
+    - docker-compose.v3
+    name: di-flink
+    urls:
+    - di-flink-1.0.1.tgz
+    version: 1.0.1
+  - apiVersion: v1
+    appVersion: 1.15.3
+    created: "2023-03-16T15:10:53.732452+02:00"
+    description: di flink without HA
+    digest: 71653a252799b3ed9afd06948dd0be4ca84becddc74c42832a550b44b599f75c
+    keywords:
+    - docker-compose.v3
+    name: di-flink
+    urls:
+    - di-flink-1.0.0.tgz
+    version: 1.0.0
+  di-full:
+  - apiVersion: v2
+    created: "2023-03-26T12:43:50.737689+03:00"
+    dependencies:
+    - alias: di_flink
+      condition: di_flink.enabled
+      name: di-flink
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 1.0.2
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 20.0.6
+    - condition: spacedeck.enabled
+      name: spacedeck
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 1.0.33
+    - alias: xapSingleSpace
+      condition: xapSingleSpace.enabled
+      name: xap-single-space
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 1.2.3
+    - condition: xap.enabled
+      name: xap
+      repository: https://resources.gigaspaces.com/helm-charts-ea
+      version: 16.3.0-m9
+    - alias: diOracleDB
+      name: di-oracledb
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      tags:
+      - oracle
+      version: 1.0.1
+    - alias: iidrOracle
+      name: iidr-oracle
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      tags:
+      - oracle
+      - iidr
+      version: 1.0.2
+    - alias: iidrAS
+      name: iidr-as
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      tags:
+      - iidr
+      version: 1.0.2
+    - alias: iidrKafka
+      name: iidr-kafka
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      tags:
+      - iidr
+      version: 1.0.2
+    - alias: redpanda
+      condition: redpanda.enabled
+      name: kafka-ui
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    description: Full DI Chart
+    digest: 59b9a5a4109394bf8c99e9cf4d9bd8cac00ab01d96f04fee63efd05e26d2811d
+    name: di-full
+    urls:
+    - s3://resources.gigaspaces.com/helm-charts-dih/di-full-2.0.10.tgz
+    version: 2.0.10
+  - apiVersion: v2
+    created: "2023-03-22T15:22:42.685742+02:00"
+    description: Full DI Chart
+    digest: 91cfe9679902d092ed5b2e4a5c0555fef8f93f06b28303ab4c7e215fb2d9db13
+    name: di-full
+    urls:
+    - di-full-2.0.7.tgz
+    version: 2.0.7
+  di-oracle:
+  - apiVersion: v2
+    appVersion: 16.3.0-rc4
+    created: "2023-04-24T19:42:43.031592+03:00"
+    dependencies:
+    - alias: iidrOracle
+      name: iidr-oracle
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      tags:
+      - oracle
+      version: 2.0.1
+    - alias: diOracleDB
+      name: di-oracledb
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      tags:
+      - oracle
+      version: 1.0.2
+    description: A Helm chart for Oracle and agent (demo)
+    digest: ecbdc8b5e7b20cd3b3ff8ca9b91da53fb940eff717eb817c7f6e32215d53ab50
+    name: di-oracle
+    urls:
+    - di-oracle-16.3.0-rc4.tgz
+    version: 16.3.0-rc4
+  - apiVersion: v2
+    appVersion: 16.3.0-rc3
+    created: "2023-04-20T18:40:34.217343+03:00"
+    dependencies:
+    - alias: iidrOracle
+      name: iidr-oracle
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      tags:
+      - oracle
+      version: 2.0.1
+    - alias: diOracleDB
+      name: di-oracledb
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      tags:
+      - oracle
+      version: 1.0.2
+    description: A Helm chart for Oracle and agent (demo)
+    digest: fcc437de6403cf09fd9302b67a80703961a43fb875148d8859d98a288b43b6da
+    name: di-oracle
+    urls:
+    - di-oracle-16.3.0-rc3.tgz
+    version: 16.3.0-rc3
+  - apiVersion: v2
+    appVersion: 16.3.0-rc2-shai
+    created: "2023-04-18T10:26:43.22256+03:00"
+    dependencies:
+    - alias: iidrOracle
+      name: iidr-oracle
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      tags:
+      - oracle
+      version: 1.0.3
+    - alias: diOracleDB
+      name: di-oracledb
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      tags:
+      - oracle
+      version: 1.0.2
+    description: A Helm chart for Oracle and agent (demo)
+    digest: 21e88f6c2389858f7695a18c7e9c325572db09adb0bc164c61c93125e655c407
+    name: di-oracle
+    urls:
+    - di-oracle-16.3.0-rc2-shai.tgz
+    version: 16.3.0-rc2-shai
+  - apiVersion: v2
+    appVersion: 16.3.0-rc2
+    created: "2023-04-10T18:44:39.287189+03:00"
+    dependencies:
+    - alias: iidrOracle
+      name: iidr-oracle
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      tags:
+      - oracle
+      version: 1.0.3
+    - alias: diOracleDB
+      name: di-oracledb
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      tags:
+      - oracle
+      version: 1.0.2
+    description: A Helm chart for DI Oracle
+    digest: 635b3c06da2bd21d4a2b22f6d6a2a4781488b2e8b0751a82f6963a7f155bec8a
+    name: di-oracle
+    urls:
+    - di-oracle-16.3.0-rc2.tgz
+    version: 16.3.0-rc2
+  - apiVersion: v2
+    appVersion: 16.3.0-rc1
+    created: "2023-04-02T18:47:57.745498+03:00"
+    dependencies:
+    - alias: iidrOracle
+      name: iidr-oracle
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      tags:
+      - oracle
+      version: 1.0.3
+    - alias: diOracleDB
+      name: di-oracledb
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      tags:
+      - oracle
+      version: 1.0.2
+    description: A Helm chart for DI Oracle
+    digest: 680bbb959f2a22b5977f81134e1c62198158dc8d0dd3c8ec64d83ce111b88cd7
+    name: di-oracle
+    urls:
+    - di-oracle-16.3.0-rc1.tgz
+    version: 16.3.0-rc1
+  - apiVersion: v2
+    appVersion: 16.3.0-m10
+    created: "2023-03-31T11:07:43.565973+03:00"
+    dependencies:
+    - alias: iidrOracle
+      name: iidr-oracle
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      tags:
+      - oracle
+      version: 1.0.3
+    - alias: diOracleDB
+      name: di-oracledb
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      tags:
+      - oracle
+      version: 1.0.2
+    description: A Helm chart for DI Oracle
+    digest: b065355c54aa77d1ae7793aeb62d653c517cefcc610f227838a1713bca99118f
+    name: di-oracle
+    urls:
+    - di-oracle-16.3.0-m10.tgz
+    version: 16.3.0-m10
+  di-oracledb:
+  - apiVersion: v1
+    created: "2023-04-24T20:19:00.905533+03:00"
+    description: A generated Helm Chart for /Users/anatoliy.berelekhis/IdeaProjects/di-e2e/docker/docker-compose.full
+      from Skippbox Kompose
+    digest: a003e555a1060cc835be3b3de0b99425a1bfd2aa8360ca97fbf396b36ab80018
+    keywords:
+    - di-oracledb
+    name: di-oracledb
+    urls:
+    - di-oracledb-1.0.2.tgz
+    version: 1.0.2
+  - apiVersion: v1
+    created: "2023-03-28T11:11:44.430849+03:00"
+    description: A generated Helm Chart for /Users/anatoliy.berelekhis/IdeaProjects/di-e2e/docker/docker-compose.full
+      from Skippbox Kompose
+    digest: f7cf58357b47a33c31c4e4b5fc4258c2771a32b09258ed12613623f98b8e337a
+    keywords:
+    - di-oracledb
+    name: di-oracledb
+    urls:
+    - di-oracledb-1.0.1.tgz
+    version: 1.0.1
+  - apiVersion: v1
+    created: "2023-02-20T16:02:28.20169+02:00"
+    description: A generated Helm Chart for /Users/anatoliy.berelekhis/IdeaProjects/di-e2e/docker/docker-compose.full
+      from Skippbox Kompose
+    digest: f660198d6cba79e467c5873197d226dc8138a85ec5a215fc134f6ed74b45540d
+    keywords:
+    - di-oracledb
+    name: di-oracledb
+    urls:
+    - di-oracledb-1.0.0.tgz
+    version: 1.0.0
+  di-pipeline:
+  - apiVersion: v2
+    appVersion: 16.3.0-m8
+    created: "2023-03-09T16:45:08.653415+02:00"
+    dependencies:
+    - alias: di
+      name: di
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: flink
+      name: flink
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.2.1
+    - alias: grafana
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 6.44.7
+    - alias: influxdb
+      condition: metrics.enabled
+      name: influxdb
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 4.9.14
+    - alias: kafka
+      name: kafka
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 20.0.4
+    - alias: kafka-ui
+      name: kafka-ui
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: service-creator
+      name: service-creator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: service-operator
+      name: service-operator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: spacedeck
+      name: spacedeck
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 1.0.21
+    - alias: manager
+      name: xap-manager
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 16.3.0-m8
+    - alias: operator
+      name: xap-operator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 16.3.0-m8
+    description: A Helm chart for DI pipeline
+    digest: da3ecb76d93a8b85135d176a8f8a7f7501c69cb6bcd7d9fdfb52390c37edb9d6
+    name: di-pipeline
+    urls:
+    - di-pipeline-16.3.0-m8.tgz
+    version: 16.3.0-m8
+  - apiVersion: v2
+    appVersion: 16.3.0-m5-1
+    created: "2023-02-28T14:31:21.66392+01:00"
+    dependencies:
+    - alias: di
+      name: di
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: flink
+      name: flink
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.2.1
+    - alias: grafana
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 6.44.7
+    - alias: influxdb
+      condition: metrics.enabled
+      name: influxdb
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 4.9.14
+    - alias: kafka
+      name: kafka
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 20.0.4
+    - alias: kafka-ui
+      name: kafka-ui
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: service-creator
+      name: service-creator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: service-operator
+      name: service-operator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: spacedeck
+      name: spacedeck
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: manager
+      name: xap-manager
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 16.2.2
+    - alias: operator
+      name: xap-operator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 16.2.2
+    description: A Helm chart for DI pipeline
+    digest: 63ea4fea358b0f54904c11b2b3682bb17053460b07df92fcb6aa961285ac7a18
+    name: di-pipeline
+    urls:
+    - di-pipeline-16.3.0-m5-1.tgz
+    version: 16.3.0-m5-1
+  - apiVersion: v2
+    appVersion: 16.3.0-m5
+    created: "2023-01-17T16:16:36.714041+02:00"
+    dependencies:
+    - alias: di
+      name: di
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: flink
+      name: flink
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.2.1
+    - alias: grafana
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 6.44.7
+    - alias: influxdb
+      condition: metrics.enabled
+      name: influxdb
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 4.9.14
+    - alias: kafka
+      name: kafka
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 20.0.4
+    - alias: kafka-ui
+      name: kafka-ui
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: service-creator
+      name: service-creator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: service-operator
+      name: service-operator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: spacedeck
+      name: spacedeck
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: manager
+      name: xap-manager
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 16.2.2
+    - alias: operator
+      name: xap-operator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 16.2.2
+    description: A Helm chart for DI pipeline
+    digest: 82d4feb7b16707614420a0a573b7df132107a699f11c2add459778485012a2a5
+    name: di-pipeline
+    urls:
+    - di-pipeline-16.3.0-m5.tgz
+    version: 16.3.0-m5
+  - apiVersion: v2
+    appVersion: 16.2.10
+    created: "2023-01-17T16:08:30.633967+02:00"
+    dependencies:
+    - alias: di
+      name: di
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: flink
+      name: flink
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.2.1
+    - alias: grafana
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 6.44.7
+    - alias: influxdb
+      condition: metrics.enabled
+      name: influxdb
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 4.9.14
+    - alias: kafka
+      name: kafka
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 20.0.4
+    - alias: kafka-ui
+      name: kafka-ui
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: service-creator
+      name: service-creator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: service-operator
+      name: service-operator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: spacedeck
+      name: spacedeck
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: manager
+      name: xap-manager
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 16.2.2
+    - alias: operator
+      name: xap-operator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 16.2.2
+    description: A Helm chart for DI pipeline
+    digest: 6c14ea431c026edfda6db930c0be6b49e515e89063b8b3163631d64d588100d8
+    name: di-pipeline
+    urls:
+    - di-pipeline-16.2.10.tgz
+    version: 16.2.10
+  - apiVersion: v2
+    appVersion: 16.2.9
+    created: "2023-01-16T10:28:24.59315+02:00"
+    dependencies:
+    - alias: di
+      name: di
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: flink
+      name: flink
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.2.1
+    - alias: grafana
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 6.44.7
+    - alias: influxdb
+      condition: metrics.enabled
+      name: influxdb
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 4.9.14
+    - alias: kafka
+      name: kafka
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 20.0.4
+    - alias: kafka-ui
+      name: kafka-ui
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: service-creator
+      name: service-creator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: service-operator
+      name: service-operator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: spacedeck
+      name: spacedeck
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: manager
+      name: xap-manager
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 16.2.2
+    - alias: operator
+      name: xap-operator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 16.2.2
+    description: A Helm chart for DI pipeline
+    digest: c4bae00fe2bc384dde15edd06d9728d7468b046bc40557e0b9280a543496c3b5
+    name: di-pipeline
+    urls:
+    - di-pipeline-16.2.9.tgz
+    version: 16.2.9
+  - apiVersion: v2
+    appVersion: "1.0"
+    created: "2022-11-21T18:10:47.718366+02:00"
+    dependencies:
+    - alias: manager
+      name: xap-manager
+      repository: file://../xap-manager
+      version: 16.2.2
+    - alias: operator
+      name: xap-operator
+      repository: file://../xap-operator
+      version: 16.2.2
+    - alias: spacedeck
+      condition: spacedeck.enabled
+      name: spacedeck
+      repository: file://../spacedeck
+      version: 0.1.0
+    - alias: di
+      name: di
+      repository: file://../di
+      version: 0.2.0
+    - alias: kafka
+      name: kafka
+      repository: file://../kafka
+      version: 19.0.0
+    - alias: flink
+      name: flink
+      repository: file://../flink
+      version: 0.2.0
+    - alias: grafana
+      condition: metrics.enabled
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 6.13.6
+    - alias: influxdb
+      condition: metrics.enabled
+      name: influxdb
+      repository: https://influxdata.github.io/helm-charts
+      version: 4.9.14
+    description: A Helm chart for GigaSpaces XAP DIH
+    digest: 5daf5069d9060b1e16f2b0fec2a95121d0ce5e47d25eaa99879425e0d4f7720b
+    name: di-pipeline
+    urls:
+    - di-pipeline-0.2.0.tgz
+    version: 0.2.0
+  di-subscription-manager:
+  - apiVersion: v1
+    created: "2023-04-24T19:23:36.262386+03:00"
+    digest: 958d60bba9938c1e9ae38e1f082864de7b3903e53492cae021c3c4195c41048b
+    keywords:
+    - di-subscription-manager
+    name: di-subscription-manager
+    urls:
+    - di-subscription-manager-1.2.2.tgz
+    version: 1.2.2
+  - apiVersion: v1
+    created: "2023-04-24T20:19:09.063177+03:00"
+    digest: b34ff875e41a3d0e879e0438dc21aada1a5e1e58cf93b77c7e3526e847ef48dd
+    keywords:
+    - di-subscription-manager
+    name: di-subscription-manager
+    urls:
+    - di-subscription-manager-1.2.1.tgz
+    version: 1.2.1
+  - apiVersion: v1
+    created: "2023-04-19T11:57:20.423618+03:00"
+    digest: 0cc660cf8864adaaa75df94abc402190b21f385df1174ba4b701a34b800a0787
+    keywords:
+    - di-subscription-manager
+    name: di-subscription-manager
+    urls:
+    - di-subscription-manager-1.2.0.tgz
+    version: 1.2.0
+  - apiVersion: v1
+    created: "2023-04-18T17:20:46.630591737+03:00"
+    digest: 347797e748842e5dd8f53ff64ef271bd234102cc5325d5a373b8802a0595f671
+    keywords:
+    - di-subscription-manager
+    name: di-subscription-manager
+    urls:
+    - di-subscription-manager-1.1.0.tgz
+    version: 1.1.0
+  - apiVersion: v1
+    created: "2023-04-09T17:56:14.185626+03:00"
+    digest: 02d145495782aaf4080ab21f09de052d89680e6f93cd7d21d230b9f471e92a1c
+    keywords:
+    - di-subscription-manager
+    name: di-subscription-manager
+    urls:
+    - di-subscription-manager-1.0.11.tgz
+    version: 1.0.11
+  - apiVersion: v1
+    created: "2023-04-09T14:43:34.034632+03:00"
+    digest: 2ad031dac11dcfe7476f6c43bee0560997a919602be8d076eb88952e14671377
+    keywords:
+    - di-subscription-manager
+    name: di-subscription-manager
+    urls:
+    - di-subscription-manager-1.0.10.tgz
+    version: 1.0.10
+  - apiVersion: v1
+    created: "2023-03-31T10:56:53.553278+03:00"
+    digest: aaf268a020b6d2dee52354e8636a22fac481aa886666902467f4ff06b2a58062
+    keywords:
+    - di-subscription-manager
+    name: di-subscription-manager
+    urls:
+    - di-subscription-manager-1.0.5.tgz
+    version: 1.0.5
+  - apiVersion: v1
+    created: "2023-03-28T15:00:15.417109+03:00"
+    digest: f25c02ffd78f7e9d2369092d451fa7a9b5e8d9cb289cedf9fbed6c44c6c7ca98
+    keywords:
+    - di-subscription-manager
+    name: di-subscription-manager
+    urls:
+    - di-subscription-manager-1.0.4.tgz
+    version: 1.0.4
+  - apiVersion: v1
+    created: "2023-03-26T17:25:13.991245+03:00"
+    digest: 8ed9c259993f67addf1baa6c01770153ac302e3a42c0452d21d14c9718c9cac9
+    keywords:
+    - di-subscription-manager
+    name: di-subscription-manager
+    urls:
+    - s3://resources.gigaspaces.com/helm-charts-dih/di-subscription-manager-1.0.3.tgz
+    version: 1.0.3
+  - apiVersion: v1
+    created: "2023-03-26T16:45:18.382921+03:00"
+    digest: 86845b7f6ef39e79663916b4231b6b1900433cf9889a2ba30ebaba37baa6d23c
+    keywords:
+    - di-subscription-manager
+    name: di-subscription-manager
+    urls:
+    - s3://resources.gigaspaces.com/helm-charts-dih/di-subscription-manager-1.0.1.tgz
+    version: 1.0.1
+  - apiVersion: v1
+    created: "2023-03-26T14:40:14.558364+03:00"
+    digest: d49a55f84f594f25709d7a1f363aed89b7fd23243100c6bf130b7be847b13db7
+    keywords:
+    - di-subscription-manager
+    name: di-subscription-manager
+    urls:
+    - s3://resources.gigaspaces.com/helm-charts-dih/di-subscription-manager-1.0.0.tgz
+    version: 1.0.0
+  di.v2:
+  - apiVersion: v2
+    created: "2023-03-16T17:00:27.050809+02:00"
+    dependencies:
+    - alias: di_flink
+      condition: di_flink.enabled
+      name: di-flink
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 1.0.0
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 20.0.6
+    - condition: spacedeck.enabled
+      name: spacedeck
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 1.0.33
+    - alias: xapSingleSpace
+      condition: xap-single-space.enabled
+      name: xap-single-space
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 1.0.0
+    - condition: xap.enabled
+      name: xap
+      repository: https://resources.gigaspaces.com/helm-charts-ea
+      version: 16.3.0-m9
+    - alias: diOracleDB
+      name: di-oracledb
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      tags:
+      - oracle
+      version: 1.0.1
+    - alias: iidrOracle
+      name: iidr-oracle
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      tags:
+      - oracle
+      - iidr
+      version: 1.0.1
+    - alias: iidrAS
+      name: iidr-as
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      tags:
+      - iidr
+      version: 1.0.1
+    - alias: iidrKafka
+      name: iidr-kafka
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      tags:
+      - iidr
+      version: 1.0.1
+    description: Full DI Chart
+    digest: 2fdbe1fdca87dbdecaaeaccd202195058bc7b317e31b64a0c249a3e3808279c0
+    name: di.v2
+    urls:
+    - di.v2-2.0.5.tgz
+    version: 2.0.5
+  dih:
+  - apiVersion: v2
+    appVersion: 16.2.2
+    created: "2022-12-12T08:16:52.987574211Z"
+    dependencies:
+    - alias: manager
+      name: xap-manager
+      repository: https://resources.gigaspaces.com/helm-charts
+      version: 16.2.2
+    - alias: operator
+      name: xap-operator
+      repository: https://resources.gigaspaces.com/helm-charts
+      version: 16.2.2
+    - alias: grafana
+      condition: metrics.enabled
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 6.44.7
+    - alias: influxdb
+      condition: metrics.enabled
+      name: influxdb
+      repository: https://influxdata.github.io/helm-charts
+      version: 4.12.0
+    description: A Helm chart for GigaSpaces DIH
+    digest: e1940bfe3da90c78866f9e241edc2ba4996e580733be4ec58368748af71e1e52
+    name: dih
+    urls:
+    - dih-16.3.0.tgz
+    version: 16.3.0
+  - apiVersion: v2
+    appVersion: 16.3.0-rcs2
+    created: "2023-04-19T12:08:06.136189+03:00"
+    dependencies:
+    - alias: di
+      name: di
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 2.0.12
+    - alias: flink
+      name: di-flink
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 1.0.7
+    - alias: grafana
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 6.44.7
+    - alias: influxdb
+      condition: metrics.enabled
+      name: influxdb
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 4.9.14
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 20.0.6
+    - alias: redpanda
+      condition: redpanda.enabled
+      name: kafka-ui
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: service-creator
+      name: service-creator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 1.0.4
+    - alias: service-operator
+      name: service-operator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 1.0.6
+    - alias: spacedeck
+      name: spacedeck
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 1.1.5
+    - alias: manager
+      name: xap-manager
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 16.3.0-rcs2
+    - alias: operator
+      name: xap-operator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 16.3.0-rcs2
+    - alias: dgw
+      name: xap-dgw
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 16.3.0-rcs2
+    - alias: iidrAS
+      name: iidr-as
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      tags:
+      - iidr
+      version: 1.0.4
+    - alias: iidrKafka
+      name: iidr-kafka
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      tags:
+      - iidr
+      version: 1.0.4
+    - alias: diSubscriptionManager
+      name: di-subscription-manager
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      tags:
+      - iidr
+      version: 1.2.0
+    description: A Helm chart for DIH
+    digest: 9b3286223568ea230a59d852088b863c2792ddf05900bfbcf06303d2cdb4736f
+    name: dih
+    urls:
+    - dih-16.3.0-rcs2.tgz
+    version: 16.3.0-rcs2
+  - apiVersion: v2
+    appVersion: 16.3.0-rc4
+    created: "2023-04-24T19:33:47.906897+03:00"
+    dependencies:
+    - alias: di
+      name: di
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 2.0.15
+    - alias: flink
+      name: di-flink
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 1.0.7
+    - alias: grafana
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 6.44.7
+    - alias: influxdb
+      condition: metrics.enabled
+      name: influxdb
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 4.9.14
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 20.0.6
+    - alias: redpanda
+      condition: redpanda.enabled
+      name: kafka-ui
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: service-creator
+      name: service-creator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 1.0.4
+    - alias: service-operator
+      name: service-operator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 1.0.8
+    - alias: spacedeck
+      name: spacedeck
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 1.1.12
+    - alias: manager
+      name: xap-manager
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 16.3.0-rc4
+    - alias: operator
+      name: xap-operator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 16.3.0-rc4
+    - alias: dgw
+      condition: dgw.enabled
+      name: xap-dgw
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 16.3.0-rc4
+    - alias: iidrAS
+      name: iidr-as
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      tags:
+      - iidr
+      version: 2.2.0
+    - alias: iidrKafka
+      name: iidr-kafka
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      tags:
+      - iidr
+      version: 2.0.0
+    - alias: diSubscriptionManager
+      name: di-subscription-manager
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      tags:
+      - iidr
+      version: 1.2.1
+    description: A Helm chart for DIH
+    digest: 060643456e76bdf7600e0c3bac652afb24bbd4371b9e6367b616a61059a5564e
+    name: dih
+    urls:
+    - dih-16.3.0-rc4.tgz
+    version: 16.3.0-rc4
+  - apiVersion: v2
+    appVersion: 16.3.0-rc3
+    created: "2023-04-20T16:49:51.948967+03:00"
+    dependencies:
+    - alias: di
+      name: di
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 2.0.14
+    - alias: flink
+      name: di-flink
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 1.0.7
+    - alias: grafana
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 6.44.7
+    - alias: influxdb
+      condition: metrics.enabled
+      name: influxdb
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 4.9.14
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 20.0.6
+    - alias: redpanda
+      condition: redpanda.enabled
+      name: kafka-ui
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: service-creator
+      name: service-creator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 1.0.4
+    - alias: service-operator
+      name: service-operator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 1.0.7
+    - alias: spacedeck
+      name: spacedeck
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 1.1.11
+    - alias: manager
+      name: xap-manager
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 16.3.0-rc3
+    - alias: operator
+      name: xap-operator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 16.3.0-rc3
+    - alias: dgw
+      condition: dgw.enabled
+      name: xap-dgw
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 16.3.0-rc3
+    - alias: iidrAS
+      name: iidr-as
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      tags:
+      - iidr
+      version: 2.0.1
+    - alias: iidrKafka
+      name: iidr-kafka
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      tags:
+      - iidr
+      version: 2.0.0
+    - alias: diSubscriptionManager
+      name: di-subscription-manager
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      tags:
+      - iidr
+      version: 1.2.1
+    description: A Helm chart for DIH
+    digest: 8e73d4dc86e47989fecd2ae8095815d5558f9572cbd654dbd748aece0fac01ee
+    name: dih
+    urls:
+    - dih-16.3.0-rc3.tgz
+    version: 16.3.0-rc3
+  - apiVersion: v2
+    appVersion: 16.3.0-rc2-shai
+    created: "2023-04-20T11:37:41.043429+03:00"
+    dependencies:
+    - alias: di
+      name: di
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 2.0.13
+    - alias: flink
+      name: di-flink
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 1.0.7
+    - alias: grafana
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 6.44.7
+    - alias: influxdb
+      condition: metrics.enabled
+      name: influxdb
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 4.9.14
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 20.0.6
+    - alias: redpanda
+      condition: redpanda.enabled
+      name: kafka-ui
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: service-creator
+      name: service-creator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 1.0.4
+    - alias: service-operator
+      name: service-operator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 1.0.7
+    - alias: spacedeck
+      name: spacedeck
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 1.1.5
+    - alias: manager
+      name: xap-manager
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 16.3.0-rc2
+    - alias: operator
+      name: xap-operator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 16.3.0-rc2
+    - alias: dgw
+      name: xap-dgw
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 16.3.0-rc2
+    - alias: iidrAS
+      name: iidr-as
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      tags:
+      - iidr
+      version: 1.0.4
+    - alias: iidrKafka
+      name: iidr-kafka
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      tags:
+      - iidr
+      version: 1.0.3
+    - alias: diSubscriptionManager
+      name: di-subscription-manager
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      tags:
+      - iidr
+      version: 1.2.1
+    description: A Helm chart for DIH
+    digest: 798bb1157ef131cb951bd36f8aa97e0a1ec4ed5338a3ce7a4a45c8312531b0ef
+    name: dih
+    urls:
+    - dih-16.3.0-rc2-shai.tgz
+    version: 16.3.0-rc2-shai
+  - apiVersion: v2
+    appVersion: 16.3.0-rc2
+    created: "2023-04-18T17:18:44.299614507+03:00"
+    dependencies:
+    - alias: di
+      name: di
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 2.0.12
+    - alias: flink
+      name: di-flink
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 1.0.7
+    - alias: grafana
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 6.44.7
+    - alias: influxdb
+      condition: metrics.enabled
+      name: influxdb
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 4.9.14
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 20.0.6
+    - alias: redpanda
+      condition: redpanda.enabled
+      name: kafka-ui
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: service-creator
+      name: service-creator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 1.0.3
+    - alias: service-operator
+      name: service-operator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 1.0.5
+    - alias: spacedeck
+      name: spacedeck
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 1.1.5
+    - alias: manager
+      name: xap-manager
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 16.3.0-rc2
+    - alias: operator
+      name: xap-operator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 16.3.0-rc2
+    - alias: dgw
+      name: xap-dgw
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 16.3.0-rc2
+    - alias: iidrAS
+      name: iidr-as
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      tags:
+      - iidr
+      version: 1.0.3
+    - alias: iidrKafka
+      name: iidr-kafka
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      tags:
+      - iidr
+      version: 1.0.3
+    - alias: diSubscriptionManager
+      name: di-subscription-manager
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      tags:
+      - iidr
+      version: 1.1.0
+    description: A Helm chart for DI pipeline
+    digest: 291153888b1f4b1b2c8d5d69eb21cf380a918d2e6f374f7bd1eb8e977bd64e65
+    name: dih
+    urls:
+    - dih-16.3.0-rc2.tgz
+    version: 16.3.0-rc2
+  - apiVersion: v2
+    appVersion: 16.3.0-rc1
+    created: "2023-04-09T17:56:14.184977+03:00"
+    dependencies:
+    - alias: di
+      name: di
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 2.0.11
+    - alias: flink
+      name: di-flink
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 1.0.6
+    - alias: grafana
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 6.44.7
+    - alias: influxdb
+      condition: metrics.enabled
+      name: influxdb
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 4.9.14
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 20.0.6
+    - alias: redpanda
+      condition: redpanda.enabled
+      name: kafka-ui
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: service-creator
+      name: service-creator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 1.0.2
+    - alias: service-operator
+      name: service-operator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 1.0.2
+    - alias: spacedeck
+      name: spacedeck
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 1.1.0
+    - alias: manager
+      name: xap-manager
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 16.3.0-rc1
+    - alias: operator
+      name: xap-operator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 16.3.0-rc1
+    - alias: dgw
+      name: xap-dgw
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 16.3.0-rc1
+    - alias: iidrAS
+      name: iidr-as
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      tags:
+      - iidr
+      version: 1.0.3
+    - alias: iidrKafka
+      name: iidr-kafka
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      tags:
+      - iidr
+      version: 1.0.3
+    - alias: diSubscriptionManager
+      name: di-subscription-manager
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      tags:
+      - iidr
+      version: 1.0.11
+    description: A Helm chart for DI pipeline
+    digest: b824ef255571a67c8d5a67bc0a3ac4d25e57268a278d65b620d5fb604eba2df1
+    name: dih
+    urls:
+    - dih-16.3.0-rc1.tgz
+    version: 16.3.0-rc1
+  - apiVersion: v2
+    appVersion: 16.3.0-merge-di
+    created: "2023-03-22T17:55:21.377306+02:00"
+    dependencies:
+    - alias: di
+      name: di
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 2.0.7
+    - alias: di_flink
+      name: di-flink
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 1.0.2
+    - alias: grafana
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 6.44.7
+    - alias: influxdb
+      condition: metrics.enabled
+      name: influxdb
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 4.9.14
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 20.0.6
+    - alias: kafka-ui
+      name: kafka-ui
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: service-creator
+      name: service-creator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 1.0.0
+    - alias: service-operator
+      name: service-operator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 1.0.0
+    - alias: spacedeck
+      name: spacedeck
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 1.0.33
+    - alias: manager
+      name: xap-manager
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 16.3.0-m9
+    - alias: operator
+      name: xap-operator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 16.3.0-m9
+    - alias: dgw
+      name: xap-dgw
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 1.0.0
+    - alias: iidrAS
+      name: iidr-as
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      tags:
+      - iidr
+      version: 1.0.1
+    - alias: iidrKafka
+      name: iidr-kafka
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      tags:
+      - iidr
+      version: 1.0.1
+    description: A Helm chart for DI pipeline
+    digest: a0c07b5eeb960f68f1ba5b25cff95caac5aaf346c37449afe34984d872fa2347
+    name: dih
+    urls:
+    - dih-16.3.0-merge-di.tgz
+    version: 16.3.0-merge-di
+  - apiVersion: v2
+    appVersion: 16.3.0-m9-mishel
+    created: "2023-03-16T13:01:01.862207+02:00"
+    dependencies:
+    - alias: di
+      name: di
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 2.1.29
+    - alias: flink
+      name: flink
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.2.1
+    - alias: grafana
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 6.44.7
+    - alias: influxdb
+      condition: metrics.enabled
+      name: influxdb
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 4.9.14
+    - alias: kafka
+      name: kafka
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 20.0.4
+    - alias: kafka-ui
+      name: kafka-ui
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: service-creator
+      name: service-creator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 1.0.0
+    - alias: service-operator
+      name: service-operator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 1.0.0
+    - alias: spacedeck
+      name: spacedeck
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 1.0.33
+    - alias: manager
+      name: xap-manager
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 16.3.0-m9
+    - alias: operator
+      name: xap-operator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 16.3.0-m9
+    - alias: dgw
+      name: xap-dgw
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 1.0.0
+    description: A Helm chart for DI pipeline
+    digest: 84423886178917f92adadf7b2926025864e4dc8903c86de44644556c28806620
+    name: dih
+    urls:
+    - dih-16.3.0-m9-mishel.tgz
+    version: 16.3.0-m9-mishel
+  - apiVersion: v2
+    appVersion: 16.3.0-m9
+    created: "2023-03-15T09:37:20.434022+02:00"
+    dependencies:
+    - alias: di
+      name: di
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 2.1.29
+    - alias: flink
+      name: flink
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.2.1
+    - alias: grafana
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 6.44.7
+    - alias: influxdb
+      condition: metrics.enabled
+      name: influxdb
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 4.9.14
+    - alias: kafka
+      name: kafka
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 20.0.4
+    - alias: kafka-ui
+      name: kafka-ui
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: service-creator
+      name: service-creator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 1.0.0
+    - alias: service-operator
+      name: service-operator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 1.0.0
+    - alias: spacedeck
+      name: spacedeck
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 1.0.33
+    - alias: manager
+      name: xap-manager
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 16.3.0-m9
+    - alias: operator
+      name: xap-operator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 16.3.0-m9
+    - alias: dgw
+      name: xap-dgw
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 1.0.0
+    description: A Helm chart for DI pipeline
+    digest: 398a514cf6b13a1d493373499046e043bca23a2539ed09372c3b3af59bdb2b61
+    name: dih
+    urls:
+    - dih-16.3.0-m9.tgz
+    version: 16.3.0-m9
+  - apiVersion: v2
+    appVersion: 16.3.0-m8
+    created: "2023-03-09T20:33:39.88164+02:00"
+    dependencies:
+    - alias: di
+      name: di
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: flink
+      name: flink
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.2.1
+    - alias: grafana
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 6.44.7
+    - alias: iidr-as
+      name: iidr-as
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: iidr-kafka
+      name: iidr-kafka
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: iidr-oraa
+      name: iidr-ora
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: influxdb
+      condition: metrics.enabled
+      name: influxdb
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 4.9.14
+    - alias: kafka
+      name: kafka
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 20.0.4
+    - alias: kafka-ui
+      name: kafka-ui
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: service-creator
+      name: service-creator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: service-operator
+      name: service-operator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: spacedeck
+      name: spacedeck
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 1.0.21
+    - alias: manager
+      name: xap-manager
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 16.3.0-m8
+    - alias: operator
+      name: xap-operator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 16.3.0-m8
+    description: A Helm chart for GigaSpaces DIH
+    digest: 9b6922403bd33d4f63885d7a060035c75625b38c652ac32788766e61d8c10f53
+    name: dih
+    urls:
+    - dih-16.3.0-m8.tgz
+    version: 16.3.0-m8
+  - apiVersion: v2
+    appVersion: 16.3.0-m5
+    created: "2023-01-17T16:22:18.389142+02:00"
+    dependencies:
+    - alias: di
+      name: di
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: flink
+      name: flink
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.2.1
+    - alias: grafana
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 6.44.7
+    - alias: iidr-as
+      name: iidr-as
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: iidr-kafka
+      name: iidr-kafka
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: iidr-oraa
+      name: iidr-ora
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: influxdb
+      condition: metrics.enabled
+      name: influxdb
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 4.9.14
+    - alias: kafka
+      name: kafka
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 20.0.4
+    - alias: kafka-ui
+      name: kafka-ui
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: service-creator
+      name: service-creator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: service-operator
+      name: service-operator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: spacedeck
+      name: spacedeck
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: manager
+      name: xap-manager
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 16.2.2
+    - alias: operator
+      name: xap-operator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 16.2.2
+    description: A Helm chart for GigaSpaces DIH
+    digest: be40b67e34fc19fcb5d1c881eaf10db5d6a40610462960ec2ad38f330066923f
+    name: dih
+    urls:
+    - dih-16.3.0-m5.tgz
+    version: 16.3.0-m5
+  - apiVersion: v2
+    appVersion: 16.3.0-m10-a
+    created: "2023-03-29T15:14:23.422148+03:00"
+    dependencies:
+    - alias: di
+      name: di
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 2.0.11
+    - alias: flink
+      name: di-flink
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 1.0.5
+    - alias: grafana
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 6.44.7
+    - alias: influxdb
+      condition: metrics.enabled
+      name: influxdb
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 4.9.14
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 20.0.6
+    - alias: redpanda
+      condition: redpanda.enabled
+      name: kafka-ui
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: service-creator
+      name: service-creator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 1.0.1
+    - alias: service-operator
+      name: service-operator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 1.0.1
+    - alias: spacedeck
+      name: spacedeck
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 1.0.49
+    - alias: manager
+      name: xap-manager
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 16.3.0-m10
+    - alias: operator
+      name: xap-operator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 16.3.0-m10
+    - alias: dgw
+      name: xap-dgw
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 16.3.0-m10
+    - alias: iidrAS
+      name: iidr-as
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      tags:
+      - iidr
+      version: 1.0.3
+    - alias: iidrKafka
+      name: iidr-kafka
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      tags:
+      - iidr
+      version: 1.0.3
+    - alias: diSubscriptionManager
+      name: di-subscription-manager
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      tags:
+      - iidr
+      version: 1.0.5
+    description: A Helm chart for DI pipeline
+    digest: 18ffa6aca2226daede7eccc84975ab8ad55343c92e394bd0d33bf24e387dd158
+    name: dih
+    urls:
+    - dih-16.3.0-m10-a.tgz
+    version: 16.3.0-m10-a
+  - apiVersion: v2
+    appVersion: 16.3.0-m10
+    created: "2023-04-02T07:58:20.881294+03:00"
+    dependencies:
+    - alias: di
+      name: di
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 2.0.11
+    - alias: flink
+      name: di-flink
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 1.0.5
+    - alias: grafana
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 6.44.7
+    - alias: influxdb
+      condition: metrics.enabled
+      name: influxdb
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 4.9.14
+    - condition: kafka.enabled
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: 20.0.6
+    - alias: redpanda
+      condition: redpanda.enabled
+      name: kafka-ui
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: service-creator
+      name: service-creator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 1.0.2
+    - alias: service-operator
+      name: service-operator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 1.0.2
+    - alias: spacedeck
+      name: spacedeck
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 1.1.0
+    - alias: manager
+      name: xap-manager
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 16.3.0-m10
+    - alias: operator
+      name: xap-operator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 16.3.0-m10
+    - alias: dgw
+      name: xap-dgw
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 16.3.0-m10
+    - alias: iidrAS
+      name: iidr-as
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      tags:
+      - iidr
+      version: 1.0.3
+    - alias: iidrKafka
+      name: iidr-kafka
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      tags:
+      - iidr
+      version: 1.0.3
+    - alias: diSubscriptionManager
+      name: di-subscription-manager
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      tags:
+      - iidr
+      version: 1.0.5
+    description: A Helm chart for DI pipeline
+    digest: f0a256e87b6b7f2642fcd8dd89a6507acbf63511a7660754dfa31c2842b34cfe
+    name: dih
+    urls:
+    - dih-16.3.0-m10.tgz
+    version: 16.3.0-m10
+  - apiVersion: v2
+    appVersion: 16.2.10
+    created: "2023-01-16T12:18:32.823796+02:00"
+    dependencies:
+    - alias: di
+      name: di
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: flink
+      name: flink
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.2.1
+    - alias: grafana
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 6.44.7
+    - alias: iidr-as
+      name: iidr-as
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: iidr-kafka
+      name: iidr-kafka
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: iidr-oraa
+      name: iidr-ora
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: influxdb
+      condition: metrics.enabled
+      name: influxdb
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 4.9.14
+    - alias: kafka
+      name: kafka
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 20.0.4
+    - alias: kafka-ui
+      name: kafka-ui
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: service-creator
+      name: service-creator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: service-operator
+      name: service-operator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: spacedeck
+      name: spacedeck
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: manager
+      name: xap-manager
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 16.2.2
+    - alias: operator
+      name: xap-operator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 16.2.2
+    description: A Helm chart for GigaSpaces DIH
+    digest: 81be5eec2d9fac1dd559b48b0110a75529226986b6823e8e1a5759fea5918225
+    name: dih
+    urls:
+    - dih-16.2.10.tgz
+    version: 16.2.10
+  - apiVersion: v2
+    appVersion: 16.2.8
+    created: "2023-01-15T15:10:27.647117+02:00"
+    dependencies:
+    - alias: di
+      name: di
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: flink
+      name: flink
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.2.1
+    - alias: iidr-as
+      name: iidr-as
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: iidr-oraa
+      name: iidr-ora
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: influxdb
+      condition: metrics.enabled
+      name: influxdb
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 4.9.14
+    - alias: kafka
+      name: kafka
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 20.0.4
+    - alias: kafka-ui
+      name: kafka-ui
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: service-creator
+      name: service-creator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: service-operator
+      name: service-operator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: spacedeck
+      name: spacedeck
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: manager
+      name: xap-manager
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 16.2.2
+    - alias: operator
+      name: xap-operator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 16.2.2
+    description: A Helm chart for GigaSpaces DIH
+    digest: 18177b7459c45e5571005d2ca835fd4508a5237b718506c9933ff3450b59ca79
+    name: dih
+    urls:
+    - dih-16.2.8.tgz
+    version: 16.2.8
+  - apiVersion: v2
+    appVersion: 16.2.7
+    created: "2023-01-15T15:06:03.169+02:00"
+    dependencies:
+    - alias: di
+      name: di
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: flink
+      name: flink
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.2.1
+    - alias: grafana
+      condition: metrics.enabled
+      name: grafana
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 6.13.6
+    - alias: iidr-as
+      name: iidr-as
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: iidr-kafka
+      name: iidr-kafka
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: iidr-oraa
+      name: iidr-ora
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: influxdb
+      condition: metrics.enabled
+      name: influxdb
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 4.9.14
+    - alias: kafka
+      name: kafka
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 20.0.4
+    - alias: kafka-ui
+      name: kafka-ui
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: service-creator
+      name: service-creator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: service-operator
+      name: service-operator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: spacedeck
+      name: spacedeck
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: manager
+      name: xap-manager
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 16.2.2
+    - alias: operator
+      name: xap-operator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 16.2.2
+    description: A Helm chart for GigaSpaces DIH
+    digest: 6e303b0ee4401a96a1db467d508fb7e527e65d9c8c1bf830d9a8076c0d6925f0
+    name: dih
+    urls:
+    - dih-16.2.7.tgz
+    version: 16.2.7
+  - apiVersion: v2
+    appVersion: 16.2.6
+    created: "2023-01-12T16:16:31.99169+02:00"
+    dependencies:
+    - alias: di
+      name: di
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: flink
+      name: flink
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.2.1
+    - alias: grafana
+      condition: metrics.enabled
+      name: grafana
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 6.13.6
+    - alias: iidr-as
+      name: iidr-as
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: iidr-kafka
+      name: iidr-kafka
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: iidr-oraa
+      name: iidr-ora
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: influxdb
+      condition: metrics.enabled
+      name: influxdb
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 4.9.14
+    - alias: kafka
+      name: kafka
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 19.0.0
+    - alias: kafka-ui
+      name: kafka-ui
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: service-creator
+      name: service-creator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: service-operator
+      name: service-operator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: spacedeck
+      name: spacedeck
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: manager
+      name: xap-manager
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 16.2.2
+    - alias: operator
+      name: xap-operator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 16.2.2
+    description: A Helm chart for GigaSpaces DIH
+    digest: 978cdee39a59f35728756a938b51b4df0af1764cfba1bb0ab8154b831ca39002
+    name: dih
+    urls:
+    - dih-16.2.6.tgz
+    version: 16.2.6
+  - apiVersion: v2
+    appVersion: 16.2.5
+    created: "2023-01-12T13:05:25.618061+02:00"
+    dependencies:
+    - alias: di
+      name: di
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: flink
+      name: flink
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.2.1
+    - alias: grafana
+      condition: metrics.enabled
+      name: grafana
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 6.13.6
+    - alias: iidr-as
+      name: iidr-as
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: iidr-kafka
+      name: iidr-kafka
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: iidr-oraa
+      name: iidr-ora
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: influxdb
+      condition: metrics.enabled
+      name: influxdb
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 4.9.14
+    - alias: kafka
+      name: kafka
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 19.0.0
+    - alias: kafka-ui
+      name: kafka-ui
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: service-creator
+      name: service-creator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: service-operator
+      name: service-operator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: spacedeck
+      name: spacedeck
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: manager
+      name: xap-manager
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 16.2.2
+    - alias: operator
+      name: xap-operator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 16.2.2
+    description: A Helm chart for GigaSpaces DIH
+    digest: b395facd1393790cd9b1f75bb9cb015a5299142e92cd2184a761a704f0ac3f31
+    name: dih
+    urls:
+    - dih-16.2.5.tgz
+    version: 16.2.5
+  - apiVersion: v2
+    appVersion: 16.2.4
+    created: "2023-01-12T12:11:48.606463+02:00"
+    dependencies:
+    - alias: di
+      name: di
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: flink
+      name: flink
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.2.0
+    - alias: grafana
+      condition: metrics.enabled
+      name: grafana
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 6.13.6
+    - alias: iidr-as
+      name: iidr-as
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: iidr-kafka
+      name: iidr-kafka
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: iidr-oraa
+      name: iidr-ora
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: influxdb
+      condition: metrics.enabled
+      name: influxdb
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 4.9.14
+    - alias: kafka
+      name: kafka
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 19.0.0
+    - alias: kafka-ui
+      name: kafka-ui
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: service-creator
+      name: service-creator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: service-operator
+      name: service-operator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: spacedeck
+      name: spacedeck
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: manager
+      name: xap-manager
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 16.2.2
+    - alias: operator
+      name: xap-operator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 16.2.2
+    description: A Helm chart for GigaSpaces DIH
+    digest: 9c364b3851ac039e8ea089dc9f9632b7c9c521aceab48c3486e4c16e820b3fe2
+    name: dih
+    urls:
+    - dih-16.2.4.tgz
+    version: 16.2.4
+  - apiVersion: v2
+    appVersion: _SMART_CACHE_VERSION_
+    created: "2023-01-12T11:35:42.129566+02:00"
+    dependencies:
+    - alias: di
+      name: di
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: flink
+      name: flink
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.2.0
+    - alias: grafana
+      condition: metrics.enabled
+      name: grafana
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 6.13.6
+    - alias: iidr-as
+      name: iidr-as
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: iidr-kafka
+      name: iidr-kafka
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: iidr-oraa
+      name: iidr-ora
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: influxdb
+      condition: metrics.enabled
+      name: influxdb
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 4.9.14
+    - alias: kafka
+      name: kafka
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 19.0.0
+    - alias: kafka-ui
+      name: kafka-ui
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: service-creator
+      name: service-creator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: service-operator
+      name: service-operator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: spacedeck
+      name: spacedeck
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: manager
+      name: xap-manager
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 16.2.2
+    - alias: operator
+      name: xap-operator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 16.2.2
+    description: A Helm chart for GigaSpaces DIH
+    digest: 4e7f8d665178396395f43ee10fa32a1ad3c6937dacfb6da5955648dd94233724
+    name: dih
+    urls:
+    - dih-16.2.3.tgz
+    version: 16.2.3
+  - apiVersion: v2
+    appVersion: _SMART_CACHE_VERSION_
+    created: "2023-01-11T18:30:51.457321+02:00"
+    dependencies:
+    - alias: di
+      name: di
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: flink
+      name: flink
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.2.0
+    - alias: grafana
+      condition: metrics.enabled
+      name: grafana
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 6.13.6
+    - alias: iidr-as
+      name: iidr-as
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: iidr-kafka
+      name: iidr-kafka
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: iidr-oraa
+      name: iidr-ora
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: influxdb
+      condition: metrics.enabled
+      name: influxdb
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 4.9.14
+    - alias: kafka
+      name: kafka
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 19.0.0
+    - alias: kafka-ui
+      name: kafka-ui
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 19.0.0-ui
+    - alias: service-creator
+      name: service-creator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: service-operator
+      name: service-operator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: spacedeck
+      name: spacedeck
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: manager
+      name: xap-manager
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 16.2.2
+    - alias: operator
+      name: xap-operator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 16.2.2
+    description: A Helm chart for GigaSpaces DIH
+    digest: b785cabdaa5a2c1173c291804d81e4bcaf719c04b83b8c6027baf3e1fdafd82f
+    name: dih
+    urls:
+    - dih-16.2.2.tgz
+    version: 16.2.2
+  dih-oracle:
+  - apiVersion: v2
+    appVersion: 16.3.0-m9
+    created: "2023-03-15T18:17:57.305741+02:00"
+    dependencies:
+    - alias: di
+      name: di
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 2.1.29
+    - alias: flink
+      name: flink
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.2.1
+    - alias: grafana
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 6.44.7
+    - alias: iidr-as
+      name: iidr-as
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: iidr-kafka
+      name: iidr-kafka
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: iidr-oraa
+      name: iidr-ora
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: influxdb
+      condition: metrics.enabled
+      name: influxdb
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 4.9.14
+    - alias: kafka
+      name: kafka
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 20.0.4
+    - alias: kafka-ui
+      name: kafka-ui
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 0.1.0
+    - alias: service-creator
+      name: service-creator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 1.0.0
+    - alias: service-operator
+      name: service-operator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 1.0.0
+    - alias: spacedeck
+      name: spacedeck
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 1.0.33
+    - alias: manager
+      name: xap-manager
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 16.3.0-m9
+    - alias: operator
+      name: xap-operator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 16.3.0-m9
+    - alias: dgw
+      name: xap-dgw
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 1.0.0
+    description: A Helm chart for GigaSpaces DIH
+    digest: afd33a6f47baf716446ec4f833d675e26596b7039373a3c2a345d0e3aec64c40
+    name: dih-oracle
+    urls:
+    - dih-oracle-16.3.0-m9.tgz
+    version: 16.3.0-m9
+  flink:
+  - apiVersion: v1
+    appVersion: 1.11.2
+    created: "2023-03-14T18:15:24.911246+02:00"
+    description: Chart for Apache Flink
+    digest: f802275e671064c2fe0475ac9b7ba4479b248a962f5a21fd375ff9aa99ea1193
+    home: https://github.com/riskfocus/helm-charts-public
+    maintainers:
+    - email: charts-maintainers@riskfocus.com
+      name: charts-maintainers
+    name: flink
+    urls:
+    - flink-0.2.1.tgz
+    version: 0.2.1
+  - apiVersion: v1
+    appVersion: 1.11.2
+    created: "2023-01-12T12:18:46.281904+02:00"
+    description: Chart for Apache Flink
+    digest: 3baf47a85554319c41bfe39cb843ac92fb059bad0adc64ac19f441074a642a6b
+    home: https://github.com/riskfocus/helm-charts-public
+    maintainers:
+    - email: charts-maintainers@riskfocus.com
+      name: charts-maintainers
+    name: flink
+    urls:
+    - flink-0.2.0.tgz
+    version: 0.2.0
+  grafana:
+  - apiVersion: v2
+    appVersion: 9.2.5
+    created: "2023-04-18T17:18:44.303198124+03:00"
+    description: The leading tool for querying and visualizing time series and metrics.
+    digest: 36635aad6f4c0e5edaa7a963ca10e0326ca940e9166bce4728909a1bd839bf64
+    home: https://grafana.net
+    icon: https://raw.githubusercontent.com/grafana/grafana/master/public/img/logo_transparent_400x.png
+    kubeVersion: ^1.8.0-0
+    maintainers:
+    - email: zanhsieh@gmail.com
+      name: zanhsieh
+    - email: rluckie@cisco.com
+      name: rtluckie
+    - email: maor.friedman@redhat.com
+      name: maorfr
+    - email: miroslav.hadzhiev@gmail.com
+      name: Xtigyro
+    - email: mail@torstenwalter.de
+      name: torstenwalter
+    name: grafana
+    sources:
+    - https://github.com/grafana/grafana
+    type: application
+    urls:
+    - charts/grafana-6.44.7.tgz
+    version: 6.44.7
+  - apiVersion: v2
+    appVersion: 8.0.3
+    created: "2023-02-28T11:33:18.988299+01:00"
+    description: The leading tool for querying and visualizing time series and metrics.
+    digest: 80ca5b53e4013ecc1fcfefe240ed46b841232b21435781804711fded4c588a63
+    home: https://grafana.net
+    icon: https://raw.githubusercontent.com/grafana/grafana/master/public/img/logo_transparent_400x.png
+    kubeVersion: ^1.8.0-0
+    maintainers:
+    - email: zanhsieh@gmail.com
+      name: zanhsieh
+    - email: rluckie@cisco.com
+      name: rtluckie
+    - email: maor.friedman@redhat.com
+      name: maorfr
+    - email: miroslav.hadzhiev@gmail.com
+      name: Xtigyro
+    - email: mail@torstenwalter.de
+      name: torstenwalter
+    name: grafana
+    sources:
+    - https://github.com/grafana/grafana
+    type: application
+    urls:
+    - grafana-6.13.6.tgz
+    version: 6.13.6
+  iidr-as:
+  - apiVersion: v1
+    created: "2023-04-24T20:19:25.546384+03:00"
+    description: IIDR Access Server helm chart
+    digest: eaa142cfdeb41371846980ce78a40c327d96ed2ce0ebdcfe90b76587d6fe9cae
+    keywords:
+    - iidr-as
+    name: iidr-as
+    urls:
+    - iidr-as-2.2.0.tgz
+    version: 2.2.0
+  - apiVersion: v1
+    created: "2023-04-23T15:12:54.993349+03:00"
+    description: IIDR Access Server helm chart
+    digest: 82057da1a520827638e87c28b959aa93418521a68eaf082121af553ce12046c6
+    keywords:
+    - iidr-as
+    name: iidr-as
+    urls:
+    - iidr-as-2.0.2.tgz
+    version: 2.0.2
+  - apiVersion: v1
+    created: "2023-04-20T16:47:27.775965+03:00"
+    description: IIDR Access Server helm chart
+    digest: ea25c0ae214a9b758ce932788d64fc528d7990de35845c42accd82f16057a92a
+    keywords:
+    - iidr-as
+    name: iidr-as
+    urls:
+    - iidr-as-2.0.1.tgz
+    version: 2.0.1
+  - apiVersion: v1
+    created: "2023-04-20T14:57:50.102205+03:00"
+    description: IIDR Access Server helm chart
+    digest: 1edececd5299c3077b2fddceb924304011181cb9cd98a1088866301540e9b15e
+    keywords:
+    - iidr-as
+    name: iidr-as
+    urls:
+    - iidr-as-1.0.4.tgz
+    version: 1.0.4
+  - apiVersion: v1
+    created: "2023-04-18T17:20:54.734728796+03:00"
+    description: A generated Helm Chart for /Users/anatoliy.berelekhis/IdeaProjects/di-e2e/docker/docker-compose.full
+      from Skippbox Kompose
+    digest: 9fea0ec526bed5ba52ab5175dae74ca6fd8b5b271fecd145ac89357c8788d909
+    keywords:
+    - iidr-as
+    name: iidr-as
+    urls:
+    - iidr-as-1.0.3.tgz
+    version: 1.0.3
+  - apiVersion: v1
+    created: "2023-03-28T15:00:24.476685+03:00"
+    description: A generated Helm Chart for /Users/anatoliy.berelekhis/IdeaProjects/di-e2e/docker/docker-compose.full
+      from Skippbox Kompose
+    digest: d275cbec0a3fa3b4def1df58c541ea491c6bccebb903c4743e1658ba61c63acd
+    keywords:
+    - iidr-as
+    name: iidr-as
+    urls:
+    - iidr-as-1.0.2.tgz
+    version: 1.0.2
+  - apiVersion: v1
+    created: "2023-03-27T11:09:20.108528+03:00"
+    description: A generated Helm Chart for /Users/anatoliy.berelekhis/IdeaProjects/di-e2e/docker/docker-compose.full
+      from Skippbox Kompose
+    digest: 308b8518c46bb5ad60bbddd873eae25219f3ad93924e3a0f608bf293461ec0b4
+    keywords:
+    - iidr-as
+    name: iidr-as
+    urls:
+    - iidr-as-1.0.1.tgz
+    version: 1.0.1
+  - apiVersion: v1
+    created: "2023-03-01T12:05:26.288383+02:00"
+    description: A generated Helm Chart for /Users/anatoliy.berelekhis/IdeaProjects/di-e2e/docker/docker-compose.full
+      from Skippbox Kompose
+    digest: d38ba5d478efb19c597008770a0b5ecf894f3e9bf8581ec23ceee387d2a3e929
+    keywords:
+    - iidr-as
+    name: iidr-as
+    urls:
+    - iidr-as-1.0.0.tgz
+    version: 1.0.0
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2023-03-14T18:15:33.934341+02:00"
+    description: A Helm chart for Kubernetes
+    digest: 573e7867a18e3a5e6aeac8c3082b14a985432a9b03e23ae1ff64f63ed7847087
+    name: iidr-as
+    type: application
+    urls:
+    - iidr-as-0.1.0.tgz
+    version: 0.1.0
+  iidr-kafka:
+  - apiVersion: v1
+    created: "2023-04-24T20:19:33.685651+03:00"
+    digest: 7a273580c27e72b1dabd5ddce56666a66f87fef9054346c941b23a535268ab44
+    name: iidr-kafka
+    urls:
+    - iidr-kafka-2.0.0.tgz
+    version: 2.0.0
+  - apiVersion: v1
+    created: "2023-04-19T11:57:54.362486+03:00"
+    digest: 836bff73104940d01a8833a37031f64be6f271440398f8dfa7a4f3f7b3f7afe2
+    name: iidr-kafka
+    urls:
+    - iidr-kafka-1.0.4.tgz
+    version: 1.0.4
+  - apiVersion: v1
+    created: "2023-04-20T14:57:57.860229+03:00"
+    digest: 56fa0e7a871d0b856c7c8dbbfea48f1f70f8a3f392d84b3724b15fca14b37de7
+    name: iidr-kafka
+    urls:
+    - iidr-kafka-1.0.3.tgz
+    version: 1.0.3
+  - apiVersion: v1
+    created: "2023-03-28T15:00:33.770564+03:00"
+    digest: 3f7830b7aa7d0190beae4921b2be42992a8ad65e5d617c226e0853eb70c1a8bf
+    name: iidr-kafka
+    urls:
+    - iidr-kafka-1.0.2.tgz
+    version: 1.0.2
+  - apiVersion: v1
+    created: "2023-03-27T11:09:30.67711+03:00"
+    digest: 94cdcab725f5b0e936e886efdd0c87e2452f11a56fa9908d72bbbd585c42344f
+    name: iidr-kafka
+    urls:
+    - iidr-kafka-1.0.1.tgz
+    version: 1.0.1
+  - apiVersion: v1
+    created: "2023-03-01T10:58:47.854748+02:00"
+    digest: b5c17c0e764d9f552addde65803c1c65155cbd32188b0963b8565e133b5fa0b6
+    name: iidr-kafka
+    urls:
+    - iidr-kafka-1.0.0.tgz
+    version: 1.0.0
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2023-03-14T18:14:40.72267+02:00"
+    description: A Helm chart for Kubernetes
+    digest: 6ad247e9cdda15933c5253b408460099b3de14cbe400cf4ee4ce38d55ccfa674
+    name: iidr-kafka
+    type: application
+    urls:
+    - iidr-kafka-0.1.0.tgz
+    version: 0.1.0
+  - apiVersion: v1
+    created: "2023-02-22T12:45:54.550379+02:00"
+    digest: c0f862ad0c4f3a21969db2e5f3e4863acdd256f03a27d7180a6f8c107789110a
+    name: iidr-kafka
+    urls:
+    - iidr-kafka-0.0.1.tgz
+    version: 0.0.1
+  iidr-ora:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2023-03-14T18:15:42.7003+02:00"
+    description: A Helm chart for Kubernetes
+    digest: dfe53235ad01a83fe1f56c8800976e7789a9c858099a02ae5074220ef45665f2
+    name: iidr-ora
+    type: application
+    urls:
+    - iidr-ora-0.1.0.tgz
+    version: 0.1.0
+  iidr-oracle:
+  - apiVersion: v1
+    created: "2023-04-24T20:19:42.066829+03:00"
+    digest: 5efb43e3943e420d782a1efe13b3e4ba7494ec988bdfb662ee515efd4fc6cfce
+    keywords:
+    - iidr-oracle
+    name: iidr-oracle
+    urls:
+    - iidr-oracle-2.0.1.tgz
+    version: 2.0.1
+  - apiVersion: v1
+    created: "2023-04-20T14:58:05.888008+03:00"
+    digest: 04db34f235668962d9652e0dc9031356f8784609f95d0e68fe11d54f3f6890e1
+    keywords:
+    - iidr-oracle
+    name: iidr-oracle
+    urls:
+    - iidr-oracle-1.0.4.tgz
+    version: 1.0.4
+  - apiVersion: v1
+    created: "2023-04-18T17:21:12.647985823+03:00"
+    digest: af2279a8f8b4f048ae9664605283bdc830b8e7e96895d2651750b6d07de066fe
+    keywords:
+    - iidr-oracle
+    name: iidr-oracle
+    urls:
+    - iidr-oracle-1.0.3.tgz
+    version: 1.0.3
+  - apiVersion: v1
+    created: "2023-03-28T15:00:42.902972+03:00"
+    digest: ffc7a812c60a24a8379f8548247c400dbef9711fda530b92ad8ad9d524345594
+    keywords:
+    - iidr-oracle
+    name: iidr-oracle
+    urls:
+    - iidr-oracle-1.0.2.tgz
+    version: 1.0.2
+  - apiVersion: v1
+    created: "2023-03-27T11:09:41.348738+03:00"
+    digest: 98476ef984c371b4c1d6ea36cc0748a6fd42496eccbebe9115c908724e9bd085
+    keywords:
+    - iidr-oracle
+    name: iidr-oracle
+    urls:
+    - iidr-oracle-1.0.1.tgz
+    version: 1.0.1
+  - apiVersion: v1
+    created: "2023-02-22T12:02:07.904453+02:00"
+    description: A generated Helm Chart for /Users/anatoliy.berelekhis/IdeaProjects/di-e2e/docker/docker-compose.full
+      from Skippbox Kompose
+    digest: bb4ff10516f7c2b03b58b71b9057f2817a4a6db5e22334ca7560e4b0b87204a6
+    keywords:
+    - iidr-oracle
+    name: iidr-oracle
+    urls:
+    - iidr-oracle-1.0.0.tgz
+    version: 1.0.0
+  influxdb:
+  - apiVersion: v1
+    appVersion: 1.8.10
+    created: "2023-03-16T14:53:25.465308+02:00"
+    description: Scalable datastore for metrics, events, and real-time analytics.
+    digest: 874afb2e71fb8eec4bfc1ba7ead3645d02001c04d73a2096cd2df5990509cb21
+    home: https://www.influxdata.com/time-series-platform/influxdb/
+    keywords:
+    - influxdb
+    - database
+    - timeseries
+    - influxdata
+    maintainers:
+    - email: rawkode@influxdata.com
+      name: rawkode
+    - email: giacomo@influxdata.com
+      name: gitirabassi
+    - email: urakiny@gmail.com
+      name: aisuko
+    - email: naseem@transit.app
+      name: naseemkullah
+    name: influxdb
+    sources:
+    - https://github.com/influxdata/influxdb
+    urls:
+    - influxdb-4.12.0.tgz
+    version: 4.12.0
+  - apiVersion: v1
+    appVersion: 1.8.4
+    created: "2023-04-24T20:19:50.502752+03:00"
+    description: Scalable datastore for metrics, events, and real-time analytics.
+    digest: 79315827a9687538de3bc5d597f879ada6bd4cfb2dc4644ff564d9a8a3dbf6cc
+    home: https://www.influxdata.com/time-series-platform/influxdb/
+    keywords:
+    - influxdb
+    - database
+    - timeseries
+    - influxdata
+    maintainers:
+    - email: rawkode@influxdata.com
+      name: rawkode
+    - email: giacomo@influxdata.com
+      name: gitirabassi
+    - email: urakiny@gmail.com
+      name: aisuko
+    - email: naseem@transit.app
+      name: naseemkullah
+    name: influxdb
+    sources:
+    - https://github.com/influxdata/influxdb
+    urls:
+    - influxdb-4.9.14.tgz
+    version: 4.9.14
+  kafka:
+  - annotations:
+      category: Infrastructure
+      licenses: Apache-2.0
+    apiVersion: v2
+    appVersion: 3.3.2
+    created: "2023-04-18T17:18:44.312894008+03:00"
+    dependencies:
+    - condition: zookeeper.enabled
+      name: zookeeper
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.x.x
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: Apache Kafka is a distributed streaming platform designed to build
+      real-time pipelines and can be used as a message broker or as a replacement
+      for a log aggregation solution for big data applications.
+    digest: 08f81afcc0ab5b9e7bb6102eaf620b0fe1e84e0884b142b9494ce41e631fd150
+    home: https://github.com/bitnami/charts/tree/main/bitnami/kafka
+    icon: https://bitnami.com/assets/stacks/kafka/img/kafka-stack-220x234.png
+    keywords:
+    - kafka
+    - zookeeper
+    - streaming
+    - producer
+    - consumer
+    maintainers:
+    - name: Bitnami
+      url: https://github.com/bitnami/charts
+    name: kafka
+    sources:
+    - https://github.com/bitnami/containers/tree/main/bitnami/kafka
+    - https://kafka.apache.org/
+    urls:
+    - charts/kafka-20.0.6.tgz
+    version: 20.0.6
+  - annotations:
+      category: Infrastructure
+      licenses: |
+        - Apache-2.0
+    apiVersion: v2
+    appVersion: 3.3.1
+    created: "2023-03-14T18:15:53.076381+02:00"
+    dependencies:
+    - condition: zookeeper.enabled
+      name: zookeeper
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.x.x
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: Apache Kafka is a distributed streaming platform designed to build
+      real-time pipelines and can be used as a message broker or as a replacement
+      for a log aggregation solution for big data applications.
+    digest: 0b454a5449bd78b3d6ec31d41d3dbe8b54b823942013b7e161f6aa728086bc6f
+    home: https://github.com/bitnami/charts/tree/main/bitnami/kafka
+    icon: https://bitnami.com/assets/stacks/kafka/img/kafka-stack-220x234.png
+    keywords:
+    - kafka
+    - zookeeper
+    - streaming
+    - producer
+    - consumer
+    maintainers:
+    - name: Bitnami
+      url: https://github.com/bitnami/charts
+    name: kafka
+    sources:
+    - https://github.com/bitnami/containers/tree/main/bitnami/kafka
+    - https://kafka.apache.org/
+    urls:
+    - kafka-20.0.4.tgz
+    version: 20.0.4
+  - annotations:
+      category: Infrastructure
+    apiVersion: v2
+    appVersion: 3.3.1
+    created: "2023-01-12T09:54:04.936626+02:00"
+    dependencies:
+    - condition: zookeeper.enabled
+      name: zookeeper
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.x.x
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: Apache Kafka is a distributed streaming platform designed to build
+      real-time pipelines and can be used as a message broker or as a replacement
+      for a log aggregation solution for big data applications.
+    digest: 2093264221237f83cd44f3c2fc3399626409ed447256bc92d7479f261a73b5f8
+    home: https://github.com/bitnami/charts/tree/master/bitnami/kafka
+    icon: https://bitnami.com/assets/stacks/kafka/img/kafka-stack-220x234.png
+    keywords:
+    - kafka
+    - zookeeper
+    - streaming
+    - producer
+    - consumer
+    maintainers:
+    - name: Bitnami
+      url: https://github.com/bitnami/charts
+    name: kafka
+    sources:
+    - https://github.com/bitnami/containers/tree/main/bitnami/kafka
+    - https://kafka.apache.org/
+    urls:
+    - kafka-19.0.0.tgz
+    version: 19.0.0
+  kafka-ui:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2023-04-24T20:19:58.860504+03:00"
+    description: A Helm chart for Kubernetes
+    digest: 54a7fb9774c98ec272f483c983e79c9d1e8f24096a53e0d0faeaf80e9a935f07
+    name: kafka-ui
+    type: application
+    urls:
+    - kafka-ui-0.1.0.tgz
+    version: 0.1.0
+  oracledih:
+  - apiVersion: v2
+    appVersion: 16.3.0-m10
+    created: "2023-03-28T18:58:22.5224+03:00"
+    dependencies:
+    - alias: iidrOracle
+      name: iidr-oracle
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      tags:
+      - oracle
+      version: 1.0.3
+    - alias: diOracleDB
+      name: di-oracledb
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      tags:
+      - oracle
+      version: 1.0.2
+    description: A Helm chart for DI Oracle
+    digest: a2357efe24c8ecb23a00fcd0816c9c5cd26423fbf2e86e15c92696b32bfb807a
+    name: oracledih
+    urls:
+    - oracledih-16.3.0-m10.tgz
+    version: 16.3.0-m10
+  service-creator:
+  - apiVersion: v2
+    created: "2023-04-24T20:20:07.221112+03:00"
+    description: A Helm chart for DIH service creator
+    digest: 011cd18d201028161a4ecc727c178f0b2b3359604faae04f4a3fd33fbcb889ea
+    name: service-creator
+    type: application
+    urls:
+    - service-creator-1.0.4.tgz
+    version: 1.0.4
+  - apiVersion: v2
+    created: "2023-04-18T17:18:44.313430556+03:00"
+    description: A Helm chart for DIH service creator
+    digest: 1ef77dd959cba5776b882e0e8e85df36e957acedc7f47606a317e813b7f44102
+    name: service-creator
+    type: application
+    urls:
+    - charts/service-creator-1.0.3.tgz
+    version: 1.0.3
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2023-04-09T17:56:14.193292+03:00"
+    description: A Helm chart for Kubernetes
+    digest: 8c5b78a2c0e56c791ea79bbbfea8e5ac35f4edf82f3d9a3ead78c01138dcee57
+    name: service-creator
+    type: application
+    urls:
+    - service-creator-1.0.2.tgz
+    version: 1.0.2
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2023-03-28T18:41:39.414772+03:00"
+    description: A Helm chart for Kubernetes
+    digest: 37fa5c2097ffd74500665e5bc2837ec4554efe877b41e4cdcc5c3660e507b639
+    name: service-creator
+    type: application
+    urls:
+    - service-creator-1.0.1.tgz
+    version: 1.0.1
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2023-03-26T13:53:37.354749+03:00"
+    description: A Helm chart for Kubernetes
+    digest: dcd1a4bd7b4a2e43fb9b24bd1daad2fd37ad8a614c047d4078ab7a046c35d29a
+    name: service-creator
+    type: application
+    urls:
+    - service-creator-1.0.0.tgz
+    version: 1.0.0
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2023-03-09T20:31:22.506571+02:00"
+    description: A Helm chart for Kubernetes
+    digest: 82d9b47164e0d7a1055369bff911ce84d075b026cc9af0daf606dc7871337387
+    name: service-creator
+    type: application
+    urls:
+    - service-creator-0.1.0.tgz
+    version: 0.1.0
+  service-operator:
+  - apiVersion: v2
+    created: "2023-04-24T20:20:14.091142+03:00"
+    description: A Helm chart for DIH service operator
+    digest: 82a4d6a9d80330f104fe64591e2df7030864db73dc2904426038e1357b957ebc
+    name: service-operator
+    type: application
+    urls:
+    - service-operator-1.0.8.tgz
+    version: 1.0.8
+  - apiVersion: v2
+    created: "2023-04-20T16:48:16.309629+03:00"
+    description: A Helm chart for DIH service operator
+    digest: 114a6ebaf1f0a26a243ca9291aacb64cf4ace586e6bf40e0be522b502d063f30
+    name: service-operator
+    type: application
+    urls:
+    - service-operator-1.0.7.tgz
+    version: 1.0.7
+  - apiVersion: v2
+    created: "2023-04-19T11:58:52.066505+03:00"
+    description: A Helm chart for DIH service operator
+    digest: 7b0a695a17b98d4cef7b2f0c8204050f24fa9ac7421acdab4577285111b7b191
+    name: service-operator
+    type: application
+    urls:
+    - service-operator-1.0.6.tgz
+    version: 1.0.6
+  - apiVersion: v2
+    created: "2023-04-18T17:18:44.313721433+03:00"
+    description: A Helm chart for DIH service operator
+    digest: 70c444df85fae8ea41691197af1b53a4724be2a31c37cfa9e6484fc408612dc7
+    name: service-operator
+    type: application
+    urls:
+    - charts/service-operator-1.0.5.tgz
+    version: 1.0.5
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2023-04-09T15:34:26.35072+03:00"
+    description: A Helm chart for Kubernetes
+    digest: 78beef4806ef5c360c09794b1c2c02be548eac825e95ef57de0f75a206dac3d8
+    name: service-operator
+    type: application
+    urls:
+    - service-operator-1.0.4.tgz
+    version: 1.0.4
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2023-04-04T19:58:46.599583+03:00"
+    description: A Helm chart for Kubernetes
+    digest: fb6c72b96cc5f6ba1e1df29f2f38c4f34f1f7dbed66b0418e74346ba374e19a6
+    name: service-operator
+    type: application
+    urls:
+    - service-operator-1.0.3.tgz
+    version: 1.0.3
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2023-04-09T17:56:14.193467+03:00"
+    description: A Helm chart for Kubernetes
+    digest: 2abdba200a4139b372471dfd973165b5cee47eacc283e8c5dba6acba44e99670
+    name: service-operator
+    type: application
+    urls:
+    - service-operator-1.0.2.tgz
+    version: 1.0.2
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2023-03-28T18:41:46.807077+03:00"
+    description: A Helm chart for Kubernetes
+    digest: 959765eee60ba2765a733c9d3603a419e6d239a0db7b6bf62a9aead52085a01f
+    name: service-operator
+    type: application
+    urls:
+    - service-operator-1.0.1.tgz
+    version: 1.0.1
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2023-03-26T13:53:47.304783+03:00"
+    description: A Helm chart for Kubernetes
+    digest: 7c11d27716d112e9aa635a2eb795f5344d5b3829e3093db0125c5683d33548bb
+    name: service-operator
+    type: application
+    urls:
+    - service-operator-1.0.0.tgz
+    version: 1.0.0
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2023-03-09T20:21:23.40134+02:00"
+    description: A Helm chart for Kubernetes
+    digest: dd2071f372df6d9d950e41758a311f2db26036082754499962af8b85196e24f1
+    name: service-operator
+    type: application
+    urls:
+    - service-operator-0.1.0.tgz
+    version: 0.1.0
+  spacedeck:
+  - apiVersion: v2
+    created: "2023-04-24T20:20:22.352436+03:00"
+    description: A Helm chart for DIH spacedeck
+    digest: 9a86c3194abd9854a5548491ce4b8c324eee29af664a567c145d4697e3577d98
+    name: spacedeck
+    type: application
+    urls:
+    - spacedeck-1.1.12.tgz
+    version: 1.1.12
+  - apiVersion: v2
+    created: "2023-04-20T16:48:24.282438+03:00"
+    description: A Helm chart for DIH spacedeck
+    digest: 3a89425c90e2090ebefea2e5820d42ad3f5f5fd102c2de236e9d5ff512b84be5
+    name: spacedeck
+    type: application
+    urls:
+    - spacedeck-1.1.11.tgz
+    version: 1.1.11
+  - apiVersion: v2
+    created: "2023-04-20T16:38:45.15925+03:00"
+    description: A Helm chart for DIH spacedeck
+    digest: 80cd13b68b18ce06b724e68758fcd3a4a0822ffe4dbf29ac234720e7092c8eac
+    name: spacedeck
+    type: application
+    urls:
+    - spacedeck-1.1.10.tgz
+    version: 1.1.10
+  - apiVersion: v2
+    created: "2023-04-19T11:59:03.231504+03:00"
+    description: A Helm chart for DIH spacedeck
+    digest: 1aa7bd905f86f41132b009fed2c476edfa7c016f466c5fa03dce3066c7135d9d
+    name: spacedeck
+    type: application
+    urls:
+    - spacedeck-1.1.8.tgz
+    version: 1.1.8
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2023-04-18T17:22:05.213966407+03:00"
+    description: A Helm chart for Kubernetes
+    digest: 48461c3d82f1427f8a1a37df64575f04e7acc1f61badabeaaa4c5a4b7c1e70e2
+    name: spacedeck
+    type: application
+    urls:
+    - spacedeck-1.1.5.tgz
+    version: 1.1.5
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2023-04-09T17:56:14.193696+03:00"
+    description: A Helm chart for Kubernetes
+    digest: 1d5081dea8f49d938083a43ce71597cd05734da91adc0a84822fb65ba6ae063d
+    name: spacedeck
+    type: application
+    urls:
+    - spacedeck-1.1.0.tgz
+    version: 1.1.0
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2023-03-30T14:13:20.852169+03:00"
+    description: A Helm chart for Kubernetes
+    digest: 0f81c85069914cdd8de88f0d7dcadf81bd75779105075b91bce4b585f396a6b1
+    name: spacedeck
+    type: application
+    urls:
+    - spacedeck-1.0.54.tgz
+    version: 1.0.54
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2023-03-30T13:12:38.454289+03:00"
+    description: A Helm chart for Kubernetes
+    digest: 03b6979608a0e5c6ce79e10ff2e9df556fa80ed0fc5c815630d2f1e1af755ed0
+    name: spacedeck
+    type: application
+    urls:
+    - spacedeck-1.0.51.tgz
+    version: 1.0.51
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2023-03-29T15:42:17.671167+03:00"
+    description: A Helm chart for Kubernetes
+    digest: 04f80d48c4520848ca1d01ec3e4fdc9ba1faa25960684d2135473cc6ee59d2ee
+    name: spacedeck
+    type: application
+    urls:
+    - spacedeck-1.0.49.tgz
+    version: 1.0.49
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2023-03-26T13:53:56.251023+03:00"
+    description: A Helm chart for Kubernetes
+    digest: 525230db2e64477f5c8620837b61d81e73ef95f3325345564251fd8bd20dd1e2
+    name: spacedeck
+    type: application
+    urls:
+    - spacedeck-1.0.33.tgz
+    version: 1.0.33
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2023-03-09T16:42:16.018274+02:00"
+    description: A Helm chart for Kubernetes
+    digest: 9741fffd9d0f332a361dea1e07dc628a6c7bc3643d9aa6f6f9b3c22f9d992bba
+    name: spacedeck
+    type: application
+    urls:
+    - spacedeck-1.0.21.tgz
+    version: 1.0.21
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2023-03-16T15:10:53.738565+02:00"
+    description: A Helm chart for Kubernetes
+    digest: 7dde2ba150caf8f6ef61128f36eccc9c75fdffc36b869f4607591c55c633c957
+    name: spacedeck
+    type: application
+    urls:
+    - spacedeck-0.1.0.tgz
+    version: 0.1.0
+  xap:
+  - apiVersion: v2
+    appVersion: 16.3.0-rc4
+    created: "2023-04-24T19:43:10.86466+03:00"
+    dependencies:
+    - alias: grafana
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 6.44.7
+    - alias: influxdb
+      condition: metrics.enabled
+      name: influxdb
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 4.9.14
+    - alias: spacedeck
+      name: spacedeck
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 1.1.12
+    - alias: manager
+      name: xap-manager
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 16.3.0-rc4
+    - alias: operator
+      name: xap-operator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 16.3.0-rc4
+    - alias: dgw
+      condition: dgw.enabled
+      name: xap-dgw
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 16.3.0-rc4
+    description: A Helm chart for XAP
+    digest: 19e6a5a3fbe0501e8eccf56fa87488d013c18e5e3e8f18229b9ed137bf0060be
+    name: xap
+    urls:
+    - xap-16.3.0-rc4.tgz
+    version: 16.3.0-rc4
+  - apiVersion: v2
+    appVersion: 16.3.0-rc3
+    created: "2023-04-20T19:20:01.103813+03:00"
+    dependencies:
+    - alias: grafana
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 6.44.7
+    - alias: influxdb
+      condition: metrics.enabled
+      name: influxdb
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 4.9.14
+    - alias: spacedeck
+      name: spacedeck
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 1.1.11
+    - alias: manager
+      name: xap-manager
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 16.3.0-rc3
+    - alias: operator
+      name: xap-operator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 16.3.0-rc3
+    - alias: dgw
+      condition: dgw.enabled
+      name: xap-dgw
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 16.3.0-rc3
+    description: A Helm chart for XAP
+    digest: 4aaae8b96422b938a5b3fdfa06bfc30ab0bc9b5f9311a9df89fb27dfcc78c378
+    name: xap
+    urls:
+    - xap-16.3.0-rc3.tgz
+    version: 16.3.0-rc3
+  - apiVersion: v2
+    appVersion: 16.3.0-rc2
+    created: "2023-04-10T18:43:21.199818+03:00"
+    dependencies:
+    - alias: grafana
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 6.44.7
+    - alias: influxdb
+      condition: metrics.enabled
+      name: influxdb
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 4.9.14
+    - alias: spacedeck
+      name: spacedeck
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 1.1.5
+    - alias: manager
+      name: xap-manager
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 16.3.0-rc2
+    - alias: operator
+      name: xap-operator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 16.3.0-rc2
+    - alias: dgw
+      name: xap-dgw
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 16.3.0-rc2
+    description: A Helm chart for XAP
+    digest: 2214cea37f65c4ce15c788c46f4f2c900618a519cc0edf7e8543d93011e7e8e0
+    name: xap
+    urls:
+    - xap-16.3.0-rc2.tgz
+    version: 16.3.0-rc2
+  - apiVersion: v2
+    appVersion: 16.3.0-rc1
+    created: "2023-04-02T18:49:09.398743+03:00"
+    dependencies:
+    - alias: grafana
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 6.44.7
+    - alias: influxdb
+      condition: metrics.enabled
+      name: influxdb
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 4.9.14
+    - alias: spacedeck
+      name: spacedeck
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 1.1.0
+    - alias: manager
+      name: xap-manager
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 16.3.0-rc1
+    - alias: operator
+      name: xap-operator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 16.3.0-rc1
+    - alias: dgw
+      name: xap-dgw
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 16.3.0-rc1
+    description: A Helm chart for XAP
+    digest: 0df7e7b82f841fb0969cf9d764c9923157b259d163f4971eb6422796ddf9ef5e
+    name: xap
+    urls:
+    - xap-16.3.0-rc1.tgz
+    version: 16.3.0-rc1
+  - apiVersion: v2
+    appVersion: "1.0"
+    created: "2023-03-16T15:10:53.7421+02:00"
+    dependencies:
+    - alias: manager
+      name: xap-manager
+      repository: file://../xap-manager
+      version: 16.3.0-m9
+    - alias: operator
+      name: xap-operator
+      repository: file://../xap-operator
+      version: 16.3.0-m9
+    - alias: spacedeck
+      condition: spacedeck.enabled
+      name: spacedeck
+      repository: file://../spacedeck
+      version: 16.3.0-m9
+    - alias: grafana
+      condition: metrics.enabled
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 6.44.7
+    - alias: influxdb
+      condition: metrics.enabled
+      name: influxdb
+      repository: https://influxdata.github.io/helm-charts
+      version: 4.12.0
+    description: A Helm chart for GigaSpaces XAP
+    digest: 5173262ddb5a1cd91fa9581d9ec1ec28630d7c36f3129b5ff2ade5c350d2ed6a
+    name: xap
+    urls:
+    - xap-16.3.0-m9.tgz
+    version: 16.3.0-m9
+  - apiVersion: v2
+    appVersion: 16.3.0-m8
+    created: "2023-03-12T16:21:03.852712+02:00"
+    dependencies:
+    - alias: grafana
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 6.44.7
+    - alias: influxdb
+      condition: metrics.enabled
+      name: influxdb
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 4.9.14
+    - alias: spacedeck
+      name: spacedeck
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 1.0.21
+    - alias: manager
+      name: xap-manager
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 16.3.0-m8
+    - alias: operator
+      name: xap-operator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 16.3.0-m8
+    description: A Helm chart for XAP
+    digest: 271090cb91b1de846cea0be352818ba6b51100cf9f915d34e166f46377319d60
+    name: xap
+    urls:
+    - xap-16.3.0-m8.tgz
+    version: 16.3.0-m8
+  - apiVersion: v2
+    appVersion: 16.3.0-m10
+    created: "2023-03-31T11:05:30.433289+03:00"
+    dependencies:
+    - alias: grafana
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 6.44.7
+    - alias: influxdb
+      condition: metrics.enabled
+      name: influxdb
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 4.9.14
+    - alias: spacedeck
+      name: spacedeck
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 1.1.0
+    - alias: manager
+      name: xap-manager
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 16.3.0-m10
+    - alias: operator
+      name: xap-operator
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 16.3.0-m10
+    - alias: dgw
+      name: xap-dgw
+      repository: https://s3.amazonaws.com/resources.gigaspaces.com/helm-charts-dih
+      version: 16.3.0-m10
+    description: A Helm chart for XAP
+    digest: 085219420c6959585d16117d21b74d45a744b1ada99ecec0309be97c57e96faf
+    name: xap
+    urls:
+    - xap-16.3.0-m10.tgz
+    version: 16.3.0-m10
+  xap-dgw:
+  - apiVersion: v1
+    created: "2023-04-19T11:59:15.726268+03:00"
+    description: A Helm chart for GigaSpaces XAP Data Gateway
+    digest: e46d29b4b182ee5ae577de57a0e9685fe36645061899d9bcb6eb45745d4addc7
+    name: xap-dgw
+    urls:
+    - xap-dgw-16.3.0-rcs2.tgz
+    version: 16.3.0-rcs2
+  - apiVersion: v1
+    created: "2023-04-24T20:20:31.504719+03:00"
+    description: A Helm chart for GigaSpaces XAP Data Gateway
+    digest: 6c7ed131f7222f399b23834b850604cf5f706b978b495c0794c654e7bf2772b4
+    name: xap-dgw
+    urls:
+    - xap-dgw-16.3.0-rc4.tgz
+    version: 16.3.0-rc4
+  - apiVersion: v1
+    created: "2023-04-20T16:48:32.732723+03:00"
+    description: A Helm chart for GigaSpaces XAP Data Gateway
+    digest: 24800b470a3a7a0ac9bf6d3d82245e61086f2c7b74565e6e0194de98d710d02b
+    name: xap-dgw
+    urls:
+    - xap-dgw-16.3.0-rc3.tgz
+    version: 16.3.0-rc3
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2023-04-18T17:22:14.464863761+03:00"
+    description: A Helm chart for GigaSpaces XAP Data Gateway
+    digest: fdcec8b022f37a409f9cb146c421f3cd5ca07965f6f8a5b88c8a005290ff07dd
+    name: xap-dgw
+    urls:
+    - xap-dgw-16.3.0-rc2.tgz
+    version: 16.3.0-rc2
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2023-04-09T17:56:14.194261+03:00"
+    description: A Helm chart for GigaSpaces XAP Data Gateway
+    digest: ff175a5c992458e9f555aea39400cec66afee9eaeeab55b442818e5956d06e75
+    name: xap-dgw
+    urls:
+    - xap-dgw-16.3.0-rc1.tgz
+    version: 16.3.0-rc1
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2023-03-29T14:12:09.563077+03:00"
+    description: A Helm chart for GigaSpaces XAP Data Gateway
+    digest: 7784adf6865f97466f678e1c255fa9b989867d48898d42978d25d384778961d2
+    name: xap-dgw
+    urls:
+    - xap-dgw-16.3.0-m10.tgz
+    version: 16.3.0-m10
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2023-03-15T09:10:38.932138+02:00"
+    description: A Helm chart for GigaSpaces XAP Data Gateway
+    digest: 897490d1973002c587f7fee92fa3bf058f86cdd280819f52a3555e97391736fe
+    name: xap-dgw
+    urls:
+    - xap-dgw-1.0.0.tgz
+    version: 1.0.0
+  xap-manager:
+  - apiVersion: v1
+    created: "2023-04-19T11:59:27.516928+03:00"
+    description: A Helm chart for GigaSpaces XAP Manager
+    digest: 8e4af0ca2e0eb27b63b6e5557b6fb4f86b1fc627b0a7b27a046fa9f17cb1cb29
+    name: xap-manager
+    urls:
+    - xap-manager-16.3.0-rcs2.tgz
+    version: 16.3.0-rcs2
+  - apiVersion: v1
+    created: "2023-04-24T19:25:06.027113+03:00"
+    description: A Helm chart for GigaSpaces XAP Manager
+    digest: c02f7fa8951c44cb03adfbf2cf52421f6b203b960753a0926bd891b89de506e8
+    name: xap-manager
+    urls:
+    - xap-manager-16.3.0-rc4.tgz
+    version: 16.3.0-rc4
+  - apiVersion: v1
+    created: "2023-04-20T16:48:40.917434+03:00"
+    description: A Helm chart for GigaSpaces XAP Manager
+    digest: 7a54ff96251c656df1ffceb255376e9d2ab41d1d8e897fee8644f3f092ad3fd3
+    name: xap-manager
+    urls:
+    - xap-manager-16.3.0-rc3.tgz
+    version: 16.3.0-rc3
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2023-04-18T17:22:22.803158338+03:00"
+    description: A Helm chart for GigaSpaces XAP Manager
+    digest: f250f03d0be292e86bb912d3d7124ad28f380d347f64ea1b9508dc9db1190346
+    name: xap-manager
+    urls:
+    - xap-manager-16.3.0-rc2.tgz
+    version: 16.3.0-rc2
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2023-04-09T17:56:14.194588+03:00"
+    description: A Helm chart for GigaSpaces XAP Manager
+    digest: 931cab6105fb08c1586511f7c17f5e45c1c56a39a469c91debda149d5b17f118
+    name: xap-manager
+    urls:
+    - xap-manager-16.3.0-rc1.tgz
+    version: 16.3.0-rc1
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2023-03-27T10:52:14.98165+03:00"
+    description: A Helm chart for GigaSpaces XAP Manager
+    digest: 00172902b57123e09a7089ca69bf5fdd9de77a8d3ed1574169863b872705432e
+    name: xap-manager
+    urls:
+    - xap-manager-16.3.0-m9.tgz
+    version: 16.3.0-m9
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2023-03-14T18:15:16.156395+02:00"
+    description: A Helm chart for GigaSpaces XAP Manager
+    digest: c05ba9655e75506e0516f15126891ac5c46def8eaf9e35a2f061dae85fe96eb0
+    name: xap-manager
+    urls:
+    - xap-manager-16.3.0-m8.tgz
+    version: 16.3.0-m8
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2023-03-31T10:58:37.924782+03:00"
+    description: A Helm chart for GigaSpaces XAP Manager
+    digest: c1da1afa96ed92b8a154d985fb3ceba9e3f6882e316002790a5947026fff45cd
+    name: xap-manager
+    urls:
+    - xap-manager-16.3.0-m10.tgz
+    version: 16.3.0-m10
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2023-03-06T16:24:00.147761+02:00"
+    description: A Helm chart for GigaSpaces XAP Manager
+    digest: 34f98e47103da36b39ff93553173f7d432813b0511023c2e54fbc6d631bee5db
+    name: xap-manager
+    urls:
+    - xap-manager-16.2.2.tgz
+    version: 16.2.2
+  xap-operator:
+  - apiVersion: v1
+    created: "2023-04-19T11:59:39.669766+03:00"
+    description: A Helm chart for GigaSpaces XAP Operator
+    digest: d7f1248aee7cd0ff66fd7430f9dac585005027c78e404ee49a1765de18261fe6
+    name: xap-operator
+    urls:
+    - xap-operator-16.3.0-rcs2.tgz
+    version: 16.3.0-rcs2
+  - apiVersion: v1
+    created: "2023-04-24T19:25:14.542438+03:00"
+    description: A Helm chart for GigaSpaces XAP Operator
+    digest: 9bfe566a4683be0031b2e2e0d22de03d34d2fad8ad1609908e57c9d189c87878
+    name: xap-operator
+    urls:
+    - xap-operator-16.3.0-rc4.tgz
+    version: 16.3.0-rc4
+  - apiVersion: v1
+    created: "2023-04-20T16:48:48.922452+03:00"
+    description: A Helm chart for GigaSpaces XAP Operator
+    digest: 87599abdee018bd2e7285308506a97c21650e0c80e89b1f1f9894041c21c59b8
+    name: xap-operator
+    urls:
+    - xap-operator-16.3.0-rc3.tgz
+    version: 16.3.0-rc3
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2023-04-18T17:22:31.982626838+03:00"
+    description: A Helm chart for GigaSpaces XAP Operator
+    digest: addc00528fd3547a701cb72e8b86108fdc9209d425fe2cc7e6f326b108562761
+    name: xap-operator
+    urls:
+    - xap-operator-16.3.0-rc2.tgz
+    version: 16.3.0-rc2
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2023-04-09T17:56:14.194953+03:00"
+    description: A Helm chart for GigaSpaces XAP Operator
+    digest: 713f0e6cb96f9b31cd3a06ba4550744856400102189ce518e6f97c6847833a6a
+    name: xap-operator
+    urls:
+    - xap-operator-16.3.0-rc1.tgz
+    version: 16.3.0-rc1
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2023-03-27T10:52:25.531518+03:00"
+    description: A Helm chart for GigaSpaces XAP Operator
+    digest: f4933160e5840c0537a697ccac04fdf9bd509f2a13adb4af848186321c2aaa78
+    name: xap-operator
+    urls:
+    - xap-operator-16.3.0-m9.tgz
+    version: 16.3.0-m9
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2023-03-14T18:16:20.389797+02:00"
+    description: A Helm chart for GigaSpaces XAP Operator
+    digest: cf0132e18bb4b58982c20377c366bfc2bd9b8cd71a507bd622d5e7925fb98e57
+    name: xap-operator
+    urls:
+    - xap-operator-16.3.0-m8.tgz
+    version: 16.3.0-m8
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2023-03-31T10:58:50.58176+03:00"
+    description: A Helm chart for GigaSpaces XAP Operator
+    digest: ac5cb4f18e35cee87cdd01ab348184bdb412ba58f10c441f5697449dbff44e6c
+    name: xap-operator
+    urls:
+    - xap-operator-16.3.0-m10.tgz
+    version: 16.3.0-m10
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2023-03-06T16:25:13.98831+02:00"
+    description: A Helm chart for GigaSpaces XAP Operator
+    digest: 2b951506745b6d66ba6a2167879bf1ea328437d844d394f871eb19cc6b235b4f
+    name: xap-operator
+    urls:
+    - xap-operator-16.2.2.tgz
+    version: 16.2.2
+  xap-pu:
+  - apiVersion: v1
+    created: "2023-04-19T11:59:50.947563+03:00"
+    description: A Helm chart for GigaSpaces XAP PU
+    digest: b00739687e6bc43ea831c6bc6562e6f3e4d98f421f195601f48b7e8955827f53
+    name: xap-pu
+    urls:
+    - xap-pu-16.3.0-rcs2.tgz
+    version: 16.3.0-rcs2
+  - apiVersion: v1
+    created: "2023-04-24T19:25:23.338972+03:00"
+    description: A Helm chart for GigaSpaces XAP PU
+    digest: a34188c6a178e1bbc9f631c8d50be11c91284dab4f8110de658b8a5054a71c82
+    name: xap-pu
+    urls:
+    - xap-pu-16.3.0-rc4.tgz
+    version: 16.3.0-rc4
+  - apiVersion: v1
+    created: "2023-04-20T16:48:57.726926+03:00"
+    description: A Helm chart for GigaSpaces XAP PU
+    digest: 9a9c11a02bf980c93a1fc2c29b3c6fbbe08dd7c5119dcd9c02ef01304c5cc3be
+    name: xap-pu
+    urls:
+    - xap-pu-16.3.0-rc3.tgz
+    version: 16.3.0-rc3
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2023-04-18T17:22:40.227876414+03:00"
+    description: A Helm chart for GigaSpaces XAP PU
+    digest: 0d3b96a0f9c31d895fcbed4dc1674af2c9c78ed00b2019feef16a3d4275af5cd
+    name: xap-pu
+    urls:
+    - xap-pu-16.3.0-rc2.tgz
+    version: 16.3.0-rc2
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2023-04-04T19:59:25.687916+03:00"
+    description: A Helm chart for GigaSpaces XAP PU
+    digest: 68f187d80ddb8c551a69b9c276a58c8756dcd9d6a5ff4a1cb5137799c01c1a4d
+    name: xap-pu
+    urls:
+    - xap-pu-16.3.0-rc1.tgz
+    version: 16.3.0-rc1
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2023-03-15T09:07:34.379752+02:00"
+    description: A Helm chart for GigaSpaces XAP PU
+    digest: de8621ca6c3cf8f3bceb7646abcf255f0c2f3f879b6564f677dd65a140c84617
+    name: xap-pu
+    urls:
+    - xap-pu-0.1.0.tgz
+    version: 0.1.0
+  xap-single-image:
+  - apiVersion: v1
+    appVersion: 16.3.0
+    created: "2023-02-26T09:27:14.344444+02:00"
+    description: xap all-in-one
+    digest: 9dde701a4d12d98d664a841ecbe2c262cc9a731cb70abb0c6e4df9b779bc2f24
+    name: xap-single-image
+    urls:
+    - xap-single-image-1.0.0.tgz
+    version: 1.0.0
+  xap-single-space:
+  - apiVersion: v2
+    appVersion: 16.3.0-m10
+    created: "2023-03-24T23:11:41.249331+03:00"
+    dependencies:
+    - alias: grafana
+      condition: metrics.enabled
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 6.44.7
+    - alias: influxdb
+      condition: metrics.enabled
+      name: influxdb
+      repository: https://influxdata.github.io/helm-charts
+      version: 4.12.0
+    description: xap all-in-one
+    digest: 2b43d9b633ad0d9a555cb3a03932d4dc6024dd6c86bdbb540fbb69740e5908de
+    name: xap-single-space
+    urls:
+    - s3://resources.gigaspaces.com/helm-charts-dih/xap-single-space-1.2.3.tgz
+    version: 1.2.3
+  - apiVersion: v2
+    appVersion: 16.3.0-m9
+    created: "2023-03-23T10:45:08.237856+02:00"
+    dependencies:
+    - alias: grafana
+      condition: metrics.enabled
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 6.44.7
+    - alias: influxdb
+      condition: metrics.enabled
+      name: influxdb
+      repository: https://influxdata.github.io/helm-charts
+      version: 4.12.0
+    description: xap all-in-one
+    digest: c45e3d6ebc0bdaddf43264584c860b9f985b21e2633fa5cf3571c74fd2b26e2c
+    name: xap-single-space
+    urls:
+    - s3://resources.gigaspaces.com/helm-charts-dih/xap-single-space-1.2.2.tgz
+    version: 1.2.2
+  - apiVersion: v2
+    appVersion: 16.3.0-m9
+    created: "2023-03-22T22:50:09.832842+02:00"
+    dependencies:
+    - alias: grafana
+      condition: metrics.enabled
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 6.44.7
+    - alias: influxdb
+      condition: metrics.enabled
+      name: influxdb
+      repository: https://influxdata.github.io/helm-charts
+      version: 4.12.0
+    description: xap all-in-one
+    digest: c4ef7795c3153e176c3768c8c1890611e17b3b39c94fa885f2fd286eefffe305
+    name: xap-single-space
+    urls:
+    - s3://resources.gigaspaces.com/helm-charts-dih/xap-single-space-1.2.1.tgz
+    version: 1.2.1
+  - apiVersion: v2
+    appVersion: 16.3.0-m9
+    created: "2023-03-20T10:42:48.060763+02:00"
+    dependencies:
+    - alias: grafana
+      condition: metrics.enabled
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 6.44.7
+    - alias: influxdb
+      condition: metrics.enabled
+      name: influxdb
+      repository: https://influxdata.github.io/helm-charts
+      version: 4.12.0
+    description: xap all-in-one
+    digest: 37f452d6dc9f4c7301e08cbaca6ddc413ca51c8ac67f1777867f443701e368dd
+    name: xap-single-space
+    urls:
+    - s3://resources.gigaspaces.com/helm-charts-dih/xap-single-space-1.2.0.tgz
+    version: 1.2.0
+  - apiVersion: v1
+    appVersion: 16.3.0
+    created: "2023-03-16T14:53:25.457721+02:00"
+    description: xap all-in-one
+    digest: c3b548969b88d7c47725f99f68dbd0c87c03020db442161ad0cb814e8bb35b38
+    name: xap-single-space
+    urls:
+    - xap-single-space-1.1.0.tgz
+    version: 1.1.0
+  - apiVersion: v1
+    appVersion: 16.3.0
+    created: "2023-03-16T15:10:53.74231+02:00"
+    description: xap all-in-one
+    digest: da9c23b5aa451fbcdbc18632f780e1933fb1cf064b31cc4cc0601d924b67a93f
+    name: xap-single-space
+    urls:
+    - xap-single-space-1.0.0.tgz
+    version: 1.0.0
+  zookeeper:
+  - apiVersion: v1
+    appVersion: 3.5.5
+    created: "2023-01-11T13:18:40.176758+02:00"
+    description: Centralized service for maintaining configuration information, naming,
+      providing distributed synchronization, and providing group services.
+    digest: e612bc94670a38579f3f0e3d0701d921c46d9ad69d09a38523147f295f124d03
+    home: https://zookeeper.apache.org/
+    icon: https://zookeeper.apache.org/images/zookeeper_small.gif
+    maintainers:
+    - email: lachlan.evenson@microsoft.com
+      name: lachie83
+    - email: owensk@google.com
+      name: kow3ns
+    name: zookeeper
+    sources:
+    - https://github.com/apache/zookeeper
+    - https://github.com/kubernetes/contrib/tree/master/statefulsets/zookeeper
+    urls:
+    - zookeeper-2.0.0.tgz
+    version: 2.0.0
+generated: "2023-04-24T20:20:31.503903+03:00"
