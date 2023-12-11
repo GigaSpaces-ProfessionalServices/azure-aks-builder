@@ -226,6 +226,7 @@ loginAzureAccount () {
 
 destroyAKScluster () {
   
+  chooseExistingAKS
   if [[ $CLUSTER_NAME == "B" ]] || [[ $CLUSTER_NAME == "b" ]]
   then 
     return 0 
