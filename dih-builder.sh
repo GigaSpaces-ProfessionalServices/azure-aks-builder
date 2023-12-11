@@ -86,6 +86,7 @@ dihMenu () {
   echo
   echo "1. Install DIH umbrella"
   echo "2. Uninstall DIH umbrella"
+  echo "3. Install Oracle DB for demo"
   echo "B. Back to Main menu."
   echo "E. Exit"
   echo 
@@ -98,6 +99,10 @@ dihMenu () {
 
       2) uninstallDIH  
          dihMenu  
+          ;;
+      
+      3) installOracleDB
+         dihMenu
           ;;
       
       [Bb]) mainMenu
@@ -225,14 +230,24 @@ installDIH () {
   then 
     return 0 
   fi
+
   read -p "Would you like to install the DIH umbrella with IIDR [y/n] " INSTALL_IIDR
-  [[ $INSTALL_IIDR =~ [yY](es)* ]] && IIDR=true || IIDR=false
-  
-  #  Add required secrets
+  if [[ $INSTALL_IIDR =~ [yY](es)* ]];then
+    IIDR=true
+    #  Add required secrets
   kubectl create secret docker-registry myregistrysecret --docker-server=https://index.docker.io/v1/ --docker-username=dihcustomers --docker-password=dckr_pat_NYcQySRyhRFZ6eUQAwLsYm314QA --docker-email=dih-customers@gigaspaces.com
   kubectl create secret generic datastore-credentials --from-literal=username='system' --from-literal=password='admin11'
+  else
+    IIDR=false
+  fi
+  
+  
+installOracleDB () {
+    echo "Installing Oracle DB on k8s cluster ..."
+    helm install oracle dihrepo/di-oracle --version 2.0.2
+}
 
-  # helm repo add DIH
+    # helm repo add DIH
   helm repo add dih $DIH_HELM_REPO
   helm repo update dih
 
