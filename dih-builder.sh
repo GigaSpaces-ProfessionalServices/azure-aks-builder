@@ -120,11 +120,11 @@ createJumper () {
   # Create a Jumper VM
   if [[ -z $CLUSTER_NAME ]]
   then
-    read -p "Please enter a Jumper description ( 'jumper-<description> ): " CLUSTER_NAME
+    read -p "Please enter a Jumper Name: " CLUSTER_NAME
   fi  
-  echo "Create a Jumper VM on azure [ jumper-$CLUSTER_NAME ]..."
+  echo "Create a Jumper VM on azure [ $CLUSTER_NAME ]..."
   az vm create \
-  -n jumper-$CLUSTER_NAME \
+  -n $CLUSTER_NAME \
   -g $RESOURCE_GROUP \
   --image $JUMPER_IMAGE \
   --custom-data $JUMPER_USERDATA \
@@ -132,7 +132,7 @@ createJumper () {
   --public-ip-sku Standard \
   --nic-delete-option delete \
   --os-disk-delete-option delete \
-  --admin-username centos \
+  --admin-username $JUMPER_ADMIN_USER \
   --tags Owner=$owner Project=$project $default_tags \
   --size $JUMPER_SIZE \
   --output table

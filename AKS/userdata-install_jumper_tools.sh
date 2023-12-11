@@ -1,58 +1,34 @@
 #!/bin/bash
-curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+
+# Install kubectl
+echo "Installing kubectl ..."
+curl -sLO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
 sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
-sudo yum install -y yum-utils epel-release
-sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-echo -e "[azure-cli]
-name=Azure CLI
-baseurl=https://packages.microsoft.com/yumrepos/azure-cli
-enabled=1
-gpgcheck=1
-gpgkey=https://packages.microsoft.com/keys/microsoft.asc" | sudo tee /etc/yum.repos.d/azure-cli.repo
+rm ./kubectl
+
+# Install helm
+echo "Installing helm ..."
 curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
 chmod 700 get_helm.sh
 ./get_helm.sh
-sudo yum install -y wget vim unzip git azure-cli maven
-wget https://s3.eu-west-1.amazonaws.com/shmulik.kaufman/bbw/jdk-11.0.17_linux-x64_bin.rpm
-sudo rpm -ivh jdk-11.0.17_linux-x64_bin.rpm
-rm -rf ./get_helm.sh jdk-11.0.17_linux-x64_bin.rpm kubectl
-sudo -u centos curl -sS https://webinstall.dev/k9s > /tmp/install_k9s.sh
-chmod +x /tmp/install_k9s.sh
-sudo -u centos /tmp/install_k9s.sh
+rm ./get_helm.sh
 
-curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
-sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
-sudo yum install bash-completion -y
-sudo yum install jq -y
-kubectl completion bash | sudo tee /etc/bash_completion.d/kubectl > /dev/null
-echo 'alias k=kubectl' >> /home/centos/.bashrc
-echo 'complete -o default -F __start_kubectl k' >> /home/centos/.bashrc
+# Install azure cli
+echo "Installing azure cli ..."
+curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 
-echo '
-export ARM_CLIENT_ID=""
-export ARM_CLIENT_SECRET=""
-export ARM_SUBSCRIPTION_ID=""
-export ARM_TENANT_ID=""
-clear' >> /home/centos/.bashrc 
+# Install vim, wget, unzip, git, maven, openjdk11
+echo "Installing vim, wget, unzip, git, maven, openjdk11"
+if [[ $(cat /etc/*-release |grep -i "ubuntu\|debian" |wc -l) > 0 ]];then 
+  sudo apt-get install -y  openjdk-11-jdk wget unzip maven
+elif [[ $(cat /etc/*-release |grep -i "ubuntu\|debian" |wc -l) > 0 ]];then
+  sudo yum install -y vim wget unzip maven java-11-openjdk-devel
+elif [[ $(uname) == "Darwin" ]];then
+  brew brew install vim wget unzip maven openjdk@11
+else
+  echo "Unsupported Linux distribution, please install vim, wget, unzip, git, maven, openjdk11 manually."
+fi
 
-echo '
-echo "
-Welcome to the azure DIH Jumper
---------------------------------------
-Installed tools:
-
-# kubectl
-# helm
-# azure cli
-# git
-# k9s
-# Auto-completion for Kubectl
-# wget, vim, unzip
-# maven
-# jdk 11
---------------------------------------
-"
-' >> /home/centos/.bashrc
-
-cd /home/centos
-sudo -u centos git clone https://github.com/GigaSpaces-ProfessionalServices/azure-aks-builder.git
+# Install k9s
+echo "Installing k9s ..."
+curl -sS https://webi.sh/k9s | sh
