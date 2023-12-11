@@ -227,7 +227,7 @@ installDIH () {
   fi
   read -p "Would you like to install the DIH umbrella with IIDR [y/n] " INSTALL_IIDR
   [[ $INSTALL_IIDR =~ [yY](es)* ]] && IIDR=true || IIDR=false
-  echo "Deploying DIH umbrella ..."
+  
   #  Add required secrets
   kubectl create secret docker-registry myregistrysecret --docker-server=https://index.docker.io/v1/ --docker-username=dihcustomers --docker-password=dckr_pat_NYcQySRyhRFZ6eUQAwLsYm314QA --docker-email=dih-customers@gigaspaces.com
   kubectl create secret generic datastore-credentials --from-literal=username='system' --from-literal=password='admin11'
@@ -240,7 +240,14 @@ installDIH () {
   installIngressController
   
   # Install DIH
-    helm install dih dih/dih --version $DIH_HELM_CHART --set global.iidrKafkaHost=$ingressIP,tags.iidr=$IIDR -f $DIH_HELM_CONF_FILE
+    ingressIP=$(kubectl get services  ingress-nginx-controller --output jsonpath='{.status.loadBalancer.ingress[0].ip}')
+    CMD="helm install dih dih/dih --version $DIH_HELM_CHART --set global.iidrKafkaHost=$ingressIP,tags.iidr=$IIDR -f $DIH_HELM_CONF_FILE"
+    echo ------------------------------------
+    echo $CMD
+    echo ------------------------------------
+    #read -p "Press any key to continue ..."
+    echo "Deploying DIH umbrella ..."
+    eval $CMD
     printIngressTCP
 }
 
