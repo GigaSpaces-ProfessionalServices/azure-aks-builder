@@ -34,6 +34,5 @@ else
   echo "Unsupported Linux distribution, please install vim, wget, unzip, git, maven, openjdk11 manually."
 fi
 
-# Install k9s
-echo "Installing k9s ..."
-curl -sS https://webi.sh/k9s | sh
+# Download azure builder project
+git clone https://github.com/GigaSpaces-ProfessionalServices/azure-aks-builder.git
