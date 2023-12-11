@@ -27,7 +27,8 @@ mainMenu () {
       1)  aksMenu
           ;;
       
-      2)  dihMenu
+      2)  chooseExistingAKS
+          dihMenu
           ;;
           
       [eE]) exit
@@ -81,12 +82,15 @@ aksMenu () {
 }
 
 dihMenu () {
-  echo "DIH management"
-  echo "--------------"
+  echo
+  echo "DIH management [$CLUSTER_NAME]"
+  echo "------------------------------"
   echo
   echo "1. Install DIH umbrella"
   echo "2. Uninstall DIH umbrella"
   echo "3. Install Oracle DB for demo"
+  echo "4. Uninstall Oracle DB for demo"
+  echo "5. Print ingress services/ports"
   echo "B. Back to Main menu."
   echo "E. Exit"
   echo 
@@ -105,6 +109,13 @@ dihMenu () {
          dihMenu
           ;;
       
+      4) uninstallOracleDB
+         dihMenu
+          ;;
+      5) printIngressTCP
+         dihMenu
+          ;;
+         
       [Bb]) mainMenu
           ;;
 
@@ -214,7 +225,7 @@ loginAzureAccount () {
 }
 
 destroyAKScluster () {
-  chooseExistingAKS
+  
   if [[ $CLUSTER_NAME == "B" ]] || [[ $CLUSTER_NAME == "b" ]]
   then 
     return 0 
@@ -225,7 +236,7 @@ destroyAKScluster () {
 }
 
 installDIH () {
-  chooseExistingAKS
+  
   if [[ $CLUSTER_NAME == "B" ]] || [[ $CLUSTER_NAME == "b" ]]
   then 
     return 0 
@@ -240,12 +251,7 @@ installDIH () {
   else
     IIDR=false
   fi
-  
-  
-installOracleDB () {
-    echo "Installing Oracle DB on k8s cluster ..."
-    helm install oracle dihrepo/di-oracle --version 2.0.2
-}
+
 
     # helm repo add DIH
   helm repo add dih $DIH_HELM_REPO
@@ -256,18 +262,18 @@ installOracleDB () {
   
   # Install DIH
     ingressIP=$(kubectl get services  ingress-nginx-controller --output jsonpath='{.status.loadBalancer.ingress[0].ip}')
-    CMD="helm install dih dih/dih --version $DIH_HELM_CHART --set global.iidrKafkaHost=$ingressIP,tags.iidr=$IIDR -f $DIH_HELM_CONF_FILE"
+    CMD="helm upgarde --install install dih dih/dih --version $DIH_HELM_CHART --set global.iidrKafkaHost=$ingressIP,tags.iidr=$IIDR -f $DIH_HELM_CONF_FILE"
     echo ------------------------------------
-    echo $CMD
+    #echo $CMD
     echo ------------------------------------
     #read -p "Press any key to continue ..."
     echo "Deploying DIH umbrella ..."
-    eval $CMD
+    #eval $CMD
     printIngressTCP
 }
 
 uninstallDIH () {
-  chooseExistingAKS
+  
   read -p "Are you sure you want to uninstall DIH from $CLUSTER_NAME? [y/n]: " REMOVE_DIH
   if [[ $REMOVE_DIH =~ [yY](es)* ]]
   then
@@ -279,11 +285,20 @@ uninstallDIH () {
     fi
     echo "Removing the dih ..."
     helm uninstall dih
-    kubectl delete secret myregistrysecret datastore-credentials
+    kubectl delete secret datastore-credentials myregistrysecret
   fi 
   dihMenu
   
 }
+
+installOracleDB () {
+    
+    echo "Installing Oracle DB on k8s cluster ..."
+    kubectl create secret docker-registry myregistrysecret --docker-server=https://index.docker.io/v1/ --docker-username=dihcustomers --docker-password=dckr_pat_NYcQySRyhRFZ6eUQAwLsYm314QA --docker-email=dih-customers@gigaspaces.com
+    kubectl create secret generic datastore-credentials --from-literal=username='system' --from-literal=password='admin11'
+    helm install oracle dih/di-oracle --version 2.0.2
+}
+
 installIngressController () {
   # helm repo add DIH and ingress-controller
   helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
@@ -300,7 +315,14 @@ installIngressController () {
 }
 
 printIngressTCP () {
+  installedIngress=$(kubectl get services |grep ingress-nginx-controller |wc -l)
+  if [[ $installedIngress -eq 0 ]];then
+    echo "Ingress controller is not installed."
+    dihMenu
+  fi
+
   ingressIP=$(kubectl get services  ingress-nginx-controller --output jsonpath='{.status.loadBalancer.ingress[0].ip}')
+  
   echo "Ingress exposed TCP ports:"
   echo ----------------------------------------------------------------------
   cat DIH/helm/ingress-controller-tcp.yaml |grep -v "#" |grep default |tr -d '"' |tr -d ' '|sed 's/:default\// --> /' |cut -d':' -f1 |sed -e "s/^/$ingressIP:/"
@@ -312,10 +334,3 @@ printIngressTCP () {
 clear
 loginAzureAccount
 mainMenu
-
-
-
-
-
-
-
