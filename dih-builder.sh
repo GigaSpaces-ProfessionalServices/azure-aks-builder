@@ -263,13 +263,13 @@ installDIH () {
   
   # Install DIH
     ingressIP=$(kubectl get services  ingress-nginx-controller --output jsonpath='{.status.loadBalancer.ingress[0].ip}')
-    CMD="helm upgarde --install install dih dih/dih --version $DIH_HELM_CHART --set global.iidrKafkaHost=$ingressIP,tags.iidr=$IIDR -f $DIH_HELM_CONF_FILE"
+    CMD="helm upgrade --install dih dih/dih --version $DIH_HELM_CHART --set global.iidrKafkaHost=$ingressIP,tags.iidr=$IIDR -f $DIH_HELM_CONF_FILE"
     echo ------------------------------------
-    #echo $CMD
+    echo $CMD
     echo ------------------------------------
-    #read -p "Press any key to continue ..."
+   # read -p "Press any key to continue ..."
     echo "Deploying DIH umbrella ..."
-    #eval $CMD
+    eval $CMD
     printIngressTCP
 }
 
