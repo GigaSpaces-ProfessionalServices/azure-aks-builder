@@ -15,14 +15,14 @@ rm ./get_helm.sh
 
 # Install azure cli
 echo "Installing azure cli ..."
-curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+curl -sL https://aka.ms/InstallAzureCLI | sudo bash
 
 # Install vim, wget, unzip, git, maven, openjdk11, k9s
 echo "Installing vim, wget, unzip, git, maven, openjdk11"
 if [[ $(cat /etc/*-release |grep -i "ubuntu\|debian" |wc -l) > 0 ]];then 
   sudo apt-get install -y  openjdk-11-jdk wget unzip maven
   
-elif [[ $(cat /etc/*-release |grep -i "ubuntu\|debian" |wc -l) > 0 ]];then
+elif [[ $(cat /etc/*-release |grep -i "fedora\|rhel" |wc -l) > 0 ]];then
   sudo yum install -y vim wget unzip maven java-11-openjdk-devel
   
 elif [[ $(uname) == "Darwin" ]];then
